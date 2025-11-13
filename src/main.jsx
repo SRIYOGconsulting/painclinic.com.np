@@ -45,12 +45,12 @@ const router = createBrowserRouter([
       {path: "puspak-message", element : <PuspakM /> },
       {path: "niru-message", element : <NiruM /> },
       {path: "muskan-message", element : <MuskanM /> },
-      {path: "headache", element : <Headache /> },
-      {path: "jointpain", element : <JointPain /> },
-      {path: "neckpain", element : <NeckPain /> },
-      {path: "shoulderpain", element : <ShoulderPain /> },
-      {path: "orofacialpain", element : <OrofacialPain /> },
-      {path: "kneepain", element : <KneePain /> },
+      {path: "what-is-headache", element : <Headache /> },
+      {path: "what-is-joint-pain", element : <JointPain /> },
+      {path: "what-is-neck-pain", element : <NeckPain /> },
+      {path: "what-is-shoulder-pain", element : <ShoulderPain /> },
+      {path: "what-is-orofacial-pain", element : <OrofacialPain /> },
+      {path: "what-is-knee-pain", element : <KneePain /> },
     ]
   }
 ])

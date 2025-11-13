@@ -6,11 +6,13 @@ import { Outlet } from 'react-router-dom'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
 import Breadcrumbs from './Components/BreadCrumbs'
+import ScrollToTop from './Components/ScrollToTop'
 
 function App() {
 
   return (
     <div>
+      <ScrollToTop/>
       <Header/>
       <Breadcrumbs/>
       <Outlet />

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/images/pain-clinic-logo.png";
 import footerBg from "../assets/images/footer-bg.png";
 import headache from "../assets/images/headache-pain.jpg";
@@ -62,12 +63,12 @@ const Footer = () => {
               Our <span className="text-[#234179]">Treatments</span>
             </h3>
             <ul className="space-y-2 text-[#456EA1] text-[16px]">
-              <li>Headache</li>
-              <li>Joint Pain</li>
-              <li>Neck Pain</li>
-              <li>Shoulder Pain</li>
-              <li>Orofacial Pain</li>
-              <li>Knee Pain</li>
+              <li className="hover:underline"><Link to="/what-is-headache">Headache</Link></li>
+              <li className="hover:underline"><Link to="/what-is-joint-pain">Joint Pain</Link></li>
+              <li className="hover:underline"><Link to="/what-is-neck-pain">Neck Pain</Link></li>
+              <li className="hover:underline"><Link to="/what-is-shoulder-pain">Shoulder Pain</Link></li>
+              <li className="hover:underline"><Link to="/what-is-orofacial-pain">Orofacial Pain</Link></li>
+              <li className="hover:underline"><Link to="/what-is-knee-pain">Knee Pain</Link></li>
             </ul>
           </div>
 
@@ -77,11 +78,11 @@ const Footer = () => {
               Browse <span className="text-[#234179]">More</span>
             </h3>
             <ul className="space-y-2 text-[#456EA1] text-[16px]">
-              <li>Nerve Related Pain</li>
-              <li>Muscle Pain</li>
-              <li>Sports Injury</li>
-              <li>Whole Body Pain</li>
-              <li>Cancer Pain</li>
+              <li className="hover:underline">Nerve Related Pain</li>
+              <li className="hover:underline">Muscle Pain</li>
+              <li className="hover:underline">Sports Injury</li>
+              <li className="hover:underline">Whole Body Pain</li>
+              <li className="hover:underline">Cancer Pain</li>
             </ul>
           </div>
 
