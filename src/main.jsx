@@ -24,6 +24,11 @@ import NeckPain from './Pages/NeckPain.jsx'
 import ShoulderPain from './Pages/ShoulderPain.jsx'
 import OrofacialPain from './Pages/OrofacialPain.jsx'
 import KneePain from './Pages/KneePain.jsx'
+import NervePain from './Pages/NervePain.jsx'
+import MusclePain from './Pages/MusclePain.jsx'
+import SportsInjury from './Pages/SportsInjury.jsx'
+import WholeBodyPain from './Pages/WholeBodyPain.jsx'
+import CancerPain from './Pages/CancerPain.jsx'
 
 const router = createBrowserRouter([
   {
@@ -51,6 +56,11 @@ const router = createBrowserRouter([
       {path: "what-is-shoulder-pain", element : <ShoulderPain /> },
       {path: "what-is-orofacial-pain", element : <OrofacialPain /> },
       {path: "what-is-knee-pain", element : <KneePain /> },
+      {path: "what-is-nerve-pain", element : <NervePain /> },
+      {path: "what-is-muscle-pain", element : <MusclePain /> },
+      {path: "what-is-sports-injury", element : <SportsInjury /> },
+      {path: "what-is-whole-body-pain", element : <WholeBodyPain /> },
+      {path: "what-is-cancer-pain", element : <CancerPain /> },
     ]
   }
 ])

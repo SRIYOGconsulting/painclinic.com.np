@@ -78,11 +78,11 @@ const Footer = () => {
               Browse <span className="text-[#234179]">More</span>
             </h3>
             <ul className="space-y-2 text-[#456EA1] text-[16px]">
-              <li className="hover:underline">Nerve Related Pain</li>
-              <li className="hover:underline">Muscle Pain</li>
-              <li className="hover:underline">Sports Injury</li>
-              <li className="hover:underline">Whole Body Pain</li>
-              <li className="hover:underline">Cancer Pain</li>
+              <li className="hover:underline"><Link to="/what-is-nerve-pain">Nerve Related Pain</Link></li>
+              <li className="hover:underline"><Link to="/what-is-muscle-pain">Muscle Pain</Link></li>
+              <li className="hover:underline"><Link to="/what-is-sports-pain">Sports Injury</Link></li>
+              <li className="hover:underline"><Link to="/what-is-whole-body-pain">Whole Body Pain</Link></li>
+              <li className="hover:underline"><Link to="/what-is-cancer-pain">Cancer Pain</Link></li>
             </ul>
           </div>
 
@@ -104,9 +104,10 @@ const Footer = () => {
                     <UserRound size={12} /> <span>Isha Sunam</span>
                     <MessageCircleMore size={12} /> <span>2 Comments</span>
                   </div>
-                  <p className="text-[15px] font-semibold">
+                  <Link to="/what-is-headache" >
+                  <p className="text-[15px] font-semibold hover:underline hover:text-gray-300">
                     How Weather Changes Trigger Headaches?
-                  </p>
+                  </p></Link>
                 </div>
               </div>
 
@@ -122,9 +123,10 @@ const Footer = () => {
                     <UserRound size={12} /> <span>Monika Sharma</span>
                     <MessageCircleMore size={12} /> <span>2 Comments</span>
                   </div>
-                  <p className="text-[15px] font-semibold">
+                  <Link to="/what-is-neck-pain" >
+                  <p className="text-[15px] font-semibold hover:underline hover:text-gray-300">
                     Neck Pain: Causes Of Neck Pain During The Monsoon Season
-                  </p>
+                  </p></Link>
                 </div>
               </div>
             </div>
