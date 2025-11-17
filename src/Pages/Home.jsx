@@ -65,7 +65,7 @@ const Home = () => {
       doctor: "Dr. Sagar",
       date: "07 Dec, 2024",
       title: "Neck Pain From Air Conditioning: Causes And Remedies",
-      path : "what-is-neck-pain",
+      path: "what-is-neck-pain",
       image: neckImg,
     },
     {
@@ -74,7 +74,7 @@ const Home = () => {
       doctor: "Dr. Niru",
       date: "6 Aug, 2024",
       title: "How Weather Changes Trigger Headaches: Causes And Solutions",
-      path : "what-is-headache",
+      path: "what-is-headache",
       image: headacheImg,
     },
     {
@@ -83,12 +83,12 @@ const Home = () => {
       doctor: "Dr. Puspak",
       date: "3 Nov, 2024",
       title: "Best Excersises To Ease Stiff Joints During Chilly Mornings",
-      path : "what-is-joint-pain",
+      path: "what-is-joint-pain",
       image: JointImg,
     },
   ];
-  
- const [currentBlogIndex, setCurrentBlogIndex] = useState(0);
+
+  const [currentBlogIndex, setCurrentBlogIndex] = useState(0);
 
   const nextBlog = () => {
     setCurrentBlogIndex((prev) => (prev + 1 >= blogSlides.length - 1 ? 0 : prev + 1));
@@ -98,21 +98,21 @@ const Home = () => {
     setCurrentBlogIndex((prev) => (prev - 1 < 0 ? blogSlides.length - 2 : prev - 1));
   };
 
-  
+
   // for doodle like image
   const doodleImages = [
-  { src: orofacialI, alt: 'Oral Pain', label: 'Orafacial Pain' },
-  { src: shoulderI, alt: 'Shoulder Pain', label: 'Shoulder Pain' },
-  { src: sportsI, alt: 'Sports Injury', label: 'Sports Injury' },
-  { src: headacheIcon, alt: 'Headache', label: 'Headache' },
-  { src: ankelI, alt: 'Ankle Pain', label: 'Ankle Pain' }
-];
+    { src: orofacialI, alt: 'Oral Pain', label: 'Orafacial Pain' },
+    { src: shoulderI, alt: 'Shoulder Pain', label: 'Shoulder Pain' },
+    { src: sportsI, alt: 'Sports Injury', label: 'Sports Injury' },
+    { src: headacheIcon, alt: 'Headache', label: 'Headache' },
+    { src: ankelI, alt: 'Ankle Pain', label: 'Ankle Pain' }
+  ];
 
 
   return (
     <div className="font-[sans-serif] overflow-x-hidden w-full max-w-screen mx-auto">
       {/* Hero Section */}
-     <section
+      <section
         className="relative w-full h-[1000px] bg-cover bg-center"
         style={{ backgroundImage: `url(${background})` }}
       >
@@ -535,91 +535,90 @@ const Home = () => {
           </div>
 
           {/* Slider */}
-<div className="overflow-hidden">
-  <div
-    className="flex transition-transform duration-500"
-    style={{ transform: `translateX(-${currentBlogIndex * 50}%)` }}
-  >
-    {blogSlides.map((item) => (
-      <Link
-        to={`/${item.path}`}
-        key={item.id}
-        className="min-w-[50%] max-w-[50%] px-3 block"
-      >
-        <div className="bg-white rounded-3xl shadow-md overflow-hidden">
+          <div className="overflow-hidden">
+            <div
+              className="flex transition-transform duration-500"
+              style={{ transform: `translateX(-${currentBlogIndex * 50}%)` }}
+            >
+              {blogSlides.map((item) => (
+                <Link
+                  to={`/${item.path}`}
+                  key={item.id}
+                  className="min-w-[50%] max-w-[50%] px-3 block"
+                >
+                  <div className="bg-white rounded-3xl shadow-md overflow-hidden">
 
-          {/* IMAGE */}
-<div className="relative h-full w-full rounded-3xl overflow-hidden bg-white p-6">
-  <div className="w-full h-full rounded-2xl overflow-hidden">
-    <img
-      src={item.image}
-      alt={item.title}
-      className="w-full h-full object-cover"
-    />
-  </div>
+                    {/* IMAGE */}
+                    <div className="relative h-full w-full rounded-3xl overflow-hidden bg-white p-6">
+                      <div className="w-full h-full rounded-2xl overflow-hidden">
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
 
-  {/* CATEGORY TAG */}
-  <div className="absolute top-10 left-10 bg-[#234179] text-white text-sm px-4 py-1 rounded-full z-10">
-    {item.category}
-  </div>
-</div>
+                      {/* CATEGORY TAG */}
+                      <div className="absolute top-10 left-10 bg-[#234179] text-white text-sm px-4 py-1 rounded-full z-10">
+                        {item.category}
+                      </div>
+                    </div>
 
 
-          {/* CONTENT */}
-          <div className="p-5">
+                    {/* CONTENT */}
+                    <div className="p-5">
 
-            {/* Doctor + Date */}
-            <p className="text-gray-500 text-sm mb-2">
-              {item.doctor} · {item.date}
-            </p>
+                      {/* Doctor + Date */}
+                      <p className="text-gray-500 text-sm mb-2">
+                        {item.doctor} · {item.date}
+                      </p>
 
-            {/* Title */}
-            <h3 className="text-xl font-bold text-[#0A2241] leading-snug mb-4">
-              {item.title}
-            </h3>
+                      {/* Title */}
+                      <h3 className="text-xl font-bold text-[#0A2241] leading-snug mb-4">
+                        {item.title}
+                      </h3>
 
-            {/* Read More Button */}
-            <button className="w-10 h-10 rounded-full border border-[#234179] text-[#234179] flex items-center justify-center">
-              {">"}
-            </button>
+                      {/* Read More Button */}
+                      <button className="w-10 h-10 rounded-full border border-[#234179] text-[#234179] flex items-center justify-center">
+                        {">"}
+                      </button>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
-      </Link>
-    ))}
-  </div>
-</div>
 
         </div>
       </section>
 
       {/* icon image slideshow section */}
 
-  {/* DOODLE ICON AUTO SLIDER SECTION */}
-<section className="py-20 px-6">
-  <div className="max-w-6xl mx-auto">
+      {/* DOODLE ICON AUTO SLIDER SECTION */}
+      <section className="py-20 px-6">
+        <div className="max-w-6xl mx-auto">
 
-    {/* AUTO SLIDER WRAPPER */}
-    <div className="overflow-hidden relative">
-      <div
-        className="flex gap-10 animate-slide whitespace-nowrap"
-      >
-        {doodleImages.concat(doodleImages).map((item, index) => (
-          <div
-            key={index}
-            className="w-32 mx-auto flex-shrink-0 flex flex-col items-center text-center"
-          >
-            <img
-              src={item.src}
-              alt={item.label}
-              className="w-20 h-20 object-contain mb-3"
-            />
+          {/* AUTO SLIDER WRAPPER */}
+          <div className="overflow-hidden relative">
+            <div
+              className="flex gap-10 animate-slide whitespace-nowrap"
+            >
+              {doodleImages.concat(doodleImages).map((item, index) => (
+                <div
+                  key={index}
+                  className="w-32 mx-auto flex-shrink-0 flex flex-col items-center text-center"
+                >
+                  <img
+                    src={item.src}
+                    alt={item.label}
+                    className="w-20 h-20 object-contain mb-3"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-        ))}
-      </div>
-    </div>
-  </div>
-</section>
-
+        </div>
+      </section>
     </div>
   );
 };

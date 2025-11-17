@@ -102,9 +102,7 @@ const NervePain = () => {
                       </div>
                       <div>
                         <span className="font-semibold text-[#0A2241]">Tags:</span>{" "}
-                       headaches
-    ,
-    Migraines
+                     Nerve Pain Relief, Winter Nerve Pain Management
                       </div>
                     </div>
                   </div>

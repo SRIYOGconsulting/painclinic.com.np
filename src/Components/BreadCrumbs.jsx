@@ -20,7 +20,7 @@ const Breadcrumbs = () => {
     physiotherapy: "Physiotherapy",
     conditions: "Conditions",
     faqs: "Frequently Asked Questions",
-    blog: "Blog",
+    blog: "Pain Clinic Blog",
     appointment: "Book Appointment",
     "puspak-message": "Message from Dr. Puspak Regmi",
     "what-is-headache": "How Weather Changes Trigger Headaches: Causes and Solutions",

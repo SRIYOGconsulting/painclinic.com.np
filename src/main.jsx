@@ -58,7 +58,7 @@ const router = createBrowserRouter([
       {path: "what-is-knee-pain", element : <KneePain /> },
       {path: "what-is-nerve-pain", element : <NervePain /> },
       {path: "what-is-muscle-pain", element : <MusclePain /> },
-      {path: "what-is-sports-injury", element : <SportsInjury /> },
+      {path: "what-is-sports-pain", element : <SportsInjury /> },
       {path: "what-is-whole-body-pain", element : <WholeBodyPain /> },
       {path: "what-is-cancer-pain", element : <CancerPain /> },
     ]

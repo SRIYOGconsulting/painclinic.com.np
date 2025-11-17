@@ -19,28 +19,30 @@ import {
 const Footer = () => {
   return (
     <footer
-      className="bg-[#051739] text-white font-[sans-serif] bg-cover bg-center bg-no-repeat relative font-[sans-serif]"
-      style={{
-        backgroundImage: `url(${footerBg})`,
-      }}
+      className="bg-[#051739] text-white font-[sans-serif] bg-cover bg-center bg-no-repeat relative"
+      style={{ backgroundImage: `url(${footerBg})` }}
     >
-      {/* Overlay for better contrast */}
       <div className="absolute inset-0 bg-[#051739]/95"></div>
 
       <div className="relative z-10">
         {/* Top Section */}
-        <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-4">
+        <div className="max-w-6xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 ">
+
           {/* Left Section */}
-          <div className="md:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <img src={logo} alt="Logo" className="h-20 w-60" />
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <img src={logo} alt="Logo" className="h-20 w-60 object-contain" />
             </div>
-            <p className="text-[#456EA1] leading-relaxed text-[16px] mb-4 ">
+
+            <p className="text-[#456EA1] leading-relaxed text-[16px]">
               Comprehensive Pain Management Clinic in Birtamode, Jhapa, Nepal specializing multiple treatment methods to cure your pain.
             </p>
+
             <button className="border border-gray-700 text-[15px] px-4 py-2 rounded-full text-[#234179]">
               BOOK AN APPOINTMENT
             </button>
+
+            {/* Social Icons */}
             <div className="flex space-x-4 mt-6">
               <a href="#" className="text-gray-300 hover:text-white">
                 <Facebook size={18} />
@@ -58,17 +60,17 @@ const Footer = () => {
           </div>
 
           {/* Treatments */}
-          <div className="md:col-span-1 md:pl-10">
+          <div className="md:pl-6">
             <h3 className="font-semibold text-[20px] mb-4 border-b border-gray-500 pb-1 w-fit">
               Our <span className="text-[#234179]">Treatments</span>
             </h3>
             <ul className="space-y-2 text-[#456EA1] text-[16px]">
-              <li className="hover:underline"><Link to="/what-is-headache">Headache</Link></li>
-              <li className="hover:underline"><Link to="/what-is-joint-pain">Joint Pain</Link></li>
-              <li className="hover:underline"><Link to="/what-is-neck-pain">Neck Pain</Link></li>
-              <li className="hover:underline"><Link to="/what-is-shoulder-pain">Shoulder Pain</Link></li>
-              <li className="hover:underline"><Link to="/what-is-orofacial-pain">Orofacial Pain</Link></li>
-              <li className="hover:underline"><Link to="/what-is-knee-pain">Knee Pain</Link></li>
+              <li><Link className="hover:underline" to="/what-is-headache">Headache</Link></li>
+              <li><Link className="hover:underline" to="/what-is-joint-pain">Joint Pain</Link></li>
+              <li><Link className="hover:underline" to="/what-is-neck-pain">Neck Pain</Link></li>
+              <li><Link className="hover:underline" to="/what-is-shoulder-pain">Shoulder Pain</Link></li>
+              <li><Link className="hover:underline" to="/what-is-orofacial-pain">Orofacial Pain</Link></li>
+              <li><Link className="hover:underline" to="/what-is-knee-pain">Knee Pain</Link></li>
             </ul>
           </div>
 
@@ -78,11 +80,11 @@ const Footer = () => {
               Browse <span className="text-[#234179]">More</span>
             </h3>
             <ul className="space-y-2 text-[#456EA1] text-[16px]">
-              <li className="hover:underline"><Link to="/what-is-nerve-pain">Nerve Related Pain</Link></li>
-              <li className="hover:underline"><Link to="/what-is-muscle-pain">Muscle Pain</Link></li>
-              <li className="hover:underline"><Link to="/what-is-sports-pain">Sports Injury</Link></li>
-              <li className="hover:underline"><Link to="/what-is-whole-body-pain">Whole Body Pain</Link></li>
-              <li className="hover:underline"><Link to="/what-is-cancer-pain">Cancer Pain</Link></li>
+              <li><Link className="hover:underline" to="/what-is-nerve-pain">Nerve Related Pain</Link></li>
+              <li><Link className="hover:underline" to="/what-is-muscle-pain">Muscle Pain</Link></li>
+              <li><Link className="hover:underline" to="/what-is-sports-pain">Sports Injury</Link></li>
+              <li><Link className="hover:underline" to="/what-is-whole-body-pain">Whole Body Pain</Link></li>
+              <li><Link className="hover:underline" to="/what-is-cancer-pain">Cancer Pain</Link></li>
             </ul>
           </div>
 
@@ -91,55 +93,53 @@ const Footer = () => {
             <h3 className="font-semibold text-[20px] mb-4 border-b border-gray-500 pb-1 w-fit">
               Latest <span className="text-[#234179]">Tips</span>
             </h3>
+
             <div className="space-y-4">
+
               {/* Tip 1 */}
-              <div className="flex items-center space-x-3">
-                <img
-                  src={headache}
-                  alt="tip1"
-                  className="rounded-lg w-16 h-12 object-cover"
-                />
+              <div className="flex items-start space-x-3">
+                <img src={headache} className="rounded-lg w-24 h-14 object-cover" />
                 <div>
-                  <div className="flex items-center font-semibold  gap-2 text-[#456EA1] text-[12px] mb-1">
+                  <div className="flex items-center gap-1 text-[#456EA1] text-[12px] font-semibold mb-1">
                     <UserRound size={12} /> <span>Isha Sunam</span>
                     <MessageCircleMore size={12} /> <span>2 Comments</span>
                   </div>
-                  <Link to="/what-is-headache" >
-                  <p className="text-[15px] font-semibold hover:underline hover:text-gray-300">
-                    How Weather Changes Trigger Headaches?
-                  </p></Link>
+                  <Link to="/what-is-headache">
+                    <p className="text-[15px] font-semibold hover:underline hover:text-gray-300">
+                      How Weather Changes Trigger Headaches?
+                    </p>
+                  </Link>
                 </div>
               </div>
 
               {/* Tip 2 */}
-              <div className="flex items-center space-x-3">
-                <img
-                  src={neckPain}
-                  alt="tip2"
-                  className="rounded-lg w-16 h-12 object-cover"
-                />
+              <div className="flex items-start space-x-3">
+                <img src={neckPain} className="rounded-lg w-24 h-14 object-cover" />
                 <div>
-                  <div className="flex items-center font-semibold gap-2 text-[#456EA1] text-[12px] mb-1">
+                  <div className="flex items-center gap-1 text-[#456EA1] text-[12px] font-semibold mb-1">
                     <UserRound size={12} /> <span>Monika Sharma</span>
                     <MessageCircleMore size={12} /> <span>2 Comments</span>
                   </div>
-                  <Link to="/what-is-neck-pain" >
-                  <p className="text-[15px] font-semibold hover:underline hover:text-gray-300">
-                    Neck Pain: Causes Of Neck Pain During The Monsoon Season
-                  </p></Link>
+                  <Link to="/what-is-neck-pain">
+                    <p className="text-[15px] font-semibold hover:underline hover:text-gray-300">
+                      Neck Pain: Causes Of Neck Pain During The Monsoon Season
+                    </p>
+                  </Link>
                 </div>
               </div>
+
             </div>
           </div>
-
         </div>
 
-        {/* Contact Info Section */}
-        <div className="max-w-7xl mx-auto px-6 -mt-4 md:-mt-8">
-          <div className="bg-[#234179] rounded-2xl py-6 px-8 flex flex-col md:flex-row items-center justify-between text-sm">
-            <div className="flex items-center space-x-3">
+        {/* Contact Info */}
+        <div className="max-w-6xl mx-auto px-6 mt-4">
+          <div className="bg-[#234179] rounded-2xl py-10 px-6 md:px-10 flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10 text-sm">
+
+            {/* Address */}
+            <div className="flex items-center space-x-3 w-full md:w-auto">
               <div className="bg-[#1d3770] p-3 rounded-full">
-                <MapPin size={18} className="text-white" />
+                <MapPin size={18} />
               </div>
               <div>
                 <p className="font-semibold text-xs">Clinic Address</p>
@@ -147,9 +147,10 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="flex items-center space-x-3">
+            {/* Email */}
+            <div className="flex items-center space-x-3 w-full md:w-auto">
               <div className="bg-[#1d3770] p-3 rounded-full">
-                <Mail size={18} className="text-white" />
+                <Mail size={18} />
               </div>
               <div>
                 <p className="font-semibold text-xs">Email Enquiry</p>
@@ -157,20 +158,22 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="flex items-center space-x-3">
+            {/* Phone */}
+            <div className="flex items-center space-x-3 w-full md:w-auto">
               <div className="bg-[#1d3770] p-3 rounded-full">
-                <Phone size={18} className="text-white" />
+                <Phone size={18} />
               </div>
               <div>
                 <p className="font-semibold text-xs">Hotline</p>
                 <p className="font-semibold">97010-12345</p>
               </div>
             </div>
+
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="bg-transparent py-4 mt-4 border-t border-[#0b2354]/50">
+        {/* Footer Bottom */}
+        <div className="py-4 mt-6 border-t border-[#0b2354]/50">
           <p className="text-center text-gray-400 text-xs">
             © Copyright 2025 Advance Pain Specialist Clinic Birtamode, Jhapa,
             Nepal.
