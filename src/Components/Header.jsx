@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/images/pain-clinic-logo.png";
+import {ChevronDown, Menu, PhoneCall} from "lucide-react"
 
 const Header = () => {
   const [hoveredMenu, setHoveredMenu] = useState({ main: null, sub: null });
@@ -39,7 +40,7 @@ const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
           className="md:hidden text-3xl"
           onClick={() => setMobileOpen(!mobileOpen)}
         >
-          ☰
+          <Menu/>
         </button>
 
         {/* DESKTOP NAV */}
@@ -105,6 +106,25 @@ const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
           <li><Link to="/contact" className="hover:text-blue-300 transition">Contact</Link></li>
         </ul>
 
+        {/* CALL EMERGENCY */}
+           <div className="hidden md:flex items-center space-x-3">
+  {/* Icon */}
+  <div className="w-9 h-9 bg-[#E8F0FF] text-[#234179] rounded-full flex items-center justify-center">
+    <PhoneCall size={18} />
+  </div>
+
+  {/* Text + Phone Number */}
+  <div className="flex flex-col leading-tight">
+    <span className="text-gray-500 text-xs">Call Emergency</span>
+    <a
+      href="tel:+9779701012345"
+      className="text-lg font-semibold text-[#234179] hover:text-blue-800"
+    >
+      +977-97010-12345
+    </a>
+  </div>
+</div>
+           
         {/* BOOK APPOINTMENT */}
         <div className="hidden md:block">
           <Link to="/appointment" className="bg-[#234179] text-white px-4 py-2 rounded-full">
@@ -124,9 +144,9 @@ const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
       <li>
         <button
           onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
-          className="w-full text-left"
+          className="w-full text-left flex"
         >
-          About ^
+          About <ChevronDown />
         </button>
 
         {mobileAboutOpen && (
@@ -140,9 +160,9 @@ const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
             <li>
               <button
                 onClick={() => setMobileMessagesOpen(!mobileMessagesOpen)}
-                className="w-full text-left"
+                className="w-full text-left flex"
               >
-                Messages ^
+                Messages <ChevronDown />
               </button>
 
               {mobileMessagesOpen && (
@@ -161,9 +181,9 @@ const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
       <li>
         <button
           onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-          className="w-full text-left"
+          className="w-full text-left flex"
         >
-          Services ^
+          Services <ChevronDown/>
         </button>
 
         {mobileServicesOpen && (

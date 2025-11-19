@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "motion/react"
+
 import background from "../assets/images/home/background.png";
 import aboutImage from "../assets/images/home/1.jpg";
 import director from "../assets/images/home/director.png";
@@ -25,10 +27,44 @@ import fibromyalgiaI from "../assets/images/fibromyalgia.png";
 import sportsI from "../assets/images/sports-injury.png";
 import wholeI from "../assets/images/whole-body.png";
 import cancerI from "../assets/images/cancer.png";
+import kneehero from "../assets/images/1Hero.png";
+import headachehero from "../assets/images/2Hero.png";
+import sectitles1 from "../assets/images/shapes/sec-title-s-1-1.png";
+import sectitles2 from "../assets/images/shapes/sec-title-s-1-2.png";
+import thunder from "../assets/images/shapes/why-choose-shape-1-1.png";
+import aboutshape from "../assets/images/shapes/about-shape-1-1.png";
+
 import { UserRound, Hospital, HeartPulse } from "lucide-react";
 
 
 const Home = () => {
+  const heroSlides = [
+  {
+    id: 1,
+    title: "Pain Clinic in Birtamode, Jhapa",
+    description: "Advance Pain Specialist Clinic in Birtamode, Jhapa, Nepal offers expert care for managing chronic and acute pain conditions.",
+    button:"View all conditions",
+    image: kneehero,
+  },
+  {
+    id: 2,
+    title: "Modern  Diagnostic Technology",
+    description: "At Advance Pain Specialist Clinic, we are committed to helping you regain a pain-free life. ",
+    button:"Book an Appointment",
+    image: headachehero,
+  },
+];
+
+const [heroIndex, setHeroIndex] = useState(0);
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setHeroIndex((prev) => (prev + 1) % heroSlides.length);
+  }, 3000);
+  return () => clearInterval(interval);
+}, []);
+
+
   const slides = [
     { id: 1, title: "Joint Pain", bigImage: JointImg, smallImage: director },
     { id: 2, title: "Back Pain", bigImage: shoulderImg, smallImage: director },
@@ -89,14 +125,28 @@ const Home = () => {
   ];
 
   const [currentBlogIndex, setCurrentBlogIndex] = useState(0);
+  const loopedSlides = blogSlides.concat(blogSlides);
 
   const nextBlog = () => {
-    setCurrentBlogIndex((prev) => (prev + 1 >= blogSlides.length - 1 ? 0 : prev + 1));
-  };
+  setCurrentBlogIndex((prev) =>
+    (prev + 1) % blogSlides.length
+  );
+};
 
-  const prevBlog = () => {
-    setCurrentBlogIndex((prev) => (prev - 1 < 0 ? blogSlides.length - 2 : prev - 1));
-  };
+const prevBlog = () => {
+  setCurrentBlogIndex((prev) =>
+    prev - 1 < 0 ? blogSlides.length - 1 : prev - 1
+  );
+};
+useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentBlogIndex((prev) =>
+      prev + 1 >= blogSlides.length ? 0 : prev + 1
+    );
+  }, 3000);
+
+  return () => clearInterval(interval);
+}, [blogSlides.length]);
 
 
   // for doodle like image
@@ -105,35 +155,76 @@ const Home = () => {
     { src: shoulderI, alt: 'Shoulder Pain', label: 'Shoulder Pain' },
     { src: sportsI, alt: 'Sports Injury', label: 'Sports Injury' },
     { src: headacheIcon, alt: 'Headache', label: 'Headache' },
-    { src: ankelI, alt: 'Ankle Pain', label: 'Ankle Pain' }
+    { src: kneeI, alt: 'Knee pain', label: 'Knee Pain' },
+    { src: JointIcon, alt: 'Joint pain', label: 'Joint Pain' },
+    { src: neckIcon, alt: 'Neck pain', label: 'Neck Pain' },
+    { src: cancerI, alt: 'Cancer pain', label: 'Cancer Pain' },
+    { src: wholeI, alt: 'whole body pain', label: 'whole body Pain' },
+    { src: fibromyalgiaI, alt: 'fibromyalhia', label: 'fibromyalhia Pain' },
+    { src: muscleI, alt: 'muscle pain', label: 'muscle Pain' },
+    { src: nerveI, alt: 'nerve pain', label: 'nerve Pain' },
+    { src: discI, alt: 'disc pain', label: 'disc Pain' },
+    { src: ankelI, alt: 'ankel pain', label: 'Ankle Pain' },
   ];
 
+  const loopedDoodles = doodleImages.concat(doodleImages  );
 
   return (
     <div className="font-[sans-serif] overflow-x-hidden w-full max-w-screen mx-auto">
       {/* Hero Section */}
-      <section
-        className="relative w-full h-[1000px] bg-cover bg-center"
-        style={{ backgroundImage: `url(${background})` }}
+   <section
+  className="relative w-full h-[600px] md:h-[750px] bg-cover bg-center overflow-hidden px-6 md:px-20"
+  style={{ backgroundImage: `url(${background})` }}
+>
+  {/* Content + Sliding Image */}
+  <div className="relative z-10 flex items-center justify-between h-full w-full">
+    
+    {/* LEFT CONTENT */}
+    <div className="text-black max-w-xl flex-1">
+      <p className="text-[18px]">Advance Pain Clinic</p>
+
+      <p className="text-[45px] md:text-[55px] font-semibold">
+        {heroSlides[heroIndex].title}
+      </p>
+
+      <p className="text-[16px] md:text-[20px] mt-2">
+        {heroSlides[heroIndex].description}
+      </p>
+
+      <button className="mt-6 px-6 py-3 bg-[#234179] text-white font-semibold rounded-full">
+        {heroSlides[heroIndex].button}
+      </button>
+    </div>
+
+    {/* RIGHT SLIDING IMAGE */}
+    <div className="hidden md:flex flex-1 h-full overflow-hidden py-0">
+      <div
+        className="flex h-full transition-transform duration-700 ease-in-out"
+        style={{ transform: `translateX(-${heroIndex * 100}%)` }}
       >
-        <div className="absolute inset-0 flex items-center px-6 md:px-20">
-          <div className="transition-all duration-500 ease-in-out">
-            <p className="text-[18px]">Advance Pain Clinic</p>
-            <p className="text-[45px] md:text-[65px] font-semibold">
-              Pain Clinic In <br />Birtamode, Jhapa
-            </p>
-            <p className="text-[16px] md:text-[18px]">
-              Advance Pain Specialist Clinic in Birtamode, Jhapa, Nepal offers expert care for managing chronic and acute pain conditions.
-            </p>
-            <button className="mt-4 px-6 py-2 bg-[#234179] text-white rounded-full">View all conditions</button>
+        {heroSlides.map((slide) => (
+          <div key={slide.id} className="flex-none w-full h-full relative py-40">
+            <img
+              src={slide.image}
+              alt="Hero"
+              className="object-contain w-full h-[600px] max-h-full"
+              style={{ objectPosition: "center" }}
+            />
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+      <div ><motion.img src={orofacialI} animate={{rotate:360}} transition={{ repeat:Infinity, duration:2}} className="h-20 w-20"/></div>
 
       {/* About Us Section */}
-      <div className="px-4 md:px-8 py-12 font-sans mt-15">
+      <div className="px-4 md:px-8 py-12 font-sans mt-15 relative">
+        <motion.img src={aboutshape} alt="clover" animate={{y:[0,-20,0]}} transition={{repeat:Infinity, duration:4, ease:"easeInOut"}} className="absolute top-80 right-5 h-24 w-24 opacity-30" />
         <Link to='/about'>
           <div className="flex flex-col md:flex-row max-w-6xl mx-auto items-center gap-10 md:gap-30">
+
             {/* Left Image Section */}
             <div className="relative w-full md:w-1/2">
               <img
@@ -151,9 +242,10 @@ const Home = () => {
 
             {/* Right Content Section */}
             <div className="w-full md:w-1/2">
+            <div className="flex gap-2"><motion.img src={sectitles1} animate={{rotate:360}} transition={{repeat:Infinity}} className="h-4"/>
               <p className="text-sm text-gray-700 font-semibold flex items-center gap-1 mb-2">
                 About Us
-              </p>
+              </p></div>
               <h2 className="text-4xl font-bold text-[#0A2241] mb-2">
                 Welcome to Advance Pain Clinic, Birtamode
               </h2>
@@ -196,10 +288,22 @@ const Home = () => {
 
       {/* Services Section */}
       <section className="bg-[#234179] py-16 px-4 mt-15">
-        <div className="text-center text-white mb-10">
-          <p className="text-sm mb-2">Our Services</p>
-          <h2 className="text-4xl font-bold">Pain Conditions That We Treat</h2>
-        </div>
+        <div className="text-white mb-10 flex flex-col items-center">
+  <div className="flex items-center gap-2">
+    <motion.img 
+      src={sectitles2} 
+      animate={{ rotate: 360 }} 
+      transition={{ repeat: Infinity, duration: 4 }}   
+      className="h-4"
+    />
+    <p className="text-sm">Our Services</p>
+  </div>
+
+  <h2 className="text-4xl font-bold mt-2">
+    Pain Conditions That We Treat
+  </h2>
+</div>
+
 
         <div className="overflow-hidden relative max-w-6xl mx-auto">
 
@@ -288,9 +392,16 @@ const Home = () => {
 
           {/* LEFT CONTENT */}
           <div className="w-full md:w-1/2 p-10 relative z-10 mb-4">
+          <div className="flex gap-2"><motion.img 
+      src={sectitles2} 
+      animate={{ rotate: 360 }} 
+      transition={{ repeat: Infinity, duration: 4 }}   
+      className="h-4"
+    />
             <h3 className="text-sm text-white mb-1">
               Say Goodbye To Your Pain
-            </h3>
+            </h3></div>
+          
 
             <h2 className="text-4xl font-bold text-white leading-tight mb-4">
               Special Offer For <br /> Senior Citizens
@@ -318,8 +429,14 @@ const Home = () => {
         </div>
       </section>
 
-      {/* New Section - Why Choose Us */}
+      {/*Why Choose Us */}
       <section className="bg-white py-20 font-[sans-serif] relative">
+
+        <motion.img src={sectitles1} alt="clover" animate={{rotate:360}} transition={{repeat:Infinity, duration:4, ease:"linear"}} className="absolute top-10 left-60 h-5 w-5" />
+        <motion.img src={sectitles1} alt="clover" animate={{rotate:360}} transition={{repeat:Infinity, duration:4, ease:"linear"}} className="absolute bottom-30 left-140 h-5 w-5" />
+        <motion.img src={sectitles1} alt="clover" animate={{rotate:360}} transition={{repeat:Infinity, duration:4, ease:"linear"}} className="absolute bottom-80 right-20 h-5 w-5" />
+        <motion.img src={sectitles1} alt="clover" animate={{rotate:360}} transition={{repeat:Infinity, duration:4, ease:"linear"}} className="absolute top-30 right-20 h-5 w-5" />
+        <motion.img src={thunder} alt="clover" animate={{rotate:[-10,10,-10]}} transition={{repeat:Infinity, duration:2, ease:"easeInOut"}} className="absolute top-50 left-30 h-15 w-15" />
 
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center px-6 gap-12 relative">
 
@@ -343,10 +460,17 @@ const Home = () => {
 
           {/* RIGHT SIDE CONTENT */}
           <div className="w-full md:w-1/2">
-
-            <p className="text-[#234179] font-semibold mb-2 text-sm flex items-center gap-2">
+            <div className="flex items-center"><motion.img 
+      src={sectitles1} 
+      animate={{ rotate: 360 }} 
+      transition={{ repeat: Infinity, duration: 4 }}   
+      className="h-4"
+    />
+    <p className="text-[#234179] font-semibold text-sm flex items-center gap-2">
               <span className="text-[#234179] text-xl"></span> Reasons To Choose Us
             </p>
+            </div>
+            
 
             <h2 className="text-[42px] md:text-[45px] font-bold text-[#0A2241] leading-tight mb-10">
               Why Choose Us?
@@ -449,10 +573,11 @@ const Home = () => {
 
           {/* LEFT SIDE CONTENT */}
           <div className="w-full md:w-1/2 flex flex-col">
-
-            <p className="text-[#234179] font-semibold text-sm mb-1">
+            <div className="flex gap-2"><motion.img src={sectitles1}  animate={{ rotate: 360 }} 
+      transition={{ repeat: Infinity, duration: 4 }}   
+      className="h-4"/><p className="text-[#234179] font-semibold text-sm mb-1">
               Professional Pain Management
-            </p>
+            </p></div>
 
             <h2 className="text-4xl font-bold text-[#0A2241] mb-4">
               How We Cure?
@@ -496,8 +621,8 @@ const Home = () => {
               className="w-[] h-[380px] object-cover rounded-2xl shadow-lg"
             />
 
-            <div className="absolute bottom-6 left-11 bg-white shadow-lg rounded-full w-30 h-30 flex items-center justify-center text-center ">
-              <p className="text-[#234179] font-semibold text-sm leading-tight">
+            <div className="absolute bottom-6 left-11 bg-white shadow-lg rounded-full w-30 h-30 flex items-center justify-center text-center hover:bg-[#234179] ">
+              <p className="text-[#234179] font-semibold text-sm leading-tight hover:text-white">
                 Get Rid <br /> of<br /> Your Pain
               </p>
             </div>
@@ -510,9 +635,12 @@ const Home = () => {
         <div className="max-w-6xl mx-auto">
 
           {/* Title */}
-          <p className="text-[#234179] font-semibold text-sm mb-2">
+          <div className="flex gap-2"><motion.img src={sectitles1}  animate={{ rotate: 360 }} 
+      transition={{ repeat: Infinity, duration: 4 }}   
+      className="h-4"/><p className="text-[#234179] font-semibold text-sm mb-2">
             Pain Clinic Blog
-          </p>
+          </p></div>
+          
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-4xl font-bold text-[#0A2241]">Latest Updates</h2>
 
@@ -540,7 +668,7 @@ const Home = () => {
               className="flex transition-transform duration-500"
               style={{ transform: `translateX(-${currentBlogIndex * 50}%)` }}
             >
-              {blogSlides.map((item) => (
+              {loopedSlides.map((item, index) => (
                 <Link
                   to={`/${item.path}`}
                   key={item.id}
@@ -551,10 +679,11 @@ const Home = () => {
                     {/* IMAGE */}
                     <div className="relative h-full w-full rounded-3xl overflow-hidden bg-white p-6">
                       <div className="w-full h-full rounded-2xl overflow-hidden">
-                        <img
+                        <motion.img
                           src={item.image}
                           alt={item.title}
                           className="w-full h-full object-cover"
+                          whileHover={{ scale: 1.1 }}
                         />
                       </div>
 
@@ -584,7 +713,7 @@ const Home = () => {
                       </button>
                     </div>
                   </div>
-                </Link>
+                </Link> 
               ))}
             </div>
           </div>
@@ -595,30 +724,41 @@ const Home = () => {
       {/* icon image slideshow section */}
 
       {/* DOODLE ICON AUTO SLIDER SECTION */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
+<section className="py-20 ">
+  <div className="max-w-5xl mx-auto">
 
-          {/* AUTO SLIDER WRAPPER */}
-          <div className="overflow-hidden relative">
-            <div
-              className="flex gap-10 animate-slide whitespace-nowrap"
-            >
-              {doodleImages.concat(doodleImages).map((item, index) => (
-                <div
-                  key={index}
-                  className="w-32 mx-auto flex-shrink-0 flex flex-col items-center text-center"
-                >
-                  <img
-                    src={item.src}
-                    alt={item.label}
-                    className="w-20 h-20 object-contain mb-3"
-                  />
-                </div>
-              ))}
-            </div>
+    {/* AUTO SLIDER WRAPPER */}
+    <div className="overflow-hidden relative">
+      <div
+        className="
+          flex 
+          gap-19   
+          whitespace-nowrap 
+          transition-transform 
+          duration-500
+        "
+        style={{ transform: `translateX(-${currentBlogIndex * 30}%)` }}
+      >
+        {loopedDoodles.map((item, index) => (
+          <div
+            key={index}
+            className="w-32 mx-auto flex-shrink-0 flex flex-col items-center text-center relative group"
+          >
+            <img
+              src={item.src}
+              alt={item.label}
+              className="w-25 h-25 object-contain mb-3"
+            />
+            <p>{item.label}</p>
+            <div className="absolute inset-0 bg-white opacity-60 group-hover:opacity-10 transition-opacity duration-300"></div>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>
+
     </div>
   );
 };

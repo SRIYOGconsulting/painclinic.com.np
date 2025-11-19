@@ -38,8 +38,7 @@ const Footer = () => {
               Comprehensive Pain Management Clinic in Birtamode, Jhapa, Nepal specializing multiple treatment methods to cure your pain.
             </p>
 
-            <button className="border border-gray-700 text-[15px] px-4 py-2 rounded-full text-[#234179]">
-              BOOK AN APPOINTMENT
+            <button className="border border-gray-700 text-[15px] px-4 py-2 rounded-full text-[#234179]"><a href="https://www.facebook.com/painclinicbirtamode">BOOK AN APPOINTMENT</a>
             </button>
 
             {/* Social Icons */}
@@ -142,8 +141,8 @@ const Footer = () => {
                 <MapPin size={18} />
               </div>
               <div>
-                <p className="font-semibold text-xs">Clinic Address</p>
-                <p className="font-semibold">Birtamode, Jhapa, Nepal</p>
+                <p className="font-semibold text-[14px]">Clinic Address</p>
+                <p className="font-semibold text-[20px] hover:underline"><a href="https://www.google.com/maps/place/JXRM%2BHMW+Advance+Pain+Specialist+Clinic,+Advance+Pain+Specialist+Clinic+1,+Mahendra+Hwy,+Birtamod+57206/@26.641482,87.9841929,17z/data=!4m6!3m5!1s0x39e5bb007acd06ab:0xca6d4798d37c7569!8m2!3d26.641482!4d87.9841929!16s%2Fg%2F11l_0fb01s?g_ep=Eg1tbF8yMDI1MTExMl8wIJvbDyoASAJQAQ%3D%3D">Birtamode, Jhapa, Nepal</a></p>
               </div>
             </div>
 
@@ -153,8 +152,8 @@ const Footer = () => {
                 <Mail size={18} />
               </div>
               <div>
-                <p className="font-semibold text-xs">Email Enquiry</p>
-                <p className="font-semibold">info@painclinic.com.np</p>
+                <p className="font-semibold text-[14px]">Email Enquiry</p>
+                <p className="font-semibold hover:underline text-[20px]"><a href="mailto:info@painclinic.com.np">info@painclinic.com.np</a></p>
               </div>
             </div>
 
@@ -164,8 +163,8 @@ const Footer = () => {
                 <Phone size={18} />
               </div>
               <div>
-                <p className="font-semibold text-xs">Hotline</p>
-                <p className="font-semibold">97010-12345</p>
+                <p className="font-semibold text-[14px]">Hotline</p>
+                <p className="font-semibold hover:underline text-[20px]"><a href="tel:+9779701012345">97010-12345</a></p>
               </div>
             </div>
 
