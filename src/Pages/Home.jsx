@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "motion/react"
+import { motion, AnimatePresence } from "motion/react"
 
 import background from "../assets/images/home/background.png";
 import aboutImage from "../assets/images/home/1.jpg";
@@ -10,6 +10,9 @@ import JointImg from "../assets/images/joint-pain.jpg";
 import neckImg from "../assets/images/neck-pain.jpg";
 import shoulderImg from "../assets/images/shoulder-pain.jpg";
 import orofacial from "../assets/images/orafacial-pain.jpg";
+import knee from "../assets/images/knee-pain.jpg";
+import muscle from "../assets/images/muscle-pain.jpg";
+import nerve from "../assets/images/nerve-pain.jpg";
 import offer from "../assets/images/offer.jpg";
 import choose from "../assets/images/why-choose-1-2.jpg";
 import backpain from "../assets/images/back-pain (1).jpg";
@@ -33,8 +36,12 @@ import sectitles1 from "../assets/images/shapes/sec-title-s-1-1.png";
 import sectitles2 from "../assets/images/shapes/sec-title-s-1-2.png";
 import thunder from "../assets/images/shapes/why-choose-shape-1-1.png";
 import aboutshape from "../assets/images/shapes/about-shape-1-1.png";
+import heroshape from "../assets/images/shapes/main-slider-shape-1-3.png";
+import clover from "../assets/images/shapes/main-slider-shape-1-4.png";
+import flower from "../assets/images/shapes/main-slider-shape-1-2.png";
+import latestupdate from "../assets/images/shapes/welcome-inner-bg-1-1.jpg"
 
-import { UserRound, Hospital, HeartPulse } from "lucide-react";
+import { UserRound, Hospital, HeartPulse, ThumbsUp } from "lucide-react";
 
 
 const Home = () => {
@@ -48,7 +55,7 @@ const Home = () => {
   },
   {
     id: 2,
-    title: "Modern  Diagnostic Technology",
+    title: "Modern DiagnosticTechnology",
     description: "At Advance Pain Specialist Clinic, we are committed to helping you regain a pain-free life. ",
     button:"Book an Appointment",
     image: headachehero,
@@ -62,7 +69,7 @@ useEffect(() => {
     setHeroIndex((prev) => (prev + 1) % heroSlides.length);
   }, 3000);
   return () => clearInterval(interval);
-}, []);
+}, [heroSlides.length]);
 
 
   const slides = [
@@ -70,8 +77,12 @@ useEffect(() => {
     { id: 2, title: "Back Pain", bigImage: shoulderImg, smallImage: director },
     { id: 3, title: "Neck Pain", bigImage: neckImg, smallImage: director },
     { id: 4, title: "Shoulder Pain", bigImage: shoulderImg, smallImage: director },
-    { id: 5, title: "Knee Pain", bigImage: headacheImg, smallImage: director },
-    { id: 6, title: "Hip Pain", bigImage: orofacial, smallImage: director },
+    { id: 5, title: " Headache", bigImage: headacheImg, smallImage: director },
+    { id: 6, title: "Orofacial Pain", bigImage: orofacial, smallImage: director },
+    { id: 7, title: "Knee Pain", bigImage: knee, smallImage: director },
+    { id: 8, title: "Muscle Pain", bigImage: muscle, smallImage: director },
+    { id: 9, title: "Nerve Pain", bigImage: nerve, smallImage: director },
+
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -173,55 +184,96 @@ useEffect(() => {
     <div className="font-[sans-serif] overflow-x-hidden w-full max-w-screen mx-auto">
       {/* Hero Section */}
    <section
-  className="relative w-full h-[600px] md:h-[750px] bg-cover bg-center overflow-hidden px-6 md:px-20"
+  className="relative w-full h-[600px] md:h-[850px] bg-cover bg-center overflow-hidden md:px-20"
   style={{ backgroundImage: `url(${background})` }}
 >
   {/* Content + Sliding Image */}
   <div className="relative z-10 flex items-center justify-between h-full w-full">
-    
+    <motion.img src={flower} alt="clover" animate={{rotate:360}} transition={{repeat:Infinity, duration:2,}} className="absolute top-70 left-90 h-15 w-15 "/>
+    <motion.img src={clover} alt="clover" animate={{rotate:360}} transition={{repeat:Infinity, duration:3, }} className="absolute bottom-90 right-0 h-15 w-15 "/>
+    <motion.img src={clover} alt="clover" animate={{rotate:360}} transition={{repeat:Infinity, duration:3, }} className="absolute bottom-5 left-0 h-15 w-15 "/>
+    <motion.img src={heroshape} alt="clover" animate={{x:[0,-10,0]}} transition={{repeat:Infinity, duration:3, ease:"easeInOut"}} className="absolute bottom-20 left-90 h-15 w-15 "/>
     {/* LEFT CONTENT */}
-    <div className="text-black max-w-xl flex-1">
-      <p className="text-[18px]">Advance Pain Clinic</p>
 
-      <p className="text-[45px] md:text-[55px] font-semibold">
-        {heroSlides[heroIndex].title}
-      </p>
+<div className="text-[#0A2241] flex-1 pt-60">
+  <p className="text-xs md:text-[18px] mb-3 font-semibold tracking-wide text-[#234179]">
+    Advance Pain Clinic
+  </p>
 
-      <p className="text-[16px] md:text-[20px] mt-2">
-        {heroSlides[heroIndex].description}
-      </p>
+<div className="relative inline-block overflow-hidden max-w- mb-5">
+  <p className="text-6xl md:text-6xl font-semibold leading-tight mb-5  ">
+    {heroSlides[heroIndex].title}
+  </p>
+  <AnimatePresence>
+  {[...Array(5)].map((_, i) => (
+    <motion.div
+      key={`overlay-${heroIndex}-${i}`} 
+      className="absolute top-0 h-full bg-[#234179] z-20"
+      style={{
+        left: `${(i * 100) / 5}%`, // split overlay into 5 vertical slices
+        width: `${100 / 5}%`,
+      }}
+      initial={{ y: "-100%" }}           // slice covers text fully
+      animate={{ y: "100%" }}      // slide down to reveal text
+      //  exit={{y:0}}            // reset for next slide
+      transition={{
+        duration: 1,
+        ease: "easeInOut",
+        delay: i * 0.1,            
+      }}
+    />
+  ))}
+</AnimatePresence>
 
-      <button className="mt-6 px-6 py-3 bg-[#234179] text-white font-semibold rounded-full">
-        {heroSlides[heroIndex].button}
-      </button>
+                </div>
+
+  <p className="text-xs md:text-base text-gray-600 leading-relaxed max-w-xl">
+    {heroSlides[heroIndex].description}
+  </p>
+
+ <div className="mt-6 flex items-center gap-60">
+  <button className="px-6 py-3 bg-[#234179] text-white font-semibold rounded-full hover:bg-[#1e3767] transition">
+    {heroSlides[heroIndex].button}
+  </button>
+
+  <div className="flex items-center bg-white rounded-xl shadow-lg px-5 py-3 w-[180px] gap-4">
+    <div className="bg-[#234179] text-white p-3 rounded-lg flex items-center justify-center">
+      <ThumbsUp size={26} strokeWidth={2} />
     </div>
+
+    <div className="flex flex-col leading-tight">
+      <span className="text-3xl text-[#234179]">100%</span>
+      <span className="text-sm font-medium text-gray-600">Pain Free Life</span>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
 
     {/* RIGHT SLIDING IMAGE */}
-    <div className="hidden md:flex flex-1 h-full overflow-hidden py-0">
-      <div
-        className="flex h-full transition-transform duration-700 ease-in-out"
-        style={{ transform: `translateX(-${heroIndex * 100}%)` }}
-      >
-        {heroSlides.map((slide) => (
-          <div key={slide.id} className="flex-none w-full h-full relative py-40">
-            <img
-              src={slide.image}
-              alt="Hero"
-              className="object-contain w-full h-[600px] max-h-full"
-              style={{ objectPosition: "center" }}
-            />
-          </div>
-        ))}
-      </div>
-    </div>
+    <div className="hidden md:flex flex-1 h-full overflow-hidden py-0 relative">
+  <AnimatePresence>
+    <motion.img
+      key={heroIndex} // triggers AnimatePresence on slide change
+      src={heroSlides[heroIndex].image}
+      alt="Hero"
+      className="w-[1100px] h-[850px] object-cover absolute top-30 left-0"
+      style={{ objectPosition: "center", zIndex: 1 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }}
+    />
+  </AnimatePresence>
+</div>
   </div>
 </section>
 
-      <div ><motion.img src={orofacialI} animate={{rotate:360}} transition={{ repeat:Infinity, duration:2}} className="h-20 w-20"/></div>
-
       {/* About Us Section */}
       <div className="px-4 md:px-8 py-12 font-sans mt-15 relative">
-        <motion.img src={aboutshape} alt="clover" animate={{y:[0,-20,0]}} transition={{repeat:Infinity, duration:4, ease:"easeInOut"}} className="absolute top-80 right-5 h-24 w-24 opacity-30" />
+        <motion.img src={aboutshape} alt="clover" animate={{y:[0,-20,0]}} transition={{repeat:Infinity, duration:3, ease:"easeInOut"}} className="absolute top-80 right-5 h-24 w-24 opacity-30" />
         <Link to='/about'>
           <div className="flex flex-col md:flex-row max-w-6xl mx-auto items-center gap-10 md:gap-30">
 
@@ -631,9 +683,12 @@ useEffect(() => {
       </section>
 
       {/* LATEST UPDATES SECTION */}
-      <section className="bg-[#e8f5ff] py-20 px-6">
+      <section className="relative bg-[#e8f5ff] py-20 px-6 bg-cover" >
+        <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{ backgroundImage: `url(${latestupdate})`, opacity: 0.3 }}
+  ></div>
         <div className="max-w-6xl mx-auto">
-
           {/* Title */}
           <div className="flex gap-2"><motion.img src={sectitles1}  animate={{ rotate: 360 }} 
       transition={{ repeat: Infinity, duration: 4 }}   
@@ -721,9 +776,7 @@ useEffect(() => {
         </div>
       </section>
 
-      {/* icon image slideshow section */}
-
-      {/* DOODLE ICON AUTO SLIDER SECTION */}
+      {/* doodle image slideshow section */}
 <section className="py-20 ">
   <div className="max-w-5xl mx-auto">
 
