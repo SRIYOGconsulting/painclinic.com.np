@@ -1,4 +1,5 @@
 import React from "react";
+import lab from "../assets/images/lab.png"
 
 const Lab = () => {
   return (
@@ -8,7 +9,7 @@ const Lab = () => {
         {/* Left Image Section */}
         <div className="bg-[#f3f6fa] rounded-xl">
           <img
-            
+            src={lab}
             alt="product details"
             className="rounded-md object-cover h-120 w-full"
           />

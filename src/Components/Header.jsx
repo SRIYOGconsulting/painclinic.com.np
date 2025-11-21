@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/images/pain-clinic-logo.png";
-import { ChevronDown, Menu, PhoneCall } from "lucide-react";
+import { ChevronDown, Menu, PhoneCall, MoveUpRight } from "lucide-react";
 
 const Header = () => {
   const [hoveredMenu, setHoveredMenu] = useState({ main: null, sub: null });
@@ -95,10 +95,10 @@ const Header = () => {
         </ul>
 
         {/* RIGHT SECTION: Call Emergency, Book Appointment, Hamburger */}
-        <div className="flex items-center gap-4 flex-shrink-0">
+        <div className="flex items-center gap-10 flex-shrink-0">
 
-          {/* CALL EMERGENCY — only LG+ */}
-          <div className="hidden xl:flex items-center space-x-3">
+          {/* CALL EMERGENCY */}
+          <div className="hidden xl:flex items-center space-x-2">
             <div className="w-9 h-9 bg-[#E8F0FF] text-[#234179] rounded-full flex items-center justify-center">
               <PhoneCall size={18} />
             </div>
@@ -111,10 +111,10 @@ const Header = () => {
           </div>
 
           {/* BOOK APPOINTMENT — only XL */}
-          <div className="hidden xl:block">
-            <Link to="/appointment" className="bg-[#234179] text-white px-4 py-2 rounded-full">
-              Book Appointment
-            </Link>
+          <div className="hidden xl:block flex ">
+            <a href="https://www.facebook.com/painclinicbirtamode" className="flex bg-[#234179] text-white px-4 py-2 rounded-full">
+              Book Appointment <MoveUpRight size={20}/>
+            </a>
           </div>
 
           {/* HAMBURGER — visible < LG */}

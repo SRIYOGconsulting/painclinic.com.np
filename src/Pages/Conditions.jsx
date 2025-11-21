@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import headacheImg from "../assets/images/headache-pain.jpg";
 import JointImg from "../assets/images/joint-pain.jpg";
 import neckImg from "../assets/images/neck-pain.jpg";
@@ -35,6 +36,7 @@ const conditions = [
       "Headaches can range from mild discomfort to severe, debilitating pain. They may be caused by stress, tension, migraines, or underlying medical conditions, requiring expert evaluation and targeted treatment.",
     image: headacheImg,
     icon: headacheIcon,
+    path: "what-is-headache",
   },
   {
     title: "Joint Pain",
@@ -42,6 +44,7 @@ const conditions = [
       "Joint pain, whether due to arthritis, injury, or overuse, can limit mobility and reduce quality of life. It often worsens with age or weather changes and requires specialized care for effective relief.",
     image: JointImg,
     icon: JointIcon,
+    path: "what-is-joint-pain",
   },
   {
     title: "Neck Pain",
@@ -49,6 +52,7 @@ const conditions = [
       "Neck pain often results from poor posture, muscle strain, or conditions like cervical spondylosis. It can lead to stiffness, reduced motion, and discomfort, impacting daily activities.",
     image: neckImg,
     icon: neckIcon,
+    path: "what-is-neck-pain",
   },
   {
     title: "Shoulder Pain",
@@ -56,6 +60,7 @@ const conditions = [
       "Shoulder pain, caused by rotator cuff injuries, frozen shoulder, or inflammation, can hinder arm movement and affect routine tasks. Early diagnosis and treatment are key to recovery.",
     image: shoulderImg,
     icon: shoulderI,
+    path: "what-is-shoulder-pain",
   },
   {
     title: "Orofacial Pain",
@@ -63,6 +68,7 @@ const conditions = [
       "Orofacial pain, including jaw discomfort and facial pain, can stem from dental issues, nerve problems, or muscle strain. It requires a multi-disciplinary approach for effective relief.",
     image: orofacial,
     icon: orofacialI,
+    path: "what-is-orofacial-pain",
   },
   {
     title: "Disc Prolapse",
@@ -70,6 +76,7 @@ const conditions = [
       "Back pain, including conditions like slipped discs, can cause severe discomfort, radiating pain, or numbness in the legs. It is often triggered by injury, poor posture, or degenerative conditions.",
     image: disc,
     icon: discI,
+    path: "what-is-whole-body-pain",
   },
   {
     title: "Knee Pain",
@@ -77,6 +84,7 @@ const conditions = [
       "Knee pain can result from injuries, arthritis, or overuse. It affects mobility and may worsen with age or physical activity, making timely intervention crucial.",
     image: knee,
     icon: kneeI,
+    path: "what-is-knee-pain",
   },
   {
     title: "Ankle Pain",
@@ -84,6 +92,7 @@ const conditions = [
       "Ankle pain is commonly caused by sprains, fractures, or conditions like gout. It can hinder walking and requires proper care to prevent long-term complications.",
     image: ankel,
     icon: ankelI,
+    path: "what-is-knee-pain",
   },
   {
     title: "Nerve Related Pain",
@@ -91,6 +100,7 @@ const conditions = [
       "Nerve pain, such as sciatica or neuropathy, manifests as sharp, burning, or tingling sensations. It often results from nerve damage or compression and needs expert management.",
     image: nerve,
     icon: nerveI,
+    path: "what-is-nerve-pain",
   },
   {
     title: "Muscle Pain",
@@ -98,6 +108,7 @@ const conditions = [
       "Muscle pain can occur due to overexertion, injuries, or medical conditions like myalgia. It affects physical activity and requires tailored therapies for relief and recovery.",
     image: muscle,
     icon: muscleI,
+    path: "what-is-muscle-pain",
   },
   {
     title: "Fibromyalgia",
@@ -105,6 +116,7 @@ const conditions = [
       "Fibromyalgia is a chronic condition causing widespread pain, fatigue, and sleep disturbances. Managing this condition involves a combination of medication, therapy, and lifestyle changes.",
     image: fibromyalgia,
     icon: fibromyalgiaI,
+    path: "what-is-neck-pain",
   },
   {
     title: "Sports Injury",
@@ -112,6 +124,7 @@ const conditions = [
       "Sports injuries, including sprains, strains, and fractures, can impair athletic performance. Early diagnosis and rehabilitation are vital for a full recovery.",
     image: sports,
     icon: sportsI,
+    path: "what-is-sports-pain",
   },
   {
     title: "Whole Body Pain",
@@ -119,6 +132,7 @@ const conditions = [
       "Whole body pain, often linked to chronic conditions, stress, or fibromyalgia, affects overall well-being. Comprehensive care is essential for long-term management.",
     image: whole,
     icon: wholeI,
+    path: "what-is-whole-body-pain",
   },
   {
     title: "Cancer Pain",
@@ -126,6 +140,7 @@ const conditions = [
       "Cancer pain, caused by tumors or treatment side effects, can severely affect quality of life. Advanced pain management techniques provide significant relief for patients.",
     image: cancer,
     icon: cancerI,
+    path: "what-is-cancer-pain",
   },
 ];
 
@@ -160,9 +175,10 @@ const Conditions = () => {
 
             {/* Text Section */}
             <div className="pt-10 px-6 pb-6">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-2">
+              <Link to={`/${conditions.path}`} key={index}><h2 className="text-xl font-semibold text-gray-800 mb-2 hover:underline hover:text-[#234179]">
                 {item.title}
-              </h2>
+              </h2></Link>
+              
               <p className="text-gray-600 leading-relaxed">
                 {item.description}
               </p>

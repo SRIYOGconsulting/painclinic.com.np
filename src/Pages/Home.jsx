@@ -50,14 +50,14 @@ const Home = () => {
     id: 1,
     title: "Pain Clinic in Birtamode, Jhapa",
     description: "Advance Pain Specialist Clinic in Birtamode, Jhapa, Nepal offers expert care for managing chronic and acute pain conditions.",
-    button:"View all conditions",
+    button:"View All Conditions",
     image: kneehero,
   },
   {
     id: 2,
-    title: "Modern DiagnosticTechnology",
+    title: "Modern Diagnostic Technology",
     description: "At Advance Pain Specialist Clinic, we are committed to helping you regain a pain-free life. ",
-    button:"Book an Appointment",
+    button:"Book An Appointment",
     image: headachehero,
   },
 ];
@@ -159,7 +159,6 @@ useEffect(() => {
   return () => clearInterval(interval);
 }, [blogSlides.length]);
 
-
   // for doodle like image
   const doodleImages = [
     { src: orofacialI, alt: 'Oral Pain', label: 'Orafacial Pain' },
@@ -180,6 +179,14 @@ useEffect(() => {
 
   const loopedDoodles = doodleImages.concat(doodleImages  );
 
+  
+  const [isMobile, setIsMobile] = useState(window.innerWidth<768)
+useEffect(()=>{
+  const handleResize = ()=> setIsMobile(window.innerWidth<768)
+  window.addEventListener("resize",handleResize);
+  return () => window.removeEventListener("resize", handleResize)
+},[])
+
   return (
     <div className="font-[sans-serif] overflow-x-hidden w-full max-w-screen mx-auto">
       {/* Hero Section */}
@@ -195,7 +202,7 @@ useEffect(() => {
     <motion.img src={heroshape} alt="clover" animate={{x:[0,-10,0]}} transition={{repeat:Infinity, duration:3, ease:"easeInOut"}} className="absolute bottom-10 left-90 h-15 w-15 "/>
     {/* LEFT CONTENT */}
 
-<div className="text-[#0A2241] flex-1 py-0 md:py-30 px-6 md:px-12 mt-60">
+<div className="text-[#0A2241] flex-1 py-20 md:py-30 px-6 md:px-12 mt-60">
   <p className="text-xs md:text-[18px] mb-3 font-semibold tracking-wide text-[#234179]">
     Advance Pain Clinic
   </p>
@@ -232,7 +239,7 @@ useEffect(() => {
   </p>
 
   <div className="mt-8 flex items-center gap-60">
-  <button className="px-6 py-3 bg-[#234179] text-white font-semibold rounded-full hover:bg-[#1e3767] transition">
+  <button className="px-7 py-3 text-[13px] bg-[#234179] text-white font-semibold rounded-full hover:bg-[#1e3767] transition">
     {heroSlides[heroIndex].button}
   </button>
 
@@ -722,7 +729,7 @@ useEffect(() => {
           <div className="overflow-hidden">
             <div
               className="flex transition-transform duration-500"
-              style={{ transform: `translateX(-${currentBlogIndex * 50}%)` }}
+              style={{ transform: `translateX(-${currentBlogIndex * (isMobile ? 100 :50)}%)`, width:isMobile ? `${loopedSlides.length*35}%`:"auto" }}
             >
               {loopedSlides.map((item, index) => (
                 <Link
@@ -801,7 +808,7 @@ useEffect(() => {
             <img
               src={item.src}
               alt={item.label}
-              className="w-25 h-25 object-contain mb-3"
+              className="w-22 h-22 object-contain mb-4"
             />
             <p>{item.label}</p>
             <div className="absolute inset-0 bg-white opacity-60 group-hover:opacity-10 transition-opacity duration-300"></div>

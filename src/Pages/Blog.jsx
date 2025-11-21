@@ -129,7 +129,7 @@ const Blog = () => {
             </div>
 
             {/* Title */}
-            <h2 className="text-[18px] font-semibold mb-2 leading-snug">
+            <h2 className="text-[18px] font-semibold mb-2 leading-snug hover:underline text-[#234179]">
               {blog.description}
             </h2>
 

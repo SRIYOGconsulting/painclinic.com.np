@@ -1,9 +1,52 @@
 import React from 'react'
+import { useState, useEffect } from 'react';
 import aboutImage from "../assets/images/home/1.jpg";
 import director from "../assets/images/home/director.png";
 import pain from "../assets/images/pain.jpg";
+import headacheIcon from "../assets/images/headache.png";
+import JointIcon from "../assets/images/joint.png";
+import neckIcon from "../assets/images/neck.png";
+import shoulderI from "../assets/images/shoulder.png";
+import orofacialI from "../assets/images/orofacial.png";
+import discI from "../assets/images/back.png";
+import kneeI from "../assets/images/knee.png";
+import ankelI from "../assets/images/ankle.png";
+import nerveI from "../assets/images/nerve.png";
+import muscleI from "../assets/images/muscle.png";
+import fibromyalgiaI from "../assets/images/fibromyalgia.png";
+import sportsI from "../assets/images/sports-injury.png";
+import wholeI from "../assets/images/whole-body.png";
+import cancerI from "../assets/images/cancer.png";
 
 const About = () => {
+   const [currentBlogIndex, setCurrentBlogIndex] = useState(0)
+  
+   // for doodle like image
+    const doodleImages = [
+      { src: orofacialI, alt: 'Oral Pain', label: 'Orafacial Pain' },
+      { src: shoulderI, alt: 'Shoulder Pain', label: 'Shoulder Pain' },
+      { src: sportsI, alt: 'Sports Injury', label: 'Sports Injury' },
+      { src: headacheIcon, alt: 'Headache', label: 'Headache' },
+      { src: kneeI, alt: 'Knee pain', label: 'Knee Pain' },
+      { src: JointIcon, alt: 'Joint pain', label: 'Joint Pain' },
+      { src: neckIcon, alt: 'Neck pain', label: 'Neck Pain' },
+      { src: cancerI, alt: 'Cancer pain', label: 'Cancer Pain' },
+      { src: wholeI, alt: 'whole body pain', label: 'whole body Pain' },
+      { src: fibromyalgiaI, alt: 'fibromyalhia', label: 'fibromyalhia Pain' },
+      { src: muscleI, alt: 'muscle pain', label: 'muscle Pain' },
+      { src: nerveI, alt: 'nerve pain', label: 'nerve Pain' },
+      { src: discI, alt: 'disc pain', label: 'disc Pain' },
+      { src: ankelI, alt: 'ankel pain', label: 'Ankle Pain' },
+    ];
+  
+    const loopedDoodles = doodleImages.concat(doodleImages  );
+    // auto slide
+    useEffect(()=>{
+      const interval = setInterval(()=>{
+        setCurrentBlogIndex((prev)=>prev+1 >= doodleImages.length ? 0 : prev +1)
+      },4000)
+      return()=> clearInterval(interval)
+    }, [doodleImages.length])
   return (
     <div className="px-4 md:px-8 py-20 font-sans">
       <div className="flex max-w-6xl mx-auto items-center gap-30">
@@ -97,13 +140,49 @@ const About = () => {
           {/* Right Image Section */}
           <div className="relative w-1/2">
             <img
-              src={pain} // This is the new image you uploaded
+              src={pain} 
               alt="Pain to Happiness"
               className=" w-full h-auto object-cover"
             />
           </div>
         </div>
       </div>
+
+      {/* doodle image section */}
+      <section className="py-10 ">
+  <div className="max-w-5xl mx-auto">
+
+    {/* AUTO SLIDER WRAPPER */}
+    <div className="overflow-hidden relative">
+      <div
+        className="
+          flex 
+          gap-19   
+          whitespace-nowrap 
+          transition-transform 
+          duration-700
+        "
+        style={{ transform: `translateX(-${currentBlogIndex * 30}%)` }}
+      >
+        {loopedDoodles.map((item, index) => (
+          <div
+            key={index}
+            className="w-32 mx-auto flex-shrink-0 flex flex-col items-center text-center relative group"
+          >
+            <img
+              src={item.src}
+              alt={item.label}
+              className="w-22 h-22 object-contain mb-6"
+            />
+            <p>{item.label}</p>
+            <div className="absolute inset-0 bg-white opacity-60 group-hover:opacity-10 transition-opacity duration-300"></div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>
     </div>
   )
 }

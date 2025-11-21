@@ -1,5 +1,5 @@
 import React from 'react'
-
+import pharmacy from "../assets/images/pharmacy.jpg"
 const Pharmacy = () => {
   return (
    <div className="max-w-6xl mx-auto px-6 md:px-10 py-20 font-[sans-serif] text-[#0A2241]">
@@ -8,7 +8,7 @@ const Pharmacy = () => {
         {/* Left Image Section */}
         <div className="bg-[#f3f6fa] rounded-xl">
           <img
-            
+            src={pharmacy}
             alt="product details"
             className="rounded-md object-cover h-120 w-full"
           />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import breadcrumb from "../assets/images/breadcrumb.jpg";
 import { House } from "lucide-react";
@@ -85,6 +85,12 @@ const Breadcrumbs = () => {
   const location = useLocation();
   const pathname = location.pathname;
 
+  useEffect(()=>{
+    if(pathname === "/"){
+     document.title = "Home | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepa" 
+    }
+  },[pathname]);
+
   if (pathname === "/") return null;
 
   let breadcrumbItems = [];
@@ -120,6 +126,11 @@ const Breadcrumbs = () => {
     });
     pageTitle = breadcrumbItems[breadcrumbItems.length - 1].label;
   }
+
+  // document title
+  useEffect(()=>{
+    document.title = `${pageTitle} | Advance Pain Clinic`
+  },[pageTitle]);
 
   return (
     <section

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import physiotherapy from "../assets/images/physiotherapy.png"
 const Physiotherapy = () => {
   return (
     <div className="max-w-6xl mx-auto px-6 md:px-10 py-20 font-[sans-serif] text-[#0A2241]">
@@ -8,7 +8,7 @@ const Physiotherapy = () => {
         {/* Left Image Section */}
         <div className="bg-[#f3f6fa] rounded-xl">
           <img
-            
+            src={physiotherapy}
             alt="product details"
             className="rounded-md object-cover h-120 w-full"
           />

@@ -14,6 +14,7 @@ import {
   Youtube,
   UserRound,
   MessageCircleMore,
+  MoveUpRight
 } from "lucide-react";
 
 const Footer = () => {
@@ -38,10 +39,10 @@ const Footer = () => {
               Comprehensive Pain Management Clinic in Birtamode, Jhapa, Nepal specializing multiple treatment methods to cure your pain.
             </p>
 
-            <button className="border border-gray-700 text-[15px] px-4 py-2 rounded-full text-[#234179] hover:bg-[#234179] hover:text-white transition">
+            <button className="border border-gray-700 text-[15px] px-4 py-2 rounded-full text-[#234179] hover:bg-[#234179] hover:text-white transition flex">
               <a href="https://www.facebook.com/painclinicbirtamode" target="_blank" rel="noopener noreferrer">
                 BOOK AN APPOINTMENT
-              </a>
+              </a> <MoveUpRight/>
             </button>
 
             {/* Social Icons */}
@@ -94,7 +95,7 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <img src={headache} className="rounded-lg w-20 h-12 object-cover" alt="Headache" />
                 <div>
-                  <div className="flex items-center gap-1 text-[#456EA1] text-[12px] font-semibold mb-1">
+                  <div className="flex items-center gap-1 text-[#456EA1] text-[10px] font-semibold mb-1">
                     <UserRound size={12} /> <span>Isha Sunam</span>
                     <MessageCircleMore size={12} /> <span>2 Comments</span>
                   </div>
@@ -110,7 +111,7 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <img src={neckPain} className="rounded-lg w-20 h-12 object-cover" alt="Neck Pain" />
                 <div>
-                  <div className="flex items-center gap-1 text-[#456EA1] text-[12px] font-semibold mb-1">
+                  <div className="flex items-center gap-1 text-[#456EA1] text-[10px] font-semibold mb-1">
                     <UserRound size={12} /> <span>Monika Sharma</span>
                     <MessageCircleMore size={12} /> <span>2 Comments</span>
                   </div>
