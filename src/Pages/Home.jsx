@@ -183,25 +183,25 @@ useEffect(() => {
   return (
     <div className="font-[sans-serif] overflow-x-hidden w-full max-w-screen mx-auto">
       {/* Hero Section */}
-   <section
-  className="relative w-full h-[600px] md:h-[850px] bg-cover bg-center overflow-hidden md:px-20"
-  style={{ backgroundImage: `url(${background})` }}
->
+  <section
+    className="relative w-full h-[600px] md:h-[700px] bg-cover bg-center overflow-hidden md:px-20"
+    style={{ backgroundImage: `url(${background})` }}
+  >
   {/* Content + Sliding Image */}
   <div className="relative z-10 flex items-center justify-between h-full w-full">
     <motion.img src={flower} alt="clover" animate={{rotate:360}} transition={{repeat:Infinity, duration:2,}} className="absolute top-70 left-90 h-15 w-15 "/>
     <motion.img src={clover} alt="clover" animate={{rotate:360}} transition={{repeat:Infinity, duration:3, }} className="absolute bottom-90 right-0 h-15 w-15 "/>
     <motion.img src={clover} alt="clover" animate={{rotate:360}} transition={{repeat:Infinity, duration:3, }} className="absolute bottom-5 left-0 h-15 w-15 "/>
-    <motion.img src={heroshape} alt="clover" animate={{x:[0,-10,0]}} transition={{repeat:Infinity, duration:3, ease:"easeInOut"}} className="absolute bottom-20 left-90 h-15 w-15 "/>
+    <motion.img src={heroshape} alt="clover" animate={{x:[0,-10,0]}} transition={{repeat:Infinity, duration:3, ease:"easeInOut"}} className="absolute bottom-0 left-90 h-15 w-15 "/>
     {/* LEFT CONTENT */}
 
-<div className="text-[#0A2241] flex-1 pt-60">
+<div className="text-[#0A2241] flex-1 py-20 md:py-40 px-6 md:px-12 mt-80">
   <p className="text-xs md:text-[18px] mb-3 font-semibold tracking-wide text-[#234179]">
     Advance Pain Clinic
   </p>
 
 <div className="relative inline-block overflow-hidden max-w- mb-5">
-  <p className="text-6xl md:text-6xl font-semibold leading-tight mb-5  ">
+  <p className="text-5xl md:text-6xl font-semibold leading-tight mb-">
     {heroSlides[heroIndex].title}
   </p>
   <AnimatePresence>
@@ -231,12 +231,12 @@ useEffect(() => {
     {heroSlides[heroIndex].description}
   </p>
 
- <div className="mt-6 flex items-center gap-60">
+  <div className="mt-2 flex items-center gap-60">
   <button className="px-6 py-3 bg-[#234179] text-white font-semibold rounded-full hover:bg-[#1e3767] transition">
     {heroSlides[heroIndex].button}
   </button>
 
-  <div className="flex items-center bg-white rounded-xl shadow-lg px-5 py-3 w-[180px] gap-4">
+  <div className="hidden lg:flex items-center bg-white rounded-xl shadow-lg px-5 py-3 w-[200px] gap-4">
     <div className="bg-[#234179] text-white p-3 rounded-lg flex items-center justify-center">
       <ThumbsUp size={26} strokeWidth={2} />
     </div>
@@ -252,22 +252,23 @@ useEffect(() => {
 </div>
 
 
-    {/* RIGHT SLIDING IMAGE */}
-    <div className="hidden md:flex flex-1 h-full overflow-hidden py-0 relative">
+    {/* RIGHT SLIDING IMAGE: hidden on small/medium, visible on large */}
+<div className="hidden lg:flex flex-1 h-full overflow-hidden relative justify-end mt-60">
   <AnimatePresence>
     <motion.img
-      key={heroIndex} // triggers AnimatePresence on slide change
+      key={heroIndex}
       src={heroSlides[heroIndex].image}
       alt="Hero"
-      className="w-[1100px] h-[850px] object-cover absolute top-30 left-0"
+      className="w-full max-w-[650px] h-auto object-cover relative z-10"
       style={{ objectPosition: "center", zIndex: 1 }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 1, ease: "easeInOut" }} // smooth fade
     />
   </AnimatePresence>
 </div>
+
   </div>
 </section>
 

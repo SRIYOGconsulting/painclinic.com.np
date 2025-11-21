@@ -24,12 +24,12 @@ const Footer = () => {
     >
       <div className="absolute inset-0 bg-[#051739]/95"></div>
 
-      <div className="relative z-10">
-        {/* Top Section */}
-        <div className="max-w-6xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 ">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 py-14">
+        {/* Top Section Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
 
-          {/* Left Section */}
-          <div className="space-y-4">
+          {/* Left Section: Logo & Description */}
+          <div className="space-y-4 order-1">
             <div className="flex items-center space-x-2">
               <img src={logo} alt="Logo" className="h-20 w-60 object-contain" />
             </div>
@@ -38,28 +38,23 @@ const Footer = () => {
               Comprehensive Pain Management Clinic in Birtamode, Jhapa, Nepal specializing multiple treatment methods to cure your pain.
             </p>
 
-            <button className="border border-gray-700 text-[15px] px-4 py-2 rounded-full text-[#234179]"><a href="https://www.facebook.com/painclinicbirtamode">BOOK AN APPOINTMENT</a>
+            <button className="border border-gray-700 text-[15px] px-4 py-2 rounded-full text-[#234179] hover:bg-[#234179] hover:text-white transition">
+              <a href="https://www.facebook.com/painclinicbirtamode" target="_blank" rel="noopener noreferrer">
+                BOOK AN APPOINTMENT
+              </a>
             </button>
 
             {/* Social Icons */}
-            <div className="flex space-x-4 mt-6">
-              <a href="#" className="text-gray-300 hover:text-white">
-                <Facebook size={18} />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-white">
-                <Twitter size={18} />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-white">
-                <Instagram size={18} />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-white">
-                <Youtube size={19} />
-              </a>
+            <div className="flex space-x-4 mt-6 text-gray-300">
+              <a href="#" className="hover:text-white"><Facebook size={18} /></a>
+              <a href="#" className="hover:text-white"><Twitter size={18} /></a>
+              <a href="#" className="hover:text-white"><Instagram size={18} /></a>
+              <a href="#" className="hover:text-white"><Youtube size={19} /></a>
             </div>
           </div>
 
           {/* Treatments */}
-          <div className="md:pl-6">
+          <div className="order-2">
             <h3 className="font-semibold text-[20px] mb-4 border-b border-gray-500 pb-1 w-fit">
               Our <span className="text-[#234179]">Treatments</span>
             </h3>
@@ -74,7 +69,7 @@ const Footer = () => {
           </div>
 
           {/* Browse More */}
-          <div>
+          <div className="order-3 sm:col-span-1 md:order-3">
             <h3 className="font-semibold text-[20px] mb-4 border-b border-gray-500 pb-1 w-fit">
               Browse <span className="text-[#234179]">More</span>
             </h3>
@@ -88,7 +83,7 @@ const Footer = () => {
           </div>
 
           {/* Latest Tips */}
-          <div>
+          <div className="order-4 sm:col-span-1 md:order-4">
             <h3 className="font-semibold text-[20px] mb-4 border-b border-gray-500 pb-1 w-fit">
               Latest <span className="text-[#234179]">Tips</span>
             </h3>
@@ -97,7 +92,7 @@ const Footer = () => {
 
               {/* Tip 1 */}
               <div className="flex items-start space-x-3">
-                <img src={headache} className="rounded-lg w-24 h-14 object-cover" />
+                <img src={headache} className="rounded-lg w-20 h-12 object-cover" alt="Headache" />
                 <div>
                   <div className="flex items-center gap-1 text-[#456EA1] text-[12px] font-semibold mb-1">
                     <UserRound size={12} /> <span>Isha Sunam</span>
@@ -113,7 +108,7 @@ const Footer = () => {
 
               {/* Tip 2 */}
               <div className="flex items-start space-x-3">
-                <img src={neckPain} className="rounded-lg w-24 h-14 object-cover" />
+                <img src={neckPain} className="rounded-lg w-20 h-12 object-cover" alt="Neck Pain" />
                 <div>
                   <div className="flex items-center gap-1 text-[#456EA1] text-[12px] font-semibold mb-1">
                     <UserRound size={12} /> <span>Monika Sharma</span>
@@ -132,50 +127,49 @@ const Footer = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="max-w-6xl mx-auto px-6 mt-4">
-          <div className="bg-[#234179] rounded-2xl py-10 px-6 md:px-10 flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10 text-sm">
+        <div className="bg-[#234179] rounded-2xl py-10 px-6 md:px-10 mt-12 flex flex-col md:flex-row items-center justify-around gap-6 text-center md:text-left text-sm">
 
-            {/* Address */}
-            <div className="flex items-center space-x-3 w-full md:w-auto">
-              <div className="bg-[#1d3770] p-3 rounded-full">
-                <MapPin size={18} />
-              </div>
-              <div>
-                <p className="font-semibold text-[14px]">Clinic Address</p>
-                <p className="font-semibold text-[20px] hover:underline"><a href="https://www.google.com/maps/place/JXRM%2BHMW+Advance+Pain+Specialist+Clinic,+Advance+Pain+Specialist+Clinic+1,+Mahendra+Hwy,+Birtamod+57206/@26.641482,87.9841929,17z/data=!4m6!3m5!1s0x39e5bb007acd06ab:0xca6d4798d37c7569!8m2!3d26.641482!4d87.9841929!16s%2Fg%2F11l_0fb01s?g_ep=Eg1tbF8yMDI1MTExMl8wIJvbDyoASAJQAQ%3D%3D">Birtamode, Jhapa, Nepal</a></p>
-              </div>
+          {/* Address */}
+          <div className="flex flex-col items-center md:items-start space-y-2">
+            <div className="bg-[#1d3770] p-3 rounded-full">
+              <MapPin size={18} />
             </div>
-
-            {/* Email */}
-            <div className="flex items-center space-x-3 w-full md:w-auto">
-              <div className="bg-[#1d3770] p-3 rounded-full">
-                <Mail size={18} />
-              </div>
-              <div>
-                <p className="font-semibold text-[14px]">Email Enquiry</p>
-                <p className="font-semibold hover:underline text-[20px]"><a href="mailto:info@painclinic.com.np">info@painclinic.com.np</a></p>
-              </div>
-            </div>
-
-            {/* Phone */}
-            <div className="flex items-center space-x-3 w-full md:w-auto">
-              <div className="bg-[#1d3770] p-3 rounded-full">
-                <Phone size={18} />
-              </div>
-              <div>
-                <p className="font-semibold text-[14px]">Hotline</p>
-                <p className="font-semibold hover:underline text-[20px]"><a href="tel:+9779701012345">97010-12345</a></p>
-              </div>
-            </div>
-
+            <p className="font-semibold text-[14px]">Clinic Address</p>
+            <p className="font-semibold hover:underline text-[20px]">
+              <a href="https://www.google.com/maps/place/JXRM%2BHMW+Advance+Pain+Specialist+Clinic,+Advance+Pain+Specialist+Clinic+1,+Mahendra+Hwy,+Birtamod+57206" target="_blank" rel="noopener noreferrer">
+                Birtamode, Jhapa, Nepal
+              </a>
+            </p>
           </div>
+
+          {/* Email */}
+          <div className="flex flex-col items-center md:items-start space-y-2">
+            <div className="bg-[#1d3770] p-3 rounded-full">
+              <Mail size={18} />
+            </div>
+            <p className="font-semibold text-[14px]">Email Enquiry</p>
+            <p className="font-semibold hover:underline text-[20px]">
+              <a href="mailto:info@painclinic.com.np">info@painclinic.com.np</a>
+            </p>
+          </div>
+
+          {/* Phone */}
+          <div className="flex flex-col items-center md:items-start space-y-2">
+            <div className="bg-[#1d3770] p-3 rounded-full">
+              <Phone size={18} />
+            </div>
+            <p className="font-semibold text-[14px]">Hotline</p>
+            <p className="font-semibold hover:underline text-[20px]">
+              <a href="tel:+9779701012345">97010-12345</a>
+            </p>
+          </div>
+
         </div>
 
         {/* Footer Bottom */}
         <div className="py-4 mt-6 border-t border-[#0b2354]/50">
           <p className="text-center text-gray-400 text-xs">
-            © Copyright 2025 Advance Pain Specialist Clinic Birtamode, Jhapa,
-            Nepal.
+            © Copyright 2025 Advance Pain Specialist Clinic Birtamode, Jhapa, Nepal.
           </p>
         </div>
       </div>
