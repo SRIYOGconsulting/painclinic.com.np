@@ -195,7 +195,7 @@ useEffect(() => {
     <motion.img src={heroshape} alt="clover" animate={{x:[0,-10,0]}} transition={{repeat:Infinity, duration:3, ease:"easeInOut"}} className="absolute bottom-10 left-90 h-15 w-15 "/>
     {/* LEFT CONTENT */}
 
-<div className="text-[#0A2241] flex-1 py-20 md:py-40 px-6 md:px-12 mt-80">
+<div className="text-[#0A2241] flex-1 py-0 md:py-30 px-6 md:px-12 mt-60">
   <p className="text-xs md:text-[18px] mb-3 font-semibold tracking-wide text-[#234179]">
     Advance Pain Clinic
   </p>
@@ -231,7 +231,7 @@ useEffect(() => {
     {heroSlides[heroIndex].description}
   </p>
 
-  <div className="mt-2 flex items-center gap-60">
+  <div className="mt-8 flex items-center gap-60">
   <button className="px-6 py-3 bg-[#234179] text-white font-semibold rounded-full hover:bg-[#1e3767] transition">
     {heroSlides[heroIndex].button}
   </button>
