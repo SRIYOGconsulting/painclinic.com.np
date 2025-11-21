@@ -184,7 +184,7 @@ useEffect(() => {
     <div className="font-[sans-serif] overflow-x-hidden w-full max-w-screen mx-auto">
       {/* Hero Section */}
   <section
-    className="relative w-full h-[600px] md:h-[700px] bg-cover bg-center overflow-hidden md:px-20"
+    className="relative w-full h-[600px] md:h-[850px] bg-cover bg-center overflow-hidden md:px-20"
     style={{ backgroundImage: `url(${background})` }}
   >
   {/* Content + Sliding Image */}
@@ -192,7 +192,7 @@ useEffect(() => {
     <motion.img src={flower} alt="clover" animate={{rotate:360}} transition={{repeat:Infinity, duration:2,}} className="absolute top-70 left-90 h-15 w-15 "/>
     <motion.img src={clover} alt="clover" animate={{rotate:360}} transition={{repeat:Infinity, duration:3, }} className="absolute bottom-90 right-0 h-15 w-15 "/>
     <motion.img src={clover} alt="clover" animate={{rotate:360}} transition={{repeat:Infinity, duration:3, }} className="absolute bottom-5 left-0 h-15 w-15 "/>
-    <motion.img src={heroshape} alt="clover" animate={{x:[0,-10,0]}} transition={{repeat:Infinity, duration:3, ease:"easeInOut"}} className="absolute bottom-0 left-90 h-15 w-15 "/>
+    <motion.img src={heroshape} alt="clover" animate={{x:[0,-10,0]}} transition={{repeat:Infinity, duration:3, ease:"easeInOut"}} className="absolute bottom-10 left-90 h-15 w-15 "/>
     {/* LEFT CONTENT */}
 
 <div className="text-[#0A2241] flex-1 py-20 md:py-40 px-6 md:px-12 mt-80">
