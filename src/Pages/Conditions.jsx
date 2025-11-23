@@ -175,11 +175,11 @@ const Conditions = () => {
 
             {/* Text Section */}
             <div className="pt-10 px-6 pb-6">
-              <Link to={`/${conditions.path}`} key={index}><h2 className="text-xl font-semibold text-gray-800 mb-2 hover:underline hover:text-[#234179]">
+              <Link to={`/${item.path}`} ><h2 className="text-xl font-semibold text-gray-800 mb-2 hover:underline hover:text-[#234179]">
                 {item.title}
               </h2></Link>
               
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-[#707882] leading-relaxed text-[16px]">
                 {item.description}
               </p>
             </div>

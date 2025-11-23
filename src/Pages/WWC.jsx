@@ -6,7 +6,7 @@ const WWC = () => {
   const steps = [
     {
       id: 1,
-      icon: <Brain className="w-10 h-10 text-[#234179]" />,
+      icon: <Brain className="w-10 h-10 text-[#234179] stroke-current hover:text-white hover:bg-[#234179]" />,
       title: "Know The Problem",
       desc: "Knowing the problem is the first step.",
     },
@@ -18,7 +18,7 @@ const WWC = () => {
     },
     {
       id: 3,
-      icon: <Bed className="w-10 h-10 text-[#234179]" />,
+      icon: <Bed className="w-10 h-10 text-[#234179] stroke-current hover:text-white hover:bg-[#234179]" />,
       title: "Therapy",
       desc: "The process will undergo if the problem is cured by therapy.",
     },
@@ -66,7 +66,7 @@ const WWC = () => {
             {/* Top icon for odd steps */}
             {index % 2 === 0 ? (
               <>
-                <div className="bg-white rounded-full shadow-lg w-20 h-20 flex items-center justify-center relative hover:bg-blue-200 border-white border transition-all duration-300">
+                <div className="bg-white rounded-full shadow-lg w-20 h-20 flex items-center justify-center relative border-white border hover:bg-[#234179] transition-all duration-300">
                   <div className="absolute -top-3 -left-3 w-8 h-8 bg-[#234179] text-white rounded-full flex items-center justify-center font-semibold text-sm shadow">
                     {step.id}
                   </div>

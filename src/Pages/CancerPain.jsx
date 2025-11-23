@@ -3,12 +3,18 @@ import cancerpain from "../assets/images/cancer-pain.jpg";
 import { UserRound } from 'lucide-react';
 const CancerPain = () => {
   return (
-    <div className="max-w-3xl mx-auto px-6 py-10 text-[#707882]">
-                            {/* Author and read time */}
-                            <div className="text-sm text-[#707882] mb-4 flex items-center justify-between">
-                              <UserRound size={16} className="text-[#234179]" /><p>By <span className="font-medium text-[#707882]">Salina Bastola</span></p>
-                              <p>3 minutes read</p>
-                            </div>
+    <div className="max-w-3xl mx-auto px-6 py-30 text-[#707882] font-[sans-serif]">
+          {/* Author and read time */}
+          <div className="text-[12px] text-[#707882] mb-4 flex items-center gap-6">
+            <div className="flex items-center gap-2">
+              <UserRound className="w-4 h-4 stroke-current text-[#234179]" />
+              <p>
+                By{" "}
+                <span className="font-medium text-[#707882]">Salina Bastola</span>
+              </p>
+            </div>
+            <p>3 Minutes Read</p>
+          </div>
                       
                             {/* Title */}
                             <h1 className="text-3xl font-bold text-[#0A2241] mb-4">What is Cancer Pain?</h1>
@@ -108,18 +114,33 @@ const CancerPain = () => {
                             <p className="mb-4 leading-relaxed">
                                 Cancer pain can be severe and debilitating, but with a comprehensive treatment plan that includes medications, therapies, and support, it is possible to effectively manage and reduce pain. It is essential for cancer patients to work closely with their healthcare team to tailor a pain management strategy that addresses both the physical and emotional aspects of their pain.
                             </p>
-                      
+
                             {/* Categories & Tags */}
-                            <div className="border-t border-gray-200 pt-4 flex flex-wrap justify-between text-sm">
-                              <div>
-                                <span className="font-semibold text-[#0A2241]">Categories:</span>{" "}
-                                Health Care, Medical Service
-                              </div>
-                              <div>
-                                <span className="font-semibold text-[#0A2241]">Tags:</span>{" "}
-                             Cancer pain management, Cancer pain treatment options
-                              </div>
-                            </div>
+<div className="border-t border-gray-200 pt-4 pb-4 flex flex-wrap justify-between items-center text-sm text-[#707882]">
+  <div className="flex items-center gap-3">
+    <span className=" text-[#234179] uppercase">Categories:</span>
+
+    <div className="flex items-center gap-2">
+      <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
+        Health Care
+      </span>
+      <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
+        Medical Service
+      </span>
+    </div>
+  </div>
+
+  {/* Tags */}
+  <div className="flex items-center gap-3 mt-3 sm:mt-0">
+    <span className=" text-[#234179] uppercase">Tags:</span>
+
+    <p className="text-[#707882]">
+      Cancer pain management, Cancer pain treatment options
+    </p>
+  </div>
+
+</div>
+<div className="border-t border-gray-200"></div>
                           </div>
   )
 }

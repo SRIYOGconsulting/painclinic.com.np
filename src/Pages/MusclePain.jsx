@@ -1,22 +1,30 @@
 import React from 'react'
 import musclepain from "../assets/images/muscle-pain.jpg";
+import {UserRound} from 'lucide-react'
+
 const MusclePain = () => {
   return (
-     <div className="max-w-3xl mx-auto px-6 py-10 text-[#707882]">
-                        {/* Author and read time */}
-                        <div className="text-sm text-[#707882] mb-4 flex items-center justify-between">
-                          <p>By <span className="font-medium text-[#707882]">Salina Bastola</span></p>
-                          <p>3 minutes read</p>
-                        </div>
+     <div className="max-w-3xl mx-auto px-6 py-30 text-[#707882] font-[sans-serif]">
+      {/* Author and read time */}
+      <div className="text-[12px] text-[#707882] mb-4 flex items-center gap-6">
+        <div className="flex items-center gap-2">
+          <UserRound className="w-4 h-4 stroke-current text-[#234179]" />
+          <p>
+            By{" "}
+            <span className="font-medium text-[#707882]">Salina Bastola</span>
+          </p>
+        </div>
+        <p>3 Minutes Read</p>
+      </div>
                   
                         {/* Title */}
                         <h1 className="text-3xl font-bold text-[#0A2241] mb-4">What is Muscle Pain?</h1>
                   
                         {/* Paragraphs */}
-                        <p className="mb-4 leading-relaxed">
+                        <p className="text-[#707882] mb-4 leading-relaxed">
                          Muscle pain, or myalgia, refers to discomfort or soreness in the muscles, which can result from a variety of causes. It may occur due to overuse, injury, or strain, often from activities like intense exercise, heavy lifting, or sudden awkward movements. There are two main types of muscle pain: acute, which is short-term and usually occurs after physical exertion, and chronic, which persists for weeks or months and can be linked to conditions like fibromyalgia or repetitive stress. Symptoms of muscle pain typically include tenderness, stiffness, swelling, or a dull ache in the affected area. Treatment options often involve rest, stretching, applying heat or cold to the area, staying hydrated, and using over-the-counter pain relievers, depending on the severity and cause of the pain.
                         </p>
-                        <p className="mb-4 leading-relaxed">
+                        <p className="text-[#707882] mb-4 leading-relaxed">
                           Cold weather can make muscle pain worse for several reasons. When the temperature drops, blood flow to the muscles tends to decrease as the body tries to conserve heat. This reduced circulation can lead to stiffer muscles, making them more prone to discomfort and soreness. Cold air can also cause the muscles to contract and tighten, increasing the sensation of pain, especially in people with existing muscle conditions or joint pain. Additionally, during colder months, people may be less active, which can further contribute to muscle stiffness and discomfort.
                         </p>
                   
@@ -35,7 +43,7 @@ const MusclePain = () => {
                         </h2>
                   
                         {/* List */}
-                        <ul className="list-disc list-inside space-y-3 mb-6">
+                        <ul className="text-[#707882] list-disc list-inside space-y-3 mb-6">
                           <li>
                             Tenderness: The muscles may feel sore or sensitive when touched or pressed.
                           </li>
@@ -61,7 +69,7 @@ const MusclePain = () => {
                         </h2>
                   
                         {/* List */}
-                        <ul className="list-disc list-inside space-y-3 mb-6">
+                        <ul className="text-[#707882] list-disc list-inside space-y-3 mb-6">
                           <li>
                             Overuse or Strain: Intense physical activity, exercise, or lifting heavy objects can lead to muscle strain, causing pain and discomfort.
                           </li>
@@ -87,21 +95,36 @@ const MusclePain = () => {
                             Medications: Certain medications, like statins (used to lower cholesterol), can have muscle pain as a side effect.
                           </li>
                         </ul>
-                        <p className="mb-4 leading-relaxed">
+                        <p className="text-[#707882] mb-4 leading-relaxed">
                             In conclusion, muscle pain, or myalgia, can arise from a wide range of causes, including overuse, injury, infections, chronic conditions, poor posture, dehydration, and even cold weather or medications. The symptoms vary, but typically include tenderness, stiffness, swelling, aching, and weakness, which can range from temporary discomfort to chronic pain. Understanding the underlying cause of muscle pain is key to finding the right treatment, whether it’s rest, stretching, hydration, medication, or physical therapy. While muscle pain is often a result of physical activity or strain, it can also be linked to more serious health conditions, so it’s important to address persistent or severe pain with proper care. By recognizing the specific cause and symptoms, one can manage or prevent muscle pain more effectively.
                         </p>
                   
                         {/* Categories & Tags */}
-                        <div className="border-t border-gray-200 pt-4 flex flex-wrap justify-between text-sm">
-                          <div>
-                            <span className="font-semibold text-[#0A2241]">Categories:</span>{" "}
-                            Health Care, Medical Service
-                          </div>
-                          <div>
-                            <span className="font-semibold text-[#0A2241]">Tags:</span>{" "}
-                           Muscle pain, Myalgia
-                          </div>
-                        </div>
+<div className="border-t border-gray-200 pt-4 pb-4 flex flex-wrap justify-between items-center text-sm text-[#707882]">
+  <div className="flex items-center gap-3">
+    <span className=" text-[#234179] uppercase">Categories:</span>
+
+    <div className="flex items-center gap-2">
+      <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
+        Health Care
+      </span>
+      <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
+        Medical Service
+      </span>
+    </div>
+  </div>
+
+  {/* Tags */}
+  <div className="flex items-center gap-3 mt-3 sm:mt-0">
+    <span className=" text-[#234179] uppercase">Tags:</span>
+
+    <p className="text-[#707882]">
+      Muscle pain, Myalgia
+    </p>
+  </div>
+
+</div>
+<div className="border-t border-gray-200"></div>
                       </div>
   )
 }

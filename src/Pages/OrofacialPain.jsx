@@ -1,24 +1,31 @@
 import React from 'react'
 import orofacial from "../assets/images/orafacial-pain.jpg";
+import { UserRound } from 'lucide-react';
 
 const OrofacialPain = () => {
   return (
-    <div className="max-w-3xl mx-auto px-6 py-10 text-gray-800">
-          {/* Author and read time */}
-          <div className="text-sm text-gray-500 mb-4 flex items-center justify-between">
-            <p>By <span className="font-medium text-gray-700">Salina Bastola</span></p>
-            <p>3 minutes read</p>
-          </div>
+    <div className="max-w-3xl mx-auto px-6 py-30 text-[#707882] font-[sans-serif]">
+      {/* Author and read time */}
+      <div className="text-[12px] text-[#707882] mb-4 flex items-center gap-6">
+        <div className="flex items-center gap-2">
+          <UserRound className="w-4 h-4 stroke-current text-[#234179]" />
+          <p>
+            By{" "}
+            <span className="font-medium text-[#707882]">Salina Bastola</span>
+          </p>
+        </div>
+        <p>3 Minutes Read</p>
+      </div>
     
           {/* Title */}
           <h1 className="text-3xl font-bold text-gray-900 mb-4">What is Orofacial Pain?</h1>
     
           {/* Paragraphs */}
-          <p className="mb-4 leading-relaxed">
+          <p className="text-[#707882] mb-4 leading-relaxed">
             Orofacial pain refers to discomfort in the areas of the face, mouth, and jaw, which can be caused by a variety of issues such as dental problems, jaw disorders, nerve conditions, or even sinus infections. Common causes include temporomandibular joint (TMJ) disorders, where the jaw joint and surrounding muscles become painful, toothaches, gum disease, or issues like trigeminal neuralgia, which causes sharp, stabbing pain along the facial nerves. It can also be linked to sinusitis or migraines, where the pain radiates into the face, or myofascial pain syndrome, which involves pain from muscle trigger points.
           </p>
     
-          <p className="mb-6 leading-relaxed">
+          <p className="text-[#707882] mb-6 leading-relaxed">
             Treatment for orofacial pain depends on the underlying cause and may include dental treatments, physical therapy for jaw issues, pain medications, or muscle relaxants. In some cases, stress management techniques or lifestyle changes might help, especially for conditions like TMJ disorders where jaw clenching or grinding is involved. Proper diagnosis is essential, as the pain could stem from a wide range of sources, requiring different approaches for effective relief.
           </p>
     
@@ -37,7 +44,7 @@ const OrofacialPain = () => {
           </h2>
     
           {/* List */}
-          <ul className="list-disc list-inside space-y-3 mb-6">
+          <ul className="text-[#707882] list-disc list-inside space-y-3 mb-6">
             <li>
               Dental Issues: Tooth decay, abscesses, gum disease, and other dental problems can cause localized pain in the teeth and gums.
             </li>
@@ -63,7 +70,7 @@ const OrofacialPain = () => {
           </h2>
     
           {/* List */}
-          <ul className="list-disc list-inside space-y-3 mb-6">
+          <ul className="text-[#707882] list-disc list-inside space-y-3 mb-6">
             <li>
               Dental Treatment: Fillings, root canals, or gum disease treatments to address tooth-related pain.
             </li>
@@ -85,23 +92,36 @@ const OrofacialPain = () => {
           </ul>
     
           {/* Final paragraph */}
-          <p className="leading-relaxed mb-8">
+          <p className="text-[#707882] leading-relaxed mb-8">
             Accurate diagnosis and appropriate treatment are key to managing orofacial pain effectively.
           </p>
     
           {/* Categories & Tags */}
-          <div className="border-t border-gray-200 pt-4 flex flex-wrap justify-between text-sm text-gray-600">
-            <div>
-              <span className="font-semibold text-gray-800">Categories:</span>{" "}
-              Health Care, Medical Service
-            </div>
-            <div>
-              <span className="font-semibold text-gray-800">Tags:</span>{" "}
-              Orofacial Pain
-,
-Tooth Pain Relief
-            </div>
-          </div>
+<div className="border-t border-gray-200 pt-4 pb-4 flex flex-wrap justify-between items-center text-sm text-[#707882]">
+  <div className="flex items-center gap-3">
+    <span className=" text-[#234179] uppercase">Categories:</span>
+
+    <div className="flex items-center gap-2">
+      <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
+        Health Care
+      </span>
+      <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
+        Medical Service
+      </span>
+    </div>
+  </div>
+
+  {/* Tags */}
+  <div className="flex items-center gap-3 mt-3 sm:mt-0">
+    <span className=" text-[#234179] uppercase">Tags:</span>
+
+    <p className="text-[#707882]">
+      Orofacial pain, Tooth Pain Relief
+    </p>
+  </div>
+
+</div>
+<div className="border-t border-gray-200"></div>
         </div>
   )
 }

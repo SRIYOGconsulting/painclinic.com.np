@@ -800,9 +800,9 @@ useEffect(()=>{
         "
         style={{ transform: `translateX(-${currentBlogIndex * 30}%)` }}
       >
-        {loopedDoodles.map((item, index) => (
+        {loopedDoodles.map(item => (
           <div
-            key={index}
+            key={item.id}
             className="w-32 mx-auto flex-shrink-0 flex flex-col items-center text-center relative group"
           >
             <img

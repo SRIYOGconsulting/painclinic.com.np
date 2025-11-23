@@ -1,19 +1,27 @@
 import React from 'react'
 import JointImg from "../assets/images/joint-pain.jpg";
+import { UserRound } from 'lucide-react';
+
 const JointPain = () => {
   return (
-     <div className="max-w-3xl mx-auto px-6 py-10 text-gray-800">
-              {/* Author and read time */}
-              <div className="text-sm text-gray-500 mb-4 flex items-center justify-between">
-                <p>By <span className="font-medium text-gray-700">Salina Bastola</span></p>
-                <p>3 minutes read</p>
-              </div>
+     <div className="max-w-3xl mx-auto px-6 py-30 text-[#707882] font-[sans-serif]">
+      {/* Author and read time */}
+      <div className="text-[12px] text-[#707882] mb-4 flex items-center gap-6">
+        <div className="flex items-center gap-2">
+          <UserRound className="w-4 h-4 stroke-current text-[#234179]" />
+          <p>
+            By{" "}
+            <span className="font-medium text-[#707882]">Salina Bastola</span>
+          </p>
+        </div>
+        <p>3 Minutes Read</p>
+      </div>
         
               {/* Title */}
               <h1 className="text-3xl font-bold text-gray-900 mb-4">What is Joint pain?</h1>
         
               {/* Paragraphs */}
-              <p className="mb-4 leading-relaxed">
+              <p className="mb-4 leading-relaxed  text-[#707882]">
                 Joint pain refers to discomfort, aches, or soreness in the joints, which are the areas where two bones meet, such as the knees, elbows, shoulders, or hips. It can be caused by a variety of factors, including injury, arthritis, overuse, or infection. Conditions like osteoarthritis, rheumatoid arthritis, or gout are common causes of chronic joint pain, while injuries such as sprains or strains can cause acute pain. Joint pain may be accompanied by swelling, stiffness, or reduced range of motion. Treatment often involves rest, physical therapy, pain relievers, and sometimes surgery, depending on the severity and cause of the pain. Preventive measures include maintaining a healthy weight, staying active, and using proper body mechanics to avoid strain on the joints.
               </p>
         
@@ -32,7 +40,7 @@ const JointPain = () => {
               </h2>
         
               {/* List */}
-              <ul className="list-disc list-inside space-y-3 mb-6">
+              <ul className="list-disc list-inside space-y-3 mb-6  text-[#707882]">
                 <li>
                   Arthritis: One of the most common causes of joint pain, arthritis refers to inflammation of the joints. Types of arthritis, such as osteoarthritis (caused by wear and tear on the joint cartilage) and rheumatoid arthritis (an autoimmune disease that attacks the joints), can lead to pain, stiffness, and swelling.
                 </li>
@@ -58,7 +66,7 @@ const JointPain = () => {
                   Obesity: Excess weight puts additional strain on weight-bearing joints, especially the knees, hips, and lower back, increasing the risk of joint pain and conditions like osteoarthritis.
                 </li>
               </ul>
-              <p className="leading-relaxed mb-8">
+              <p className="leading-relaxed mb-8  text-[#707882]">
                 Addressing the underlying cause of joint pain is important for effective treatment, whether through lifestyle changes, medical interventions, or physical therapy.
               </p>
               {/* Subheading */}
@@ -67,7 +75,7 @@ const JointPain = () => {
               </h2>
         
               {/* List */}
-              <ul className="list-disc list-inside space-y-3 mb-6">
+              <ul className="list-disc list-inside space-y-3 mb-6  text-[#707882]">
                 <li>
                   Stay Active: Regular exercise helps keep the muscles around your joints strong, providing better support and stability. Low-impact activities like swimming, walking, or cycling are especially gentle on the joints while still offering benefits. Strength training also helps improve joint function.
                 </li>
@@ -87,18 +95,33 @@ const JointPain = () => {
                   Protect Your Joints During Activity: If you're engaging in high-impact or repetitive activities, use supportive gear like braces, knee pads, or wrist guards to reduce the risk of injury. Ensure you're wearing comfortable shoes that provide proper arch support.
                 </li>
               </ul>
-        
+
               {/* Categories & Tags */}
-              <div className="border-t border-gray-200 pt-4 flex flex-wrap justify-between text-sm text-gray-600">
-                <div>
-                  <span className="font-semibold text-gray-800">Categories:</span>{" "}
-                  Health Care, Medical Service
-                </div>
-                <div>
-                  <span className="font-semibold text-gray-800">Tags:</span>{" "}
-                  Sports injury, Injury prevention
-                </div>
-              </div>
+<div className="border-t border-gray-200 pt-4 pb-4 flex flex-wrap justify-between items-center text-sm text-[#707882]">
+  <div className="flex items-center gap-3">
+    <span className=" text-[#234179] uppercase">Categories:</span>
+
+    <div className="flex items-center gap-2">
+      <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
+        Health Care
+      </span>
+      <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
+        Medical Service
+      </span>
+    </div>
+  </div>
+
+  {/* Tags */}
+  <div className="flex items-center gap-3 mt-3 sm:mt-0">
+    <span className=" text-[#234179] uppercase">Tags:</span>
+
+    <p className="text-[#707882]">
+      Sports injury, Injury prevention
+    </p>
+  </div>
+
+</div>
+<div className="border-t border-gray-200"></div>
             </div>
   )
 }

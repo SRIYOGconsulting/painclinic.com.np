@@ -1,22 +1,29 @@
 import React from 'react'
+import { UserRound } from 'lucide-react';
 import headacheImg from "../assets/images/headache-pain.jpg";
 const Headache = () => {
   return (
-  <div className="max-w-3xl mx-auto px-6 py-10 text-gray-800">
-                {/* Author and read time */}
-                <div className="text-sm text-gray-500 mb-4 flex items-center justify-between">
-                  <p>By <span className="font-medium text-gray-700">Salina Bastola</span></p>
-                  <p>3 minutes read</p>
-                </div>
+  <div className="max-w-3xl mx-auto px-6 py-30 text-[#707882] font-[sans-serif]">
+      {/* Author and read time */}
+      <div className="text-[12px] text-[#707882] mb-4 flex items-center gap-6">
+        <div className="flex items-center gap-2">
+          <UserRound className="w-4 h-4 stroke-current text-[#234179]" />
+          <p>
+            By{" "}
+            <span className="font-medium text-[#707882]">Salina Bastola</span>
+          </p>
+        </div>
+        <p>3 Minutes Read</p>
+      </div>
           
                 {/* Title */}
                 <h1 className="text-3xl font-bold text-gray-900 mb-4">What is Headache?</h1>
           
                 {/* Paragraphs */}
-                <p className="mb-4 leading-relaxed">
+                <p className="mb-4 leading-relaxed text-[#707882]">
                   A headache is pain in the head or neck area. It can range from mild to severe and may be caused by factors like stress, dehydration, or lack of sleep. Common types include tension headaches, migraines, cluster headaches, and sinus headaches. Symptoms can include throbbing, tightness, nausea, and sensitivity to light or sound.
                 </p>
-                <p className="mb-4 leading-relaxed">
+                <p className="mb-4 leading-relaxed text-[#707882]">
                   There are different types of headaches, including tension headaches, migraines, sinus headaches, and cluster headaches. Tension headaches are the most common and often result from stress or muscle tension. Migraines are more intense, often causing throbbing pain on one side of the head, and are usually accompanied by other symptoms. Sinus headaches occur when the sinuses become inflamed, while cluster headaches involve severe pain on one side of the head, typically around the eye. Treatment depends on the type of headache and its cause, ranging from over-the-counter pain relievers to lifestyle changes or medical treatments
                 </p>
           
@@ -35,7 +42,7 @@ const Headache = () => {
                 </h2>
           
                 {/* List */}
-                <ul className="list-disc list-inside space-y-3 mb-6">
+                <ul className="list-disc list-inside space-y-3 mb-6 text-[#707882]">
                   <li>
                     Stress and Tension: Emotional or physical stress can lead to tension headaches, the most common type. These headaches often feel like a tight band around the forehead or a dull ache across the head and neck. Stress can cause muscle tension, especially in the neck and shoulders, leading to pain in the head area.
                   </li>
@@ -67,7 +74,7 @@ const Headache = () => {
                 </h2>
           
                 {/* List */}
-                <ul className="list-disc list-inside space-y-3 mb-6">
+                <ul className="list-disc list-inside space-y-3 mb-6 text-[#707882]">
                   <li>
                     Pain: This is the primary symptom of any headache. The pain can vary in intensity, type, and location. It might feel dull, throbbing, sharp, or pressure-like. It can occur anywhere on the head, including the temples, forehead, behind the eyes, or at the back of the head and neck.
                   </li>
@@ -89,18 +96,31 @@ const Headache = () => {
                 </ul>
           
                 {/* Categories & Tags */}
-                <div className="border-t border-gray-200 pt-4 flex flex-wrap justify-between text-sm text-gray-600">
-                  <div>
-                    <span className="font-semibold text-gray-800">Categories:</span>{" "}
-                    Health Care, Medical Service
-                  </div>
-                  <div>
-                    <span className="font-semibold text-gray-800">Tags:</span>{" "}
-                   headaches
-,
-Migraines
-                  </div>
-                </div>
+<div className="border-t border-gray-200 pt-4 pb-4 flex flex-wrap justify-between items-center text-sm text-[#707882]">
+  <div className="flex items-center gap-3">
+    <span className=" text-[#234179] uppercase">Categories:</span>
+
+    <div className="flex items-center gap-2">
+      <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
+        Health Care
+      </span>
+      <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
+        Medical Service
+      </span>
+    </div>
+  </div>
+
+  {/* Tags */}
+  <div className="flex items-center gap-3 mt-3 sm:mt-0">
+    <span className=" text-[#234179] uppercase">Tags:</span>
+
+    <p className="text-[#707882]">
+      Headaches, Migraines
+    </p>
+  </div>
+
+</div>
+<div className="border-t border-gray-200"></div>
               </div>
   )
 }

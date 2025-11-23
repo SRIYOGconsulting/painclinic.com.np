@@ -1,20 +1,27 @@
 import React from "react";
 import neckImg from "../assets/images/neck-pain.jpg";
+import { UserRound } from "lucide-react";
 
 const NeckPain = () => {
   return (
-    <div className="max-w-3xl mx-auto px-6 py-10 text-gray-800">
+    <div className="max-w-3xl mx-auto px-6 py-30 text-[#707882] font-[sans-serif]">
       {/* Author and read time */}
-      <div className="text-sm text-gray-500 mb-4 flex items-center justify-between">
-        <p>By <span className="font-medium text-gray-700">Salina Bastola</span></p>
-        <p>3 minutes read</p>
+      <div className="text-[12px] text-[#707882] mb-4 flex items-center gap-6">
+        <div className="flex items-center gap-2">
+          <UserRound className="w-4 h-4 stroke-current text-[#234179]" />
+          <p>
+            By{" "}
+            <span className="font-medium text-[#707882]">Salina Bastola</span>
+          </p>
+        </div>
+        <p>3 Minutes Read</p>
       </div>
 
       {/* Title */}
       <h1 className="text-3xl font-bold text-gray-900 mb-4">What Is Neck Pain?</h1>
 
       {/* Paragraphs */}
-      <p className="mb-4 leading-relaxed">
+      <p className="text-[#707882] mb-4 leading-relaxed">
         Neck pain refers to discomfort or pain in the muscles, joints, or bones of the neck.
         It can result from poor posture, muscle strain, injury, or age-related wear and tear
         on the spine, such as cervical spondylosis. Other common causes include herniated discs,
@@ -22,7 +29,7 @@ const NeckPain = () => {
         bone spurs.
       </p>
 
-      <p className="mb-6 leading-relaxed">
+      <p className="text-[#707882] mb-6 leading-relaxed">
         Symptoms of neck pain can range from mild stiffness to severe, sharp pain. It can also
         lead to headaches, numbness, or tingling in the arms. While many cases of neck pain
         improve with rest, heat, or over-the-counter pain relievers, persistent or severe pain
@@ -44,7 +51,7 @@ const NeckPain = () => {
       </h2>
 
       {/* List */}
-      <ul className="list-disc list-inside space-y-3 mb-6">
+      <ul className="text-[#707882] list-disc list-inside space-y-3 mb-6">
         <li>
           Increased Muscle Tension:Humidity can cause
           the body to feel warmer and sweat more, leading to discomfort. This discomfort,
@@ -76,23 +83,38 @@ const NeckPain = () => {
       </ul>
 
       {/* Final paragraph */}
-      <p className="leading-relaxed mb-8">
+      <p className="text-[#707882] leading-relaxed mb-8">
         If you find that monsoon humidity is aggravating neck pain, staying hydrated, stretching
         regularly, using heat or cold therapy, and maintaining good posture can help alleviate
         some discomfort. Consult a healthcare provider if the pain becomes persistent or severe.
       </p>
 
       {/* Categories & Tags */}
-      <div className="border-t border-gray-200 pt-4 flex flex-wrap justify-between text-sm text-gray-600">
-        <div>
-          <span className="font-semibold text-gray-800">Categories:</span>{" "}
-          Health Care, Medical Service
-        </div>
-        <div>
-          <span className="font-semibold text-gray-800">Tags:</span>{" "}
-          Neck Pain, Inflammation
-        </div>
-      </div>
+<div className="border-t border-gray-200 pt-4 pb-4 flex flex-wrap justify-between items-center text-sm text-[#707882]">
+  <div className="flex items-center gap-3">
+    <span className=" text-[#234179] uppercase">Categories:</span>
+
+    <div className="flex items-center gap-2">
+      <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
+        Health Care
+      </span>
+      <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
+        Medical Service
+      </span>
+    </div>
+  </div>
+
+  {/* Tags */}
+  <div className="flex items-center gap-3 mt-3 sm:mt-0">
+    <span className=" text-[#234179] uppercase">Tags:</span>
+
+    <p className="text-[#707882]">
+      Neck pain, Inflammation
+    </p>
+  </div>
+
+</div>
+<div className="border-t border-gray-200"></div>
     </div>
   );
 };

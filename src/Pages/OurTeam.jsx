@@ -60,7 +60,7 @@ const OurTeam = () => {
             <p className="text-[#707882] text-[16px] mt-2 leading-relaxed">{member.title}</p>
 
             {/* Social Links */}
-            <div className="flex justify-center gap-4 mt-6">
+            <div className="flex justify-center gap-4 mt-10">
               {member.socials.map(({ icon: Icon, href }, i) => (
                 <a
                   key={i}

@@ -1,22 +1,27 @@
 import React from 'react';
 import knee from "../assets/images/knee-pain.jpg";
+import { UserRound } from 'lucide-react';
 
 const KneePain = () => {
   return (
-    <div className="max-w-3xl mx-auto px-6 py-10 text-gray-800">
+    <div className="max-w-3xl mx-auto px-6 py-30 text-[#707882] font-[sans-serif]">
       {/* Author and read time */}
-      <div className="text-sm text-gray-500 mb-4 flex items-center justify-between">
-        <p>
-          By <span className="font-medium text-gray-700">Salina Bastola</span> 
-        </p>
-        <p>3 minutes read</p>
+      <div className="text-[12px] text-[#707882] mb-4 flex items-center gap-6">
+        <div className="flex items-center gap-2">
+          <UserRound className="w-4 h-4 stroke-current text-[#234179]" />
+          <p>
+            By{" "}
+            <span className="font-medium text-[#707882]">Salina Bastola</span>
+          </p>
+        </div>
+        <p>3 Minutes Read</p>
       </div>
 
       {/* Title */}
       <h1 className="text-3xl font-bold text-gray-900 mb-4">What is Knee Pain?</h1>
 
       {/* Paragraphs */}
-      <p className="mb-4 leading-relaxed">
+      <p className="mb-4 leading-relaxed  text-[#707882]">
         Knee pain refers to any discomfort, soreness, or injury that affects the knee joint, 
         which connects the thigh bone (femur), shin bone (tibia), and kneecap (patella). 
         This type of pain can result from a variety of causes, including injury, overuse, 
@@ -26,7 +31,7 @@ const KneePain = () => {
         patterns during exercise or daily activities can also contribute to knee pain.
       </p>
 
-      <p className="mb-6 leading-relaxed">
+      <p className="mb-6 leading-relaxed text-[#707882]">
         As temperatures drop during the winter months, many people experience an increase 
         in knee pain, whether it's from old injuries or underlying conditions like arthritis. 
         The cold weather can lead to stiffer joints, reduced blood flow, and changes in air 
@@ -51,7 +56,7 @@ const KneePain = () => {
       </h2>
 
       {/* List */}
-      <ul className="list-disc list-inside space-y-3 mb-6">
+      <ul className="list-disc list-inside space-y-3 mb-6 text-[#707882]">
         <li>
            Cold and Damp Weather:  Cold temperatures 
           can cause muscles and tissues around the knee to stiffen, restricting movement and 
@@ -79,7 +84,7 @@ const KneePain = () => {
       </h2>
 
       {/* List */}
-      <ul className="list-disc list-inside space-y-3 mb-6">
+      <ul className="list-disc list-inside space-y-3 mb-6 text-[#707882]">
         <li>
            Stay Active:  Regular low-impact exercises like 
           swimming, cycling, or walking can help maintain flexibility and strength around the 
@@ -120,16 +125,31 @@ const KneePain = () => {
       </ul>
 
       {/* Categories & Tags */}
-      <div className="border-t border-gray-200 pt-4 flex flex-wrap justify-between text-sm text-gray-600">
-        <div>
-          <span className="font-semibold text-gray-800">Categories: {" "}
-          Health Care, Medical Service</span>
-        </div>
-        <div>
-          <span className="font-semibold text-gray-800">Tags: {" "}
-          Knee Pain, Knee Pain Causes</span>
-        </div>
-      </div>
+<div className="border-t border-gray-200 pt-4 pb-4 flex flex-wrap justify-between items-center text-sm text-[#707882]">
+  <div className="flex items-center gap-3">
+    <span className=" text-[#234179] uppercase">Categories:</span>
+
+    <div className="flex items-center gap-2">
+      <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
+        Health Care
+      </span>
+      <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
+        Medical Service
+      </span>
+    </div>
+  </div>
+
+  {/* Tags */}
+  <div className="flex items-center gap-3 mt-3 sm:mt-0">
+    <span className=" text-[#234179] uppercase">Tags:</span>
+
+    <p className="text-[#707882]">
+      Knee pain, Knee Pain Causes
+    </p>
+  </div>
+
+</div>
+<div className="border-t border-gray-200"></div>
     </div>
   );
 };

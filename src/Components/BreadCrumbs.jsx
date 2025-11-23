@@ -85,16 +85,15 @@ const Breadcrumbs = () => {
   const location = useLocation();
   const pathname = location.pathname;
 
+  if(pathname==="/") return null;
+  let breadcrumbItems = [];
+  let pageTitle = "";
+
   useEffect(()=>{
     if(pathname === "/"){
      document.title = "Home | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepa" 
     }
   },[pathname]);
-
-  if (pathname === "/") return null;
-
-  let breadcrumbItems = [];
-  let pageTitle = "";
 
   if (breadcrumbMap[pathname]) {
     const { hierarchy, labels } = breadcrumbMap[pathname];

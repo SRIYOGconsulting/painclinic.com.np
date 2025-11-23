@@ -47,7 +47,7 @@ const NiruM = () => {
     
               {/* Profile Content */}
               <div className="bg-[#f5f7fa] p-6">
-                <div className="space-y-4">
+                <div className="space-y-3">
                   <div>
                     <p className="text-[#0A2241] font-bold mb-1">Full Name:</p>
                     <p className="text-[#707882] border-b border-gray-300 pb-3">
@@ -80,7 +80,7 @@ const NiruM = () => {
                     <p className="text-[#0A2241] font-bold mb-1">
                       Years of Experience:
                     </p>
-                    <p className="text-[#707882]">15+ Years</p>
+                    <p className="text-[#707882] border-b border-gray-300 pb-3">15+ Years</p>
                   </div>
 
                   <div>

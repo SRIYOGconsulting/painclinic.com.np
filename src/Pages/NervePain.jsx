@@ -1,22 +1,30 @@
 import React from 'react'
 import nervepain from "../assets/images/nerve-pain.jpg";
+import { UserRound } from 'lucide-react';
+
 const NervePain = () => {
   return (
-     <div className="max-w-3xl mx-auto px-6 py-10 text-[#707882]">
-                    {/* Author and read time */}
-                    <div className="text-sm text-[#707882] mb-4 flex items-center justify-between">
-                      <p>By <span className="font-medium text-[#707882]">Salina Bastola</span></p>
-                      <p>3 minutes read</p>
-                    </div>
+     <div className="max-w-3xl mx-auto px-6 py-30 text-[#707882] font-[sans-serif]">
+      {/* Author and read time */}
+      <div className="text-[12px] text-[#707882] mb-4 flex items-center gap-6">
+        <div className="flex items-center gap-2">
+          <UserRound className="w-4 h-4 stroke-current text-[#234179]" />
+          <p>
+            By{" "}
+            <span className="font-medium text-[#707882]">Salina Bastola</span>
+          </p>
+        </div>
+        <p>3 Minutes Read</p>
+      </div>
               
                     {/* Title */}
                     <h1 className="text-3xl font-bold text-[#0A2241] mb-4">What is Nerve Pain?</h1>
               
                     {/* Paragraphs */}
-                    <p className="mb-4 leading-relaxed">
+                    <p className="text-[#707882] mb-4 leading-relaxed">
                      Nerve pain, also known as neuropathic pain, occurs when there is damage or dysfunction in the nervous system, including the nerves, spinal cord, or brain. This type of pain is different from regular pain caused by injury or inflammation and can feel like a burning, stabbing, shooting, or tingling sensation. Nerve pain may arise from conditions like diabetes (diabetic neuropathy), herniated discs, infections, injuries, or nerve disorders such as shingles or sciatica. It can also occur due to nerve compression or damage from chronic conditions, such as multiple sclerosis or carpal tunnel syndrome.
                     </p>
-                    <p className="mb-4 leading-relaxed">
+                    <p className="text-[#707882] mb-4 leading-relaxed">
                       Symptoms of nerve pain can vary widely but commonly include sharp or shooting pain, numbness, tingling, or a "pins and needles" sensation. In some cases, even light touch can trigger severe pain, a condition known as allodynia. Treating nerve pain often involves addressing the underlying cause, along with medications such as pain relievers, antidepressants, anticonvulsants, or topical treatments. In some cases, physical therapy, nerve blocks, or surgery may be necessary to alleviate symptoms and improve quality of life.
                     </p>
               
@@ -35,7 +43,7 @@ const NervePain = () => {
                     </h2>
               
                     {/* List */}
-                    <ul className="list-disc list-inside space-y-3 mb-6">
+                    <ul className="text-[#707882] text-[#707882] list-disc list-inside space-y-3 mb-6">
                       <li>
                         Diabetes (Diabetic Neuropathy): High blood sugar levels can damage nerves, particularly in the hands and feet, leading to nerve pain or numbness.
                       </li>
@@ -67,7 +75,7 @@ const NervePain = () => {
                     </h2>
               
                     {/* List */}
-                    <ul className="list-disc list-inside space-y-3 mb-6">
+                    <ul className="text-[#707882] list-disc list-inside space-y-3 mb-6">
                       <li>
                         Layer Up: Keep your body warm by wearing layers of clothing. Focus on wearing gloves, socks, and scarves to help maintain body heat and protect sensitive areas like your hands and feet. Heated pads or wraps can provide additional relief to areas affected by nerve pain.
                       </li>
@@ -90,21 +98,36 @@ const NervePain = () => {
                         Consult Your Doctor: If nerve pain worsens in the winter months, consult your healthcare provider to discuss treatment options. Medications, physical therapy, nerve blocks, or even adjustments to your existing treatment plan may be necessary to help you manage symptoms more effectively.
                       </li>
                     </ul>
-                    <p className="mb-4 leading-relaxed">
+                    <p className="text-[#707882] mb-4 leading-relaxed">
                         By understanding how winter can impact nerve pain and taking proactive steps to care for your body, you can reduce discomfort and continue to enjoy your daily activities despite the cold weather.
                     </p>
               
                     {/* Categories & Tags */}
-                    <div className="border-t border-gray-200 pt-4 flex flex-wrap justify-between text-sm">
-                      <div>
-                        <span className="font-semibold text-[#0A2241]">Categories:</span>{" "}
-                        Health Care, Medical Service
-                      </div>
-                      <div>
-                        <span className="font-semibold text-[#0A2241]">Tags:</span>{" "}
-                     Nerve Pain Relief, Winter Nerve Pain Management
-                      </div>
-                    </div>
+<div className="border-t border-gray-200 pt-4 pb-4 flex flex-wrap justify-between items-center text-sm text-[#707882]">
+  <div className="flex items-center gap-3">
+    <span className=" text-[#234179] uppercase">Categories:</span>
+
+    <div className="flex items-center gap-2">
+      <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
+        Health Care
+      </span>
+      <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
+        Medical Service
+      </span>
+    </div>
+  </div>
+
+  {/* Tags */}
+  <div className="flex items-center gap-3 mt-3 sm:mt-0">
+    <span className=" text-[#234179] uppercase">Tags:</span>
+
+    <p className="text-[#707882]">
+      Nerve Pain Relief, Winter Nerve Pain Management
+    </p>
+  </div>
+
+</div>
+<div className="border-t border-gray-200"></div>
                   </div>
   )
 }

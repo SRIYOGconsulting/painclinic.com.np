@@ -48,7 +48,7 @@ const About = () => {
       return()=> clearInterval(interval)
     }, [doodleImages.length])
   return (
-    <div className="px-4 md:px-8 py-20 font-sans">
+    <div className="px-4 md:px-8 py-20 font-[sans-serif]">
       <div className="flex max-w-6xl mx-auto items-center gap-30">
         {/* Left Image Section */}
         <div className="relative w-1/2">
@@ -74,7 +74,7 @@ const About = () => {
           <h2 className="text-4xl font-bold text-[#0A2241] mb-2">
             Advance Pain
           </h2>
-          <p className="text-gray-600 mb-6 leading-relaxed">
+          <p className="text-[#707882] text-[16px] mb-6 leading-relaxed">
             Management <br /><br />
             At Advance Pain Specialist Clinic, we strive to transform lives by helping individuals overcome the limitations of pain and embrace a healthier, happier future.
           </p>
@@ -110,14 +110,14 @@ const About = () => {
         </div>
       </div>
       {/* Journey of Pain to Happiness Section */}
-      <div className="px-4 md:px-8 py-40 font-sans">
+      <div className="px-4 md:px-8 py-40 font-[sans-serif]">
         <div className="flex max-w-6xl mx-auto items-center gap-30">
           {/* Left Content Section */}
           <div className="w-1/2">
-            <h2 className="text-[48px] font-bold mb-2">
+            <h2 className="text-[48px] font-semibold mb-2">
               Journey of Pain to Happiness
             </h2>
-            <p className="text-gray-600 mb-6 leading-relaxed">
+            <p className="text-[#707882] text-[16px] mb-6 leading-relaxed">
              We are proud to be the first
                         dedicated pain management clinic in Koshi Province,
                         addressing a long-standing need for specialized care in
@@ -129,7 +129,7 @@ const About = () => {
 
             <div className="flex gap-4">
               <button className="bg-[#0D6EFD] hover:bg-[#1e3767] transition px-8 rounded-md">
-                Book an Appointment
+                <a href='https://www.facebook.com/painclinicbirtamode'>Book an Appointment</a>
               </button>
               <button className="border border-gray-700  px-8 py-2 rounded-md text-[#234179]">
                 Contact Us

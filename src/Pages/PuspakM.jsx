@@ -64,7 +64,7 @@ const PuspakM = () => {
 
           {/* Profile Content */}
           <div className="bg-[#f5f7fa] p-6">
-            <div className="space-y-4">
+            <div className="space-y-3">
               <div>
                 <p className="text-[#0A2241] font-bold mb-1">Full Name:</p>
                 <p className="text-[#707882] border-b border-gray-300 pb-3">
