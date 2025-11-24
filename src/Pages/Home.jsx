@@ -43,6 +43,18 @@ import latestupdate from "../assets/images/shapes/welcome-inner-bg-1-1.jpg"
 
 import { UserRound, Hospital, HeartPulse, ThumbsUp } from "lucide-react";
 
+// Reusable hook for mobile detection
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return isMobile;
+}
 
 const Home = () => {
   const heroSlides = [
@@ -72,39 +84,38 @@ useEffect(() => {
 }, [heroSlides.length]);
 
 
-  const slides = [
-    { id: 1, title: "Joint Pain", bigImage: JointImg, smallImage: director },
-    { id: 2, title: "Back Pain", bigImage: shoulderImg, smallImage: director },
-    { id: 3, title: "Neck Pain", bigImage: neckImg, smallImage: director },
-    { id: 4, title: "Shoulder Pain", bigImage: shoulderImg, smallImage: director },
-    { id: 5, title: " Headache", bigImage: headacheImg, smallImage: director },
-    { id: 6, title: "Orofacial Pain", bigImage: orofacial, smallImage: director },
-    { id: 7, title: "Knee Pain", bigImage: knee, smallImage: director },
-    { id: 8, title: "Muscle Pain", bigImage: muscle, smallImage: director },
-    { id: 9, title: "Nerve Pain", bigImage: nerve, smallImage: director },
+const isMobile = useIsMobile(); 
 
+  // Conditions
+  const slides = [
+    { id: 1, title: "Joint Pain", bigImage: JointImg, path:"what-is-joint-pain" },
+    { id: 2, title: "Back Pain", bigImage: shoulderImg, path:"what-is-back-pain" },
+    { id: 3, title: "Neck Pain", bigImage: neckImg, path:"what-is-neck-pain" },
+    { id: 4, title: "Shoulder Pain", bigImage: shoulderImg, path:"what-is-shoulder-pain" },
+    { id: 5, title: "Headache", bigImage: headacheImg, path:"what-is-headache" },
+    { id: 6, title: "Orofacial Pain", bigImage: orofacial, path:"what-is-orofacial-pain" },
+    { id: 7, title: "Knee Pain", bigImage: knee, path:"what-is-knee-pain" },
+    { id: 8, title: "Muscle Pain", bigImage: muscle, path:"what-is-muscle-pain" },
+    { id: 9, title: "Nerve Pain", bigImage: nerve, path:"what-is-nerve-pain" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const loopedServiceSlides = slides.concat(slides);
 
-  // Auto-slide every 3s
+ // Update navigation
+const goToNext = () =>
+  setCurrentIndex((prev) => (prev + 1 >= slides.length ? 0 : prev + 1));
+const goToPrev = () =>
+  setCurrentIndex((prev) => (prev - 1 < 0 ? slides.length - 1 : prev - 1));
+  // Auto-slide every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) =>
-        prev + 3 >= slides.length ? 0 : prev + 3
-      );
+      setCurrentIndex((prev) => (prev + 1 >= slides.length ? 0 : prev + 1));
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [slides.length]);
 
-  const goToNext = () =>
-    setCurrentIndex((prev) => (prev + 3 >= slides.length ? 0 : prev + 3));
-  const goToPrev = () =>
-    setCurrentIndex((prev) =>
-      prev - 3 < 0 ? slides.length - (slides.length % 3 || 3) : prev - 3
-    );
-
-  // BLOG SLIDES (3 cards)
+  // BLOG SLIDER
   const blogSlides = [
     {
       id: 1,
@@ -120,7 +131,7 @@ useEffect(() => {
       category: "Headache",
       doctor: "Dr. Niru",
       date: "6 Aug, 2024",
-      title: "How Weather Changes Trigger Headaches: Causes And Solutions",
+      title: "How Weather Changes Trigger Headaches",
       path: "what-is-headache",
       image: headacheImg,
     },
@@ -129,7 +140,7 @@ useEffect(() => {
       category: "Joint Pain",
       doctor: "Dr. Puspak",
       date: "3 Nov, 2024",
-      title: "Best Excersises To Ease Stiff Joints During Chilly Mornings",
+      title: "Exercises To Ease Stiff Joints",
       path: "what-is-joint-pain",
       image: JointImg,
     },
@@ -138,54 +149,42 @@ useEffect(() => {
   const [currentBlogIndex, setCurrentBlogIndex] = useState(0);
   const loopedSlides = blogSlides.concat(blogSlides);
 
-  const nextBlog = () => {
-  setCurrentBlogIndex((prev) =>
-    (prev + 1) % blogSlides.length
-  );
-};
+  const nextBlog = () =>
+    setCurrentBlogIndex((prev) => (prev + 1 >= blogSlides.length ? 0 : prev + 1));
 
-const prevBlog = () => {
-  setCurrentBlogIndex((prev) =>
-    prev - 1 < 0 ? blogSlides.length - 1 : prev - 1
-  );
-};
-useEffect(() => {
-  const interval = setInterval(() => {
+  const prevBlog = () =>
     setCurrentBlogIndex((prev) =>
-      prev + 1 >= blogSlides.length ? 0 : prev + 1
+      prev - 1 < 0 ? blogSlides.length - 1 : prev - 1
     );
-  }, 3000);
 
-  return () => clearInterval(interval);
-}, [blogSlides.length]);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentBlogIndex((prev) =>
+        prev + 1 >= blogSlides.length ? 0 : prev + 1
+      );
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
-  // for doodle like image
+  // DOODLES
   const doodleImages = [
-    { src: orofacialI, alt: 'Oral Pain', label: 'Orafacial Pain' },
-    { src: shoulderI, alt: 'Shoulder Pain', label: 'Shoulder Pain' },
-    { src: sportsI, alt: 'Sports Injury', label: 'Sports Injury' },
-    { src: headacheIcon, alt: 'Headache', label: 'Headache' },
-    { src: kneeI, alt: 'Knee pain', label: 'Knee Pain' },
-    { src: JointIcon, alt: 'Joint pain', label: 'Joint Pain' },
-    { src: neckIcon, alt: 'Neck pain', label: 'Neck Pain' },
-    { src: cancerI, alt: 'Cancer pain', label: 'Cancer Pain' },
-    { src: wholeI, alt: 'whole body pain', label: 'whole body Pain' },
-    { src: fibromyalgiaI, alt: 'fibromyalhia', label: 'fibromyalhia Pain' },
-    { src: muscleI, alt: 'muscle pain', label: 'muscle Pain' },
-    { src: nerveI, alt: 'nerve pain', label: 'nerve Pain' },
-    { src: discI, alt: 'disc pain', label: 'disc Pain' },
-    { src: ankelI, alt: 'ankel pain', label: 'Ankle Pain' },
+    { src: orofacialI, label: "Orafacial Pain" },
+    { src: shoulderI, label: "Shoulder Pain" },
+    { src: sportsI, label: "Sports Injury" },
+    { src: headacheIcon, label: "Headache" },
+    { src: kneeI, label: "Knee Pain" },
+    { src: JointIcon, label: "Joint Pain" },
+    { src: neckIcon, label: "Neck Pain" },
+    { src: cancerI, label: "Cancer Pain" },
+    { src: wholeI, label: "Whole Body Pain" },
+    { src: fibromyalgiaI, label: "Fibromyalgia Pain" },
+    { src: muscleI, label: "Muscle Pain" },
+    { src: nerveI, label: "Nerve Pain" },
+    { src: discI, label: "Disc Pain" },
+    { src: ankelI, label: "Ankle Pain" },
   ];
 
-  const loopedDoodles = doodleImages.concat(doodleImages  );
-
-  
-  const [isMobile, setIsMobile] = useState(window.innerWidth<768)
-useEffect(()=>{
-  const handleResize = ()=> setIsMobile(window.innerWidth<768)
-  window.addEventListener("resize",handleResize);
-  return () => window.removeEventListener("resize", handleResize)
-},[])
+  const loopedDoodles = doodleImages.concat(doodleImages);
 
   return (
     <div className="font-[sans-serif] overflow-x-hidden w-full max-w-screen mx-auto">
@@ -348,92 +347,80 @@ useEffect(()=>{
 
       {/* Services Section */}
       <section className="bg-[#234179] py-16 px-4 mt-15">
-        <div className="text-white mb-10 flex flex-col items-center">
-  <div className="flex items-center gap-2">
-    <motion.img 
-      src={sectitles2} 
-      animate={{ rotate: 360 }} 
-      transition={{ repeat: Infinity, duration: 4 }}   
-      className="h-4"
-    />
-    <p className="text-sm">Our Services</p>
+      {/* TITLE */}
+      <div className="text-white mb-10 flex flex-col items-center">
+        <div className="flex items-center gap-2">
+          <motion.img
+            src={sectitles2}
+            animate={{ rotate: 360 }}
+            transition={{ repeat: Infinity, duration: 4 }}
+            className="h-4"
+          />
+          <p className="text-sm">Our Services</p>
+        </div>
+        <h2 className="text-4xl font-bold mt-2">
+          Pain Conditions That We Treat
+        </h2>
+      </div>
+
+      {/* SLIDER */}
+      <div className="relative max-w-6xl mx-auto overflow-hidden">
+  <div
+    className="flex transition-transform duration-700 ease-in-out"
+    style={{
+      transform: `translateX(-${currentIndex * (isMobile ? 300 : 33.333)}%)`, width:isMobile ? `${loopedServiceSlides.length *100}%` : "auto",
+    }}
+  >
+    {loopedServiceSlides.map((item) => (
+      <div
+        key={item.id}
+        className={`flex-shrink-0 px-2`}
+        style={{ width: isMobile ? "100%" : "33.333%" }}
+      >
+        <div className="w-full h-64 rounded-xl overflow-hidden relative">
+          <img
+            src={item.bigImage}
+            alt={item.title}
+            className="w-full h-full object-cover rounded-xl"
+          />
+          <Link to={`/${item.path}`}>
+          <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-4">
+            <h3 className="text-white text-lg font-semibold hover:underline hover:text-[#234179]">{item.title}</h3>
+          </div>
+          </Link>
+        </div>
+      </div>
+    ))}
   </div>
 
-  <h2 className="text-4xl font-bold mt-2">
-    Pain Conditions That We Treat
-  </h2>
+  {/* NAV BUTTONS */}
+  <button
+    onClick={goToPrev}
+    className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full p-3"
+  >
+    &#8592;
+  </button>
+  <button
+    onClick={goToNext}
+    className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full p-3"
+  >
+    &#8594;
+  </button>
 </div>
 
-
-        <div className="overflow-hidden relative max-w-6xl mx-auto">
-
-          <div
-            className="flex transition-transform duration-700 ease-in-out"
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-          >
-            {slides.map(({ id, title, bigImage }, index) => (
-              <div className="min-w-full shrink-0 flex justify-between gap-3 px-2 overflow-hidden">
-
-                {/* SHOW 3 CARDS PER SLIDE */}
-                {[0, 1, 2].map((offset) => {
-                  const slideIndex = (index + offset) % slides.length;
-                  const item = slides[slideIndex];
-
-                  return (
-                    <div key={offset} className="relative w-1/3 min-w-0">
-
-                      {/* IMAGE CARD */}
-                      <div className="w-full h-64 rounded-xl overflow-hidden relative">
-                        <img
-                          src={item.bigImage}
-                          alt={item.title}
-                          className="w-full h-full object-cover rounded-xl"
-                        />
-
-                        {/* HEADING OVER IMAGE */}
-                        <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-4">
-                          <h3 className="text-white text-lg font-semibold">
-                            {item.title}
-                          </h3>
-                        </div>
-                      </div>
-
-                    </div>
-                  );
-                })}
-
-              </div>
-            ))}
-          </div>
-
-          {/* Navigation Buttons */}
+      {/* DOTS */}
+      <div className="flex justify-center mt-6 space-x-3">
+        {slides.map((_, idx) => (
           <button
-            onClick={goToPrev}
-            className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full p-3"
-          >
-            &#8592;
-          </button>
-
-          <button
-            onClick={goToNext}
-            className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full p-3"
-          >
-            &#8594;
-          </button>
-        </div>
-
-        {/* Pagination Dots */}
-        <div className="flex justify-center mt-6 space-x-3">
-          {slides.map((_, idx) => (
-            <button
-              key={idx}
-              className={`w-3 h-3 rounded-full ${idx === currentIndex ? "bg-white" : "bg-white/50"
-                }`}
-              onClick={() => setCurrentIndex(idx)}
-            />
-          ))}
-        </div>
-      </section>
+            key={idx}
+            className={`w-3 h-3 rounded-full ${
+              idx === currentIndex ? "bg-white" : "bg-white/50"
+            }`}
+            onClick={() => setCurrentIndex(idx)}
+          />
+        ))}
+      </div>
+    </section>
 
       {/* ggoodbye section */}
       <section className="py-16 px-4  mt-15">
@@ -731,10 +718,10 @@ useEffect(()=>{
               className="flex transition-transform duration-500"
               style={{ transform: `translateX(-${currentBlogIndex * (isMobile ? 100 :50)}%)`, width:isMobile ? `${loopedSlides.length*35}%`:"auto" }}
             >
-              {loopedSlides.map((item, index) => (
+              {loopedSlides.map((item1) => (
                 <Link
-                  to={`/${item.path}`}
-                  key={item.id}
+                  to={`/${item1.path}`}
+                  key={item1.id}
                   className="min-w-[50%] max-w-[50%] px-3 block"
                 >
                   <div className="bg-white rounded-3xl shadow-md overflow-hidden">
@@ -743,8 +730,8 @@ useEffect(()=>{
                     <div className="relative h-full w-full rounded-3xl overflow-hidden bg-white p-6">
                       <div className="w-full h-full rounded-2xl overflow-hidden">
                         <motion.img
-                          src={item.image}
-                          alt={item.title}
+                          src={item1.image}
+                          alt={item1.title}
                           className="w-full h-full object-cover"
                           whileHover={{ scale: 1.1 }}
                         />
@@ -752,7 +739,7 @@ useEffect(()=>{
 
                       {/* CATEGORY TAG */}
                       <div className="absolute top-10 left-10 bg-[#234179] text-white text-sm px-4 py-1 rounded-full z-10">
-                        {item.category}
+                        {item1.category}
                       </div>
                     </div>
 
@@ -762,12 +749,12 @@ useEffect(()=>{
 
                       {/* Doctor + Date */}
                       <p className="text-gray-500 text-sm mb-2">
-                        {item.doctor} · {item.date}
+                        {item1.doctor} · {item1.date}
                       </p>
 
                       {/* Title */}
                       <h3 className="text-xl font-bold text-[#0A2241] leading-snug mb-4">
-                        {item.title}
+                        {item1.title}
                       </h3>
 
                       {/* Read More Button */}
@@ -800,17 +787,17 @@ useEffect(()=>{
         "
         style={{ transform: `translateX(-${currentBlogIndex * 30}%)` }}
       >
-        {loopedDoodles.map(item => (
+        {loopedDoodles.map(item2 => (
           <div
-            key={item.id}
+            key={item2.id}
             className="w-32 mx-auto flex-shrink-0 flex flex-col items-center text-center relative group"
           >
             <img
-              src={item.src}
-              alt={item.label}
+              src={item2.src}
+              alt={item2.label}
               className="w-22 h-22 object-contain mb-4"
             />
-            <p>{item.label}</p>
+            <p>{item2.label}</p>
             <div className="absolute inset-0 bg-white opacity-60 group-hover:opacity-10 transition-opacity duration-300"></div>
           </div>
         ))}
