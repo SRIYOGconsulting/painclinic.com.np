@@ -85,51 +85,58 @@ const Breadcrumbs = () => {
   const location = useLocation();
   const pathname = location.pathname;
 
-  if(pathname==="/") return null;
+  const isHome = pathname === "/";
+
   let breadcrumbItems = [];
   let pageTitle = "";
 
-  useEffect(()=>{
-    if(pathname === "/"){
-     document.title = "Home | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepa" 
+  // Hook 1 always runs
+  useEffect(() => {
+    if (isHome) {
+      document.title =
+        "Home | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal";
     }
-  },[pathname]);
+  }, [isHome]);
 
-  if (breadcrumbMap[pathname]) {
-    const { hierarchy, labels } = breadcrumbMap[pathname];
+  // Breadcrumb generation logic 
+  if (!isHome) {
+    if (breadcrumbMap[pathname]) {
+      const { hierarchy, labels } = breadcrumbMap[pathname];
 
-    if (labels.length === 1 && hierarchy.length === 1) {
-
-      breadcrumbItems = [{ path: "/blog", label: "Our Blog" }];
-      pageTitle = labels[0];
+      if (labels.length === 1 && hierarchy.length === 1) {
+        breadcrumbItems = [{ path: "/blog", label: "Our Blog" }];
+        pageTitle = labels[0];
+      } else {
+        breadcrumbItems = hierarchy.map((path, index) => ({
+          path,
+          label: labels[index],
+        }));
+        pageTitle = labels[labels.length - 1];
+      }
     } else {
-      // Normal navbar special pages
-      breadcrumbItems = hierarchy.map((path, index) => ({
-        path,
-        label: labels[index],
-      }));
-      pageTitle = labels[labels.length - 1];
+      const segments = pathname.split("/").filter(Boolean);
+      let currentPath = "";
+      breadcrumbItems = segments.map((seg) => {
+        currentPath += `/${seg}`;
+        return {
+          path: currentPath,
+          label:
+            defaultBreadcrumbMap[currentPath] ||
+            seg.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
+        };
+      });
+
+      pageTitle = breadcrumbItems[breadcrumbItems.length - 1].label;
     }
-  } else {
-    // Default: split pathname and build breadcrumb
-    const segments = pathname.split("/").filter(Boolean);
-    let currentPath = "";
-    breadcrumbItems = segments.map((seg) => {
-      currentPath += `/${seg}`;
-      return {
-        path: currentPath,
-        label:
-          defaultBreadcrumbMap[currentPath] ||
-          seg.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
-      };
-    });
-    pageTitle = breadcrumbItems[breadcrumbItems.length - 1].label;
   }
 
-  // document title
-  useEffect(()=>{
-    document.title = `${pageTitle} | Advance Pain Clinic`
-  },[pageTitle]);
+  // hook 2 always runs even for home
+  useEffect(() => {
+    if (!isHome) document.title = `${pageTitle} | Advance Pain Clinic`;
+  }, [isHome, pageTitle]);
+
+  // safe return — AFTER hooks
+  if (isHome) return <></>;
 
   return (
     <section

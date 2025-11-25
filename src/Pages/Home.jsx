@@ -15,6 +15,9 @@ import muscle from "../assets/images/muscle-pain.jpg";
 import nerve from "../assets/images/nerve-pain.jpg";
 import offer from "../assets/images/offer.jpg";
 import choose from "../assets/images/why-choose-1-2.jpg";
+import cancerImg from "../assets/images/cancer-pain.jpg";
+import sportsImg from "../assets/images/sports-injury.jpg";
+import wholebody from "../assets/images/whole-body-pain.jpg";
 import backpain from "../assets/images/back-pain (1).jpg";
 import headacheIcon from "../assets/images/headache.png";
 import JointIcon from "../assets/images/joint.png";
@@ -88,33 +91,40 @@ const isMobile = useIsMobile();
 
   // Conditions
   const slides = [
-    { id: 1, title: "Joint Pain", bigImage: JointImg, path:"what-is-joint-pain" },
-    { id: 2, title: "Back Pain", bigImage: shoulderImg, path:"what-is-back-pain" },
-    { id: 3, title: "Neck Pain", bigImage: neckImg, path:"what-is-neck-pain" },
-    { id: 4, title: "Shoulder Pain", bigImage: shoulderImg, path:"what-is-shoulder-pain" },
-    { id: 5, title: "Headache", bigImage: headacheImg, path:"what-is-headache" },
+    { id: 1, title: "Headache", bigImage: headacheImg, path:"what-is-headache" },
+    { id: 2, title: "Joint Pain", bigImage: JointImg, path:"what-is-joint-pain" },
+    { id: 3, title: "Whole Body Pain", bigImage: wholebody, path:"what-is-whole-body-pain" },
+    { id: 4, title: "Sports Injury", bigImage: sportsImg, path:"what-is-sports-pain" },
+    { id: 5, title: "Cancer Pain", bigImage: cancerImg, path:"what-is-cancer-pain" },
     { id: 6, title: "Orofacial Pain", bigImage: orofacial, path:"what-is-orofacial-pain" },
     { id: 7, title: "Knee Pain", bigImage: knee, path:"what-is-knee-pain" },
     { id: 8, title: "Muscle Pain", bigImage: muscle, path:"what-is-muscle-pain" },
     { id: 9, title: "Nerve Pain", bigImage: nerve, path:"what-is-nerve-pain" },
+    { id: 10, title: "Neck Pain", bigImage: neckImg, path:"what-is-neck-pain" },
+    { id: 11, title: "Shoulder Pain", bigImage: shoulderImg, path:"what-is-shoulder-pain" },
+    { id: 12, title: "Knee Pain", bigImage: knee, path:"what-is-knee-pain" },
+    { id: 13, title: "Muscle Pain", bigImage: muscle, path:"what-is-muscle-pain" },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const loopedServiceSlides = slides.concat(slides);
+  const [currentServiceIndex, setcurrentServiceIndex] = useState(0);
 
- // Update navigation
-const goToNext = () =>
-  setCurrentIndex((prev) => (prev + 1 >= slides.length ? 0 : prev + 1));
-const goToPrev = () =>
-  setCurrentIndex((prev) => (prev - 1 < 0 ? slides.length - 1 : prev - 1));
-  // Auto-slide every 3 seconds
+  const nextService = () =>
+    setcurrentServiceIndex((prev) => (prev + 1 >= slides.length ? 0 : prev + 1));
+
+  const prevService = () =>
+    setcurrentServiceIndex((prev) =>
+      prev - 1 < 0 ? slides.length - 1 : prev - 1
+    );
+
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1 >= slides.length ? 0 : prev + 1));
+      setcurrentServiceIndex((prev) =>
+        prev + 1 >= slides.length ? 0 : prev + 1
+      );
     }, 3000);
     return () => clearInterval(interval);
-  }, [slides.length]);
-
+  }, []);
+  
   // BLOG SLIDER
   const blogSlides = [
     {
@@ -346,81 +356,69 @@ const goToPrev = () =>
 
 
       {/* Services Section */}
-      <section className="bg-[#234179] py-16 px-4 mt-15">
-      {/* TITLE */}
-      <div className="text-white mb-10 flex flex-col items-center">
-        <div className="flex items-center gap-2">
-          <motion.img
-            src={sectitles2}
-            animate={{ rotate: 360 }}
-            transition={{ repeat: Infinity, duration: 4 }}
-            className="h-4"
-          />
-          <p className="text-sm">Our Services</p>
-        </div>
-        <h2 className="text-4xl font-bold mt-2">
-          Pain Conditions That We Treat
-        </h2>
-      </div>
+<section className="bg-[#234179] py-25 px-4 mt-15 h-160">
+  <div className="text-center flex flex-col items-center text-white mb-10">
+     <div className="flex items-center gap-2">
+    <motion.img 
+      src={sectitles2} 
+      animate={{ rotate: 360 }} 
+      transition={{ repeat: Infinity, duration: 4 }}   
+      className="h-4"
+    />
+    <p className="text-sm">Our Services</p>
+  </div>
 
-      {/* SLIDER */}
-      <div className="relative max-w-6xl mx-auto overflow-hidden">
+    <h2 className="text-4xl font-bold">Pain Conditions That We Treat</h2>
+  </div>
+
+  {/* Slider  */}
+  <div className="overflow-hidden relative max-w-6xl mx-auto">
   <div
     className="flex transition-transform duration-700 ease-in-out"
-    style={{
-      transform: `translateX(-${currentIndex * (isMobile ? 300 : 33.333)}%)`, width:isMobile ? `${loopedServiceSlides.length *100}%` : "auto",
-    }}
+    style={{ transform: `translateX(-${currentServiceIndex * 33.33}%)` }}
   >
-    {loopedServiceSlides.map((item) => (
+    {slides.map((item, index) => (
       <div
-        key={item.id}
-        className={`flex-shrink-0 px-2`}
-        style={{ width: isMobile ? "100%" : "33.333%" }}
+        key={index}
+        className="relative sm:w-1/2 lg:w-1/3 shrink-0 px-2"
       >
-        <div className="w-full h-64 rounded-xl overflow-hidden relative">
+        <div className="w-full h-40 sm:h-52 md:h-64 rounded-xl overflow-hidden relative">
           <img
             src={item.bigImage}
             alt={item.title}
             className="w-full h-full object-cover rounded-xl"
           />
+
           <Link to={`/${item.path}`}>
-          <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-4">
-            <h3 className="text-white text-lg font-semibold hover:underline hover:text-[#234179]">{item.title}</h3>
-          </div>
+            <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-4">
+              <h3 className="text-white text-lg font-semibold hover:underline hover:text-[#234179]">
+                {item.title}
+              </h3>
+            </div>
           </Link>
         </div>
       </div>
     ))}
   </div>
-
-  {/* NAV BUTTONS */}
-  <button
-    onClick={goToPrev}
-    className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full p-3"
-  >
-    &#8592;
-  </button>
-  <button
-    onClick={goToNext}
-    className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full p-3"
-  >
-    &#8594;
-  </button>
 </div>
 
-      {/* DOTS */}
-      <div className="flex justify-center mt-6 space-x-3">
-        {slides.map((_, idx) => (
-          <button
-            key={idx}
-            className={`w-3 h-3 rounded-full ${
-              idx === currentIndex ? "bg-white" : "bg-white/50"
-            }`}
-            onClick={() => setCurrentIndex(idx)}
-          />
-        ))}
-      </div>
-    </section>
+
+  {/* Pagination Dots */}
+  <div className="flex justify-center mt-6 space-x-3">
+    {Array.from({ length: slides.length -2 }).map((_, idx) => (
+      <button
+        key={idx}
+        className={`w-3 h-3 rounded-full ${
+          idx === currentServiceIndex ? "bg-white" : "bg-white/50"
+        }`}
+        onClick={() => setcurrentServiceIndex(idx)}
+      />
+    ))}
+  </div>
+</section>
+
+
+
 
       {/* ggoodbye section */}
       <section className="py-16 px-4  mt-15">
@@ -718,10 +716,10 @@ const goToPrev = () =>
               className="flex transition-transform duration-500"
               style={{ transform: `translateX(-${currentBlogIndex * (isMobile ? 100 :50)}%)`, width:isMobile ? `${loopedSlides.length*35}%`:"auto" }}
             >
-              {loopedSlides.map((item1) => (
+              {loopedSlides.map((item1,index) => (
                 <Link
                   to={`/${item1.path}`}
-                  key={item1.id}
+                  key={index}
                   className="min-w-[50%] max-w-[50%] px-3 block"
                 >
                   <div className="bg-white rounded-3xl shadow-md overflow-hidden">
@@ -787,9 +785,9 @@ const goToPrev = () =>
         "
         style={{ transform: `translateX(-${currentBlogIndex * 30}%)` }}
       >
-        {loopedDoodles.map(item2 => (
+        {loopedDoodles.map((item2, index) => (
           <div
-            key={item2.id}
+            key={index}
             className="w-32 mx-auto flex-shrink-0 flex flex-col items-center text-center relative group"
           >
             <img
