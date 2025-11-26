@@ -104,6 +104,8 @@ const isMobile = useIsMobile();
     { id: 11, title: "Shoulder Pain", bigImage: shoulderImg, path:"what-is-shoulder-pain" },
     { id: 12, title: "Knee Pain", bigImage: knee, path:"what-is-knee-pain" },
     { id: 13, title: "Muscle Pain", bigImage: muscle, path:"what-is-muscle-pain" },
+    { id: 12, title: "Knee Pain", bigImage: knee, path:"what-is-knee-pain" },
+    { id: 13, title: "Muscle Pain", bigImage: muscle, path:"what-is-muscle-pain" },
   ];
 
   const [currentServiceIndex, setcurrentServiceIndex] = useState(0);
