@@ -5,8 +5,10 @@ import {
   MapPin,
   Clock,
 } from "lucide-react";
+import { motion } from "motion/react"
 
 import reception from "../assets/images/reception.jpg"; 
+import sectitles1 from "../assets/images/shapes/sec-title-s-1-1.png";
 
 const Contact = () => {
   return (
@@ -25,7 +27,10 @@ const Contact = () => {
 
         {/* Right Info Section */}
         <div className="space-y-6">
-          <p className="text-[#234179] font-semibold">Contact Us</p>
+          <div className="flex gap-2"><motion.img src={sectitles1} animate={{rotate:360}} transition={{repeat:Infinity}} className="h-4"/>
+              <p className="text-sm text-gray-700 font-semibold flex items-center gap-1 mb-2">
+                Contact Us
+              </p></div>
 
           <h1 className="text-4xl font-bold text-[#1d2c4b] leading-tight">
             Advance Pain <br /> Specialist Clinic

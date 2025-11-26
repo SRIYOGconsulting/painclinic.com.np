@@ -39,23 +39,23 @@ const teamMembers = [
 
 const OurTeam = () => {
   return (
-    <div className="flex flex-wrap justify-center gap-10 py-50 bg-white min-h-screen font-[sans-serif] max-w-6xl mx-auto">
+    <div className="flex flex-wrap justify-center gap-10 py-50 bg-white min-h-screen font-[sans-serif] max-w-7xl mx-auto">
       {teamMembers.map((member, index) => (
         <div
-          key={index}
-          className="relative flex flex-col items-center text-center bg-[#ECF0F5] rounded-3xl shadow-sm w-80 h-80 pt-24 pb-6"
-        >
-          {/* Circular Image */}
-          <div className="absolute -top-20 left-1/2 transform -translate-x-1/2">
-            <img
-              src={member.image}
-              alt={member.name}
-              className="w-40 h-40 object-cover rounded-full border-[7px] border-white shadow-md transition-all duration-300 hover:border-[#234179]"
-            />
-          </div>
+  key={index}
+  className="relative flex flex-col items-center text-center bg-[#ECF0F5] rounded-3xl shadow-sm w-90 pt-28 sm:pt-28 pb-8 h-auto"
+>
+  <div className="absolute -top-8 sm:-top-20 left-1/2 transform -translate-x-1/2">
+    <img
+      src={member.image}
+      alt={member.name}
+      className="w-50 h-45 object-cover rounded-full border-[7px] border-white shadow-md transition-all duration-300 hover:border-[#234179]"
+    />
+  </div>
+
 
           {/* Content */}
-          <div className="mt-10 px-4">
+          <div className="mt-4 px-4">
             <h3 className="text-[26px] font-semibold text-[#0A2241]">{member.name}</h3>
             <p className="text-[#707882] text-[16px] mt-2 leading-relaxed">{member.title}</p>
 

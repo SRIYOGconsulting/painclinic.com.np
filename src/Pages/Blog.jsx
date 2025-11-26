@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { UserRound, MessageCircleMore } from 'lucide-react';
+import { motion } from 'motion/react';
 import headacheImg from "../assets/images/headache-pain.jpg";
 import jointImg from "../assets/images/joint-pain.jpg";
 import neckImg from "../assets/images/neck-pain.jpg";
@@ -110,7 +111,7 @@ const blogs = [
 
 const Blog = () => {
   return (
-    <div className='max-w-6xl mx-auto px-6 py-24 font-[sans-serif]'>
+    <div className='max-w-7xl mx-auto px-6 py-24 font-[sans-serif]'>
       {/* grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {blogs.map((blog, index) => (
@@ -120,13 +121,31 @@ const Blog = () => {
             className="bg-[#ECF0F5CC] rounded-2xl shadow-md hover:shadow-lg transition-all p-5 block"
           >
             {/* Image */}
-            <div className="mb-4">
-              <img
-                src={blog.image}
-                alt={blog.title}
-                className="w-full h-56 object-cover rounded-xl"
-              />
-            </div>
+            <motion.div
+  className="mb-4 relative group overflow-hidden rounded-xl"
+  whileHover={{ scale: 1.05 }}
+  transition={{ duration: 0.3 }}
+>
+  <img
+    src={blog.image}
+    alt={blog.title}
+    className="w-full h-56 object-cover rounded-xl"
+  />
+
+  {/* Blue overlay */}
+  <div
+    className="
+      absolute inset-0 
+      bg-blue-600 
+      opacity-0 
+      group-hover:opacity-40 
+      transition-opacity 
+      duration-300 
+      rounded-xl
+    "
+  />
+</motion.div>
+
 
             {/* Title */}
             <h2 className="text-[18px] font-semibold mb-2 leading-snug hover:underline text-[#234179]">

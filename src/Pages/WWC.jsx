@@ -1,6 +1,8 @@
 import React from "react";
 import { Brain, ClipboardList, Bed, Pill } from "lucide-react";
+import { motion } from "motion/react"
 import whychooseus from "../assets/images/why-choose-1.jpg";
+import sectitles1 from "../assets/images/shapes/sec-title-s-1-1.png";
 
 const WWC = () => {
   const steps = [
@@ -49,7 +51,10 @@ const WWC = () => {
 
       {/* Section title */}
       <div className="text-center mb-16">
-        <p className="text-[#234179] text-[16px] ">Our Curing Process</p>
+         <div className="flex items-center justify-center gap-2"><motion.img src={sectitles1} animate={{rotate:360}} transition={{repeat:Infinity}} className="h-4"/>
+                      <p className="text-[#234179] text-[16px] font-semibold flex items-center gap-1 mb-2">
+                        Our Curing Process
+                      </p></div>
         <h2 className="text-[45px] md:text-4xl font-bold text-[#0A2241] mt-2">
           How We Cure?
         </h2>
