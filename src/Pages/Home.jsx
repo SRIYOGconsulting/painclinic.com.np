@@ -104,7 +104,9 @@ const isMobile = useIsMobile();
     { id: 11, title: "Shoulder Pain", bigImage: shoulderImg, path:"what-is-shoulder-pain" },
     { id: 12, title: "Knee Pain", bigImage: knee, path:"what-is-knee-pain" },
     { id: 13, title: "Muscle Pain", bigImage: muscle, path:"what-is-muscle-pain" },
-    { id: 12, title: "Knee Pain", bigImage: knee, path:"what-is-knee-pain" },
+    { id: 13, title: "Knee Pain", bigImage: knee, path:"what-is-knee-pain" },
+    { id: 13, title: "Muscle Pain", bigImage: muscle, path:"what-is-muscle-pain" },
+    { id: 13, title: "Muscle Pain", bigImage: muscle, path:"what-is-muscle-pain" },
     { id: 13, title: "Muscle Pain", bigImage: muscle, path:"what-is-muscle-pain" },
   ];
 
@@ -291,7 +293,7 @@ const isMobile = useIsMobile();
 </section>
 
       {/* About Us Section */}
-      <div className="px-4 md:px-8 py-12 font-sans mt-15 relative">
+      <div className="px-4 md:px-8 py-12 font-sans mt-15 relative max-w-6xl mx-auto">
         <motion.img src={aboutshape} alt="clover" animate={{y:[0,-20,0]}} transition={{repeat:Infinity, duration:3, ease:"easeInOut"}} className="absolute top-80 right-5 h-24 w-24 opacity-30" />
         <Link to='/about'>
           <div className="flex flex-col md:flex-row max-w-6xl mx-auto items-center gap-10 md:gap-30">
@@ -301,7 +303,7 @@ const isMobile = useIsMobile();
               <img
                 src={aboutImage}
                 alt="aboutImage"
-                className="rounded-3xl shadow-lg w-full h-auto object-cover"
+                className="rounded-3xl shadow-lg w-auto h-auto md:w-100 md:h-100 object-cover"
               />
               <div className="absolute bottom-4 right-0 md:right-6 bg-[#6b85be] rounded-2xl px-6 py-5 text-white text-center w-[110px] opacity-90">
                 <p className="text-4xl font-bold leading-none">10+</p>
@@ -772,8 +774,8 @@ const isMobile = useIsMobile();
       </section>
 
       {/* doodle image slideshow section */}
-<section className="py-20 ">
-  <div className="max-w-5xl mx-auto">
+<section className="py-20">
+  <div className="max-w-6xl mx-auto">
 
     {/* AUTO SLIDER WRAPPER */}
     <div className="overflow-hidden relative">
@@ -783,19 +785,19 @@ const isMobile = useIsMobile();
           gap-19   
           whitespace-nowrap 
           transition-transform 
-          duration-500
+          duration-600
         "
         style={{ transform: `translateX(-${currentBlogIndex * 30}%)` }}
       >
         {loopedDoodles.map((item2, index) => (
           <div
             key={index}
-            className="w-32 mx-auto flex-shrink-0 flex flex-col items-center text-center relative group"
+            className="w-40 mx-auto flex-shrink-0 flex flex-col items-center text-center relative group"
           >
             <img
               src={item2.src}
               alt={item2.label}
-              className="w-22 h-22 object-contain mb-4"
+              className="w-25 h-25 object-contain mb-4"
             />
             <p>{item2.label}</p>
             <div className="absolute inset-0 bg-white opacity-60 group-hover:opacity-10 transition-opacity duration-300"></div>

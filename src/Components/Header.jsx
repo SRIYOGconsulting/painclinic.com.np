@@ -20,22 +20,22 @@ const Header = () => {
 
   return (
     <header
-      className={`w-[94%] mx-auto mt-4 z-50 rounded-xl ${
+      className={`w-[96%] mx-auto mt-4 z-50 rounded-xl ${
         location.pathname === "/"
           ? "absolute top-4 left-1/2 -translate-x-1/2 bg-white shadow-md"
           : "relative bg-white"
       }`}
     >
-      <nav className="flex items-center justify-between py-4 px-8">
+      <nav className="flex items-center justify-between py-4 px-12">
 
         {/* LEFT LOGO (always fixed in same place) */}
         <div className="flex-shrink-0">
-          <img src={logo} alt="Logo" className="h-20" />
+          <img src={logo} alt="Logo" className="h-22" />
         </div>
 
         {/* DESKTOP NAV (centered, lg and up) */}
-        <ul className="hidden lg:flex items-center gap-8 font-medium mx-auto">
-          <li><Link to="/" className="hover:text-blue-300 transition">Home</Link></li>
+        <ul className="hidden lg:flex items-center gap-10 text-[17px] mx-auto font-medium">
+          <li><Link to="/" className="hover:text-[#234179] transition">Home</Link></li>
 
           {/* ABOUT (Desktop hover) */}
           <li
@@ -43,13 +43,13 @@ const Header = () => {
             onMouseEnter={() => setHoveredMenu({ main: "about", sub: null })}
             onMouseLeave={() => setHoveredMenu({ main: null, sub: null })}
           >
-            <span className="cursor-pointer hover:text-blue-300 transition">About</span>
+            <span className="cursor-pointer hover:text-[#234179] transition">About</span>
 
             {hoveredMenu.main === "about" && (
               <ul className="absolute bg-white shadow-lg rounded-md top-full left-0 w-48 py-2 animate-fadeIn z-50">
-                <li><Link to="/about" className="block px-4 py-2 hover:bg-blue-50">About Us</Link></li>
-                <li><Link to="/team" className="block px-4 py-2 hover:bg-blue-50">Our Team</Link></li>
-                <li><Link to="/whatwecure" className="block px-4 py-2 hover:bg-blue-50">What We Cure</Link></li>
+                <li><Link to="/about" className="hover:text-white block px-4 py-2 hover:bg-[#234179]">About Us</Link></li>
+                <li><Link to="/team" className="hover:text-white block px-4 py-2 hover:bg-[#234179]">Our Team</Link></li>
+                <li><Link to="/whatwecure" className="hover:text-white block px-4 py-2 hover:bg-[#234179]">What We Cure</Link></li>
 
                 {/* Messages submenu */}
                 <li
@@ -57,13 +57,13 @@ const Header = () => {
                   onMouseEnter={() => setHoveredMenu({ main: "about", sub: "messages" })}
                   onMouseLeave={() => setHoveredMenu({ main: "about", sub: null })}
                 >
-                  <span className="block px-4 py-2 hover:bg-blue-50 cursor-pointer">Messages</span>
+                  <span className="block px-4 py-2 hover:bg-[#234179] hover:text-white cursor-pointer">Messages</span>
 
                   {hoveredMenu.sub === "messages" && (
                     <ul className="absolute left-full top-0 bg-white shadow-lg rounded-md w-48 py-2 animate-fadeIn z-50">
-                      <li><Link to="/puspak-message" className="block px-4 py-2 hover:bg-blue-50">Dr. Puspak</Link></li>
-                      <li><Link to="/niru-message" className="block px-4 py-2 hover:bg-blue-50">Dr. Niru</Link></li>
-                      <li><Link to="/muskan-message" className="block px-4 py-2 hover:bg-blue-50">Dr. Muskan</Link></li>
+                      <li><Link to="/puspak-message" className="block px-4 py-2 hover:bg-[#234179] hover:text-white ">Dr. Puspak</Link></li>
+                      <li><Link to="/niru-message" className="block px-4 py-2 hover:bg-[#234179] hover:text-white ">Dr. Niru</Link></li>
+                      <li><Link to="/muskan-message" className="block px-4 py-2 hover:bg-[#234179] hover:text-white ">Dr. Muskan</Link></li>
                     </ul>
                   )}
                 </li>
@@ -77,28 +77,28 @@ const Header = () => {
             onMouseEnter={() => setHoveredMenu({ main: "services", sub: null })}
             onMouseLeave={() => setHoveredMenu({ main: null, sub: null })}
           >
-            <span className="cursor-pointer hover:text-blue-300 transition">Services</span>
+            <span className="cursor-pointer hover:text-[#234179] transition">Services</span>
 
             {hoveredMenu.main === "services" && (
               <ul className="absolute bg-white shadow-lg rounded-md top-full left-0 w-48 py-2 animate-fadeIn z-50">
-                <li><Link to="/lab" className="block px-4 py-2 hover:bg-blue-50">Lab</Link></li>
-                <li><Link to="/pharmacy" className="block px-4 py-2 hover:bg-blue-50">Pharmacy</Link></li>
-                <li><Link to="/physiotherapy" className="block px-4 py-2 hover:bg-blue-50">Physiotherapy</Link></li>
+                <li><Link to="/lab" className="block px-4 py-2 hover:bg-[#234179] hover:text-white ">Lab</Link></li>
+                <li><Link to="/pharmacy" className="block px-4 py-2 hover:bg-[#234179] hover:text-white ">Pharmacy</Link></li>
+                <li><Link to="/physiotherapy" className="block px-4 py-2 hover:bg-[#234179] hover:text-white ">Physiotherapy</Link></li>
               </ul>
             )}
           </li>
 
-          <li><Link to="/conditions" className="hover:text-blue-300 transition">Conditions</Link></li>
-          <li><Link to="/faqs" className="hover:text-blue-300 transition">FAQs</Link></li>
-          <li><Link to="/blog" className="hover:text-blue-300 transition">Blog</Link></li>
-          <li><Link to="/contact" className="hover:text-blue-300 transition">Contact</Link></li>
+          <li><Link to="/conditions" className="hover:text-[#234179] transition">Conditions</Link></li>
+          <li><Link to="/faqs" className="hover:text-[#234179] transition">FAQs</Link></li>
+          <li><Link to="/blog" className="hover:text-[#234179] transition">Blog</Link></li>
+          <li><Link to="/contact" className="hover:text-[#234179] transition">Contact</Link></li>
         </ul>
 
         {/* RIGHT SECTION: Call Emergency, Book Appointment, Hamburger */}
         <div className="flex items-center gap-10 flex-shrink-0">
 
           {/* CALL EMERGENCY */}
-          <div className="hidden xl:flex items-center space-x-2">
+          {/* <div className="hidden xl:flex items-center space-x-2">
             <div className="w-9 h-9 bg-[#E8F0FF] text-[#234179] rounded-full flex items-center justify-center">
               <PhoneCall size={18} />
             </div>
@@ -108,12 +108,12 @@ const Header = () => {
                 +977-97010-12345
               </a>
             </div>
-          </div>
+          </div> */}
 
           {/* BOOK APPOINTMENT — only XL */}
           <div className="hidden xl:block flex ">
-            <a href="https://www.facebook.com/painclinicbirtamode" className="flex bg-[#234179] text-white px-4 py-2 rounded-full">
-              Book Appointment <MoveUpRight size={20}/>
+            <a href="https://www.facebook.com/painclinicbirtamode" className="flex bg-[#234179] text-white px-6 py-4 rounded-full font-semibold">
+              Book An Appointment <MoveUpRight size={20}/>
             </a>
           </div>
 
@@ -192,16 +192,10 @@ const Header = () => {
             <li><Link to="/faqs" onClick={() => setMobileOpen(false)}>FAQs</Link></li>
             <li><Link to="/blog" onClick={() => setMobileOpen(false)}>Blog</Link></li>
             <li><Link to="/contact" onClick={() => setMobileOpen(false)}>Contact</Link></li>
-
-            <li>
-              <Link
-                to="/appointment"
-                onClick={() => setMobileOpen(false)}
-                className="bg-[#234179] text-white px-4 py-2 rounded-full inline-block"
-              >
-                Book Appointment
-              </Link>
-            </li>
+            <li><a href="/contact" onClick={() => setMobileOpen(false)}>info@painclininc.com.np</a></li>
+            <li><a href="/contact" onClick={() => setMobileOpen(false)}>
++977-97010-12345</a></li>
+            
 
           </ul>
         </div>

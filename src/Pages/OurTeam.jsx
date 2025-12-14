@@ -56,7 +56,7 @@ const OurTeam = () => {
 
           {/* Content */}
           <div className="mt-4 px-4">
-            <h3 className="text-[26px] font-semibold text-[#0A2241]">{member.name}</h3>
+            <h3 className="text-[26px] font-semibold text-[#0A2241] mt-10 md:mt-0">{member.name}</h3>
             <p className="text-[#707882] text-[16px] mt-2 leading-relaxed">{member.title}</p>
 
             {/* Social Links */}

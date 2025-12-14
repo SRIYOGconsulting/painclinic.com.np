@@ -151,12 +151,12 @@ const Breadcrumbs = () => {
       <div className="absolute inset-0 bg-[#ecf0f5cc] rounded-xl"></div>
       <div className="relative max-w-6xl mx-auto flex flex-col items-center text-center">
         {/* Page Title */}
-        <p className="text-[#0A2241] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words">
+        <p className="text-[#0A2241] text-3xl sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-4 break-words">
           {pageTitle}
         </p>
 
         {/* Breadcrumb navigation */}
-        <nav className="text-[#0A2241] flex flex-wrap justify-center gap-2 items-center font-semibold text-xs sm:text-sm md:text-base">
+        <nav className="text-[#0A2241] flex flex-wrap justify-center gap-2 items-center font-semibold text-base sm:text-sm md:text-base">
           <House className="text-[#234179]" size={18} />
           <Link to="/" className="hover:underline hover:text-gray-900">
             Home

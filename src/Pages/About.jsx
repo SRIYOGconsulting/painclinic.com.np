@@ -156,8 +156,8 @@ const About = () => {
       </div>
 
       {/* ---------------- DOODLE SLIDER ---------------- */}
-      <section className="py-20 ">
-  <div className="max-w-5xl mx-auto">
+      <section className="mt-20 py-20">
+  <div className="max-w-6xl mx-auto">
 
     {/* AUTO SLIDER WRAPPER */}
     <div className="overflow-hidden relative">
@@ -174,12 +174,12 @@ const About = () => {
         {loopedDoodles.map((item2, index) => (
           <div
             key={index}
-            className="w-32 mx-auto flex-shrink-0 flex flex-col items-center text-center relative group"
+            className="w-35 mx-auto flex-shrink-0 flex flex-col items-center text-center relative group"
           >
             <img
               src={item2.src}
               alt={item2.label}
-              className="w-22 h-22 object-contain mb-4"
+              className="w-24 h-24 object-contain mb-4"
             />
             <p>{item2.label}</p>
             <div className="absolute inset-0 bg-white opacity-60 group-hover:opacity-10 transition-opacity duration-300"></div>
