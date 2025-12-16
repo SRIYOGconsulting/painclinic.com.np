@@ -1,4 +1,3 @@
-import React from 'react'
 import physiotherapy from "../assets/images/physiotherapy.png"
 const Physiotherapy = () => {
   return (
@@ -35,7 +34,7 @@ const Physiotherapy = () => {
           <ul className="list-disc list-inside space-y-2 ml-4">
             <li>
               <span className="font-semibold"> Manual Therapy:</span>{" "}
-               Skilled hands-on techniques such as joint mobilizations, soft tissue release, and massage to reduce pain and stiffness, improve joint mobility, and relieve muscle tension.
+              Skilled hands-on techniques such as joint mobilizations, soft tissue release, and massage to reduce pain and stiffness, improve joint mobility, and relieve muscle tension.
             </li>
             <li>
               <span className="font-semibold ">
@@ -53,9 +52,9 @@ const Physiotherapy = () => {
           <ul className="list-disc list-inside space-y-2 ml-4">
             <li>
               <span className="font-semibold">
-               Post-Surgery Recovery: 
+                Post-Surgery Recovery:
               </span>{" "}
-               After surgery (e.g., joint replacement, spine surgery, etc.), our physiotherapists help you regain strength, mobility, and function through specialized rehabilitation programs.
+              After surgery (e.g., joint replacement, spine surgery, etc.), our physiotherapists help you regain strength, mobility, and function through specialized rehabilitation programs.
             </li>
             <li>
               <span className="font-semibold">
@@ -80,7 +79,7 @@ const Physiotherapy = () => {
             </li>
             <li>
               <span className="font-semibold">
-                Neuromuscular Re-education: 
+                Neuromuscular Re-education:
               </span>{" "}
               Using techniques to retrain the nervous system, improving how the brain and muscles communicate to decrease pain and enhance movement.
             </li>
@@ -96,13 +95,13 @@ const Physiotherapy = () => {
               <span className="font-semibold">
                 Sports-Specific Rehab:
               </span>{" "}
-             Whether it's a sprain, strain, or post-surgery rehabilitation, we provide sports-specific physiotherapy to help you recover and return to activity safely.
+              Whether it's a sprain, strain, or post-surgery rehabilitation, we provide sports-specific physiotherapy to help you recover and return to activity safely.
             </li>
             <li>
               <span className="font-semibold">
                 Injury Prevention Education:
               </span>{" "}
-             Guidance on avoiding future injuries through proper technique, stretching, and strengthening exercises.
+              Guidance on avoiding future injuries through proper technique, stretching, and strengthening exercises.
             </li>
           </ul>
         </div>

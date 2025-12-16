@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Phone,
   Send,
@@ -6,16 +5,15 @@ import {
   Clock,
 } from "lucide-react";
 import { motion } from "motion/react"
-
-import reception from "../assets/images/reception.jpg"; 
+import reception from "../assets/images/reception.jpg";
 import sectitles1 from "../assets/images/shapes/sec-title-s-1-1.png";
 
 const Contact = () => {
   return (
     <div className="bg-[#eef3f9] min-h-screen mt-20 font-[sans-serif]">
-      
+
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center justify-center py-15 px-6">
-        
+
         {/* Left Image Card */}
         <div className="bg-white rounded-3xl shadow-md p-8">
           <img
@@ -27,10 +25,10 @@ const Contact = () => {
 
         {/* Right Info Section */}
         <div className="space-y-6">
-          <div className="flex gap-2"><motion.img src={sectitles1} animate={{rotate:360}} transition={{repeat:Infinity}} className="h-4"/>
-              <p className="text-sm text-gray-700 font-semibold flex items-center gap-1 mb-2">
-                Contact Us
-              </p></div>
+          <div className="flex gap-2"><motion.img src={sectitles1} animate={{ rotate: 360 }} transition={{ repeat: Infinity }} className="h-4" />
+            <p className="text-sm text-gray-700 font-semibold flex items-center gap-1 mb-2">
+              Contact Us
+            </p></div>
 
           <h1 className="text-4xl font-bold text-[#1d2c4b] leading-tight">
             Advance Pain <br /> Specialist Clinic
@@ -43,7 +41,7 @@ const Contact = () => {
             </div>
             <div>
               <p className="font-semibold text-[#1d2c4b]">Call Now</p>
-              <p className="text-gray-600">+977-97010-12345</p>
+              <a href="tel:+9779701012345" className="text-gray-600">+977-97010-12345</a>
             </div>
           </div>
 
@@ -54,7 +52,7 @@ const Contact = () => {
             </div>
             <div>
               <p className="font-semibold text-[#1d2c4b]">Info@Painclinic.Com.Np</p>
-              <p className="text-gray-600">info@painclinic.com.np</p>
+              <a href="mailto:info@painclinic.com.np" className="text-gray-600">info@painclinic.com.np</a>
             </div>
           </div>
 

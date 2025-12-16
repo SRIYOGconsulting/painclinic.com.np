@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import headacheImg from "../assets/images/headache-pain.jpg";
 import JointImg from "../assets/images/joint-pain.jpg";
@@ -178,7 +177,7 @@ const Conditions = () => {
               <Link to={`/${item.path}`} ><h2 className="text-xl font-semibold text-gray-800 mb-2 hover:underline hover:text-[#234179]">
                 {item.title}
               </h2></Link>
-              
+
               <p className="text-[#707882] leading-relaxed text-[16px]">
                 {item.description}
               </p>

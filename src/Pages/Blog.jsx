@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom';
 import { UserRound, MessageCircleMore } from 'lucide-react';
 import { motion } from 'motion/react';
@@ -122,19 +121,19 @@ const Blog = () => {
           >
             {/* Image */}
             <motion.div
-  className="mb-4 relative group overflow-hidden rounded-xl"
-  whileHover={{ scale: 1.05 }}
-  transition={{ duration: 0.3 }}
->
-  <img
-    src={blog.image}
-    alt={blog.title}
-    className="w-full h-56 object-cover rounded-xl"
-  />
+              className="mb-4 relative group overflow-hidden rounded-xl"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <img
+                src={blog.image}
+                alt={blog.title}
+                className="w-full h-56 object-cover rounded-xl"
+              />
 
-  {/* Blue overlay */}
-  <div
-    className="
+              {/* Blue overlay */}
+              <div
+                className="
       absolute inset-0 
       bg-blue-600 
       opacity-0 
@@ -143,8 +142,8 @@ const Blog = () => {
       duration-300 
       rounded-xl
     "
-  />
-</motion.div>
+              />
+            </motion.div>
 
 
             {/* Title */}

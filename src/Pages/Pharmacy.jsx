@@ -1,8 +1,7 @@
-import React from 'react'
 import pharmacy from "../assets/images/pharmacy.jpg"
 const Pharmacy = () => {
   return (
-   <div className="max-w-6xl mx-auto px-6 md:px-10 py-20 font-[sans-serif] text-[#0A2241]">
+    <div className="max-w-6xl mx-auto px-6 md:px-10 py-20 font-[sans-serif] text-[#0A2241]">
       {/* Top Section */}
       <div className="grid md:grid-cols-2 gap-8 mb-10">
         {/* Left Image Section */}
@@ -55,7 +54,7 @@ const Pharmacy = () => {
               <span className="font-semibold">
                 Personalized Counseling:
               </span>{" "}
-               Our pharmacists provide one-on-one counseling to ensure you understand how to take your medications safely, the potential side effects, and how to manage any risks.
+              Our pharmacists provide one-on-one counseling to ensure you understand how to take your medications safely, the potential side effects, and how to manage any risks.
             </li>
             <li>
               <span className="font-semibold">
@@ -73,13 +72,13 @@ const Pharmacy = () => {
           <ul className="list-disc list-inside space-y-2 ml-4">
             <li>
               <span className="font-semibold">
-                Comprehensive Reviews: 
+                Comprehensive Reviews:
               </span>{" "}
               We regularly review your medications to identify any potential interactions, redundancies, or side effects that may affect your treatment. This helps optimize your therapy and reduce risks.
             </li>
             <li>
               <span className="font-semibold">
-                Drug Interaction Checks: 
+                Drug Interaction Checks:
               </span>{" "}
               Our pharmacists ensure that your pain medications do not interact negatively with other treatments or health conditions, ensuring a safe treatment plan.
             </li>
@@ -95,13 +94,13 @@ const Pharmacy = () => {
               <span className="font-semibold">
                 Convenient Medication Delivery:
               </span>{" "}
-             For added convenience, we offer home delivery for your pain medications and refills, ensuring you never run out of essential treatments.
+              For added convenience, we offer home delivery for your pain medications and refills, ensuring you never run out of essential treatments.
             </li>
             <li>
               <span className="font-semibold">
                 Automated Refills:
               </span>{" "}
-             Our system helps manage prescription refills to ensure you always have the medications you need, on time.
+              Our system helps manage prescription refills to ensure you always have the medications you need, on time.
             </li>
           </ul>
         </div>

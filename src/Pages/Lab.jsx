@@ -1,4 +1,3 @@
-import React from "react";
 import lab from "../assets/images/lab.png"
 
 const Lab = () => {

@@ -1,4 +1,3 @@
-import React from 'react'
 import wholebodypain from "../assets/images/whole-body-pain.jpg";
 import { UserRound } from "lucide-react"
 
@@ -121,34 +120,34 @@ const WholeBodyPain = () => {
       <p className="text-[#707882] mb-4 leading-relaxed">
         Whole body pain can be challenging to diagnose and manage because it’s often related to several interconnected factors. If you’re experiencing persistent or unexplained widespread pain, it’s important to consult a healthcare professional to determine the cause and receive appropriate treatment.
       </p>
-      
+
       {/* Categories & Tags */}
-<div className="border-t border-gray-200 pt-4 pb-4 flex flex-wrap justify-between items-center text-sm text-[#707882]">
-  <div className="flex items-center gap-3">
-    <span className=" text-[#234179] uppercase">Categories:</span>
+      <div className="border-t border-gray-200 pt-4 pb-4 flex flex-wrap justify-between items-center text-sm text-[#707882]">
+        <div className="flex items-center gap-3">
+          <span className=" text-[#234179] uppercase">Categories:</span>
 
-    <div className="flex items-center gap-2">
-      <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
-        Health Care
-      </span>
-      <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
-        Medical Service
-      </span>
-    </div>
-  </div>
+          <div className="flex items-center gap-2">
+            <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
+              Health Care
+            </span>
+            <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
+              Medical Service
+            </span>
+          </div>
+        </div>
 
-  {/* Tags */}
-  <div className="flex items-center gap-3 mt-3 sm:mt-0">
-    <span className=" text-[#234179] uppercase">Tags:</span>
+        {/* Tags */}
+        <div className="flex items-center gap-3 mt-3 sm:mt-0">
+          <span className=" text-[#234179] uppercase">Tags:</span>
 
-    <p className="text-[#707882]">
-      Whole body pain, Prevent sports injuries
-    </p>
-  </div>
+          <p className="text-[#707882]">
+            Whole body pain, Prevent sports injuries
+          </p>
+        </div>
 
-</div>
-<div className="border-t border-gray-200"></div>
-      
+      </div>
+      <div className="border-t border-gray-200"></div>
+
     </div>
   )
 }

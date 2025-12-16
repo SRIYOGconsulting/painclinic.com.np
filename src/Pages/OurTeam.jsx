@@ -1,4 +1,3 @@
-import React from 'react';
 import { Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
 import teamMember1 from '../assets/images/team/1.png';
 import teamMember2 from '../assets/images/team/2.png';
@@ -42,16 +41,16 @@ const OurTeam = () => {
     <div className="flex flex-wrap justify-center gap-10 py-50 bg-white min-h-screen font-[sans-serif] max-w-7xl mx-auto">
       {teamMembers.map((member, index) => (
         <div
-  key={index}
-  className="relative flex flex-col items-center text-center bg-[#ECF0F5] rounded-3xl shadow-sm w-90 pt-28 sm:pt-28 pb-8 h-auto"
->
-  <div className="absolute -top-8 sm:-top-20 left-1/2 transform -translate-x-1/2">
-    <img
-      src={member.image}
-      alt={member.name}
-      className="w-50 h-45 object-cover rounded-full border-[7px] border-white shadow-md transition-all duration-300 hover:border-[#234179]"
-    />
-  </div>
+          key={index}
+          className="relative flex flex-col items-center text-center bg-[#ECF0F5] rounded-3xl shadow-sm w-90 pt-28 sm:pt-28 pb-8 h-auto"
+        >
+          <div className="absolute -top-8 sm:-top-20 left-1/2 transform -translate-x-1/2">
+            <img
+              src={member.image}
+              alt={member.name}
+              className="w-50 h-45 object-cover rounded-full border-[7px] border-white shadow-md transition-all duration-300 hover:border-[#234179]"
+            />
+          </div>
 
 
           {/* Content */}

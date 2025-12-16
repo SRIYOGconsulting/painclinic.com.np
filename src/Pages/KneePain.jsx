@@ -1,4 +1,3 @@
-import React from 'react';
 import knee from "../assets/images/knee-pain.jpg";
 import { UserRound } from 'lucide-react';
 
@@ -22,22 +21,22 @@ const KneePain = () => {
 
       {/* Paragraphs */}
       <p className="mb-4 leading-relaxed  text-[#707882]">
-        Knee pain refers to any discomfort, soreness, or injury that affects the knee joint, 
-        which connects the thigh bone (femur), shin bone (tibia), and kneecap (patella). 
-        This type of pain can result from a variety of causes, including injury, overuse, 
-        or underlying health conditions. Common causes of knee pain include ligament injuries 
-        (such as ACL tears), cartilage damage (like meniscus tears), arthritis, patellar 
-        tendinitis, and bursitis. Other factors such as age, weight, or improper movement 
+        Knee pain refers to any discomfort, soreness, or injury that affects the knee joint,
+        which connects the thigh bone (femur), shin bone (tibia), and kneecap (patella).
+        This type of pain can result from a variety of causes, including injury, overuse,
+        or underlying health conditions. Common causes of knee pain include ligament injuries
+        (such as ACL tears), cartilage damage (like meniscus tears), arthritis, patellar
+        tendinitis, and bursitis. Other factors such as age, weight, or improper movement
         patterns during exercise or daily activities can also contribute to knee pain.
       </p>
 
       <p className="mb-6 leading-relaxed text-[#707882]">
-        As temperatures drop during the winter months, many people experience an increase 
-        in knee pain, whether it's from old injuries or underlying conditions like arthritis. 
-        The cold weather can lead to stiffer joints, reduced blood flow, and changes in air 
-        pressure that exacerbate discomfort in the knees. For those who already have 
-        conditions like osteoarthritis, the cold can increase the sensitivity of the joint, 
-        making pain more pronounced. Additionally, people tend to be less active in winter, 
+        As temperatures drop during the winter months, many people experience an increase
+        in knee pain, whether it's from old injuries or underlying conditions like arthritis.
+        The cold weather can lead to stiffer joints, reduced blood flow, and changes in air
+        pressure that exacerbate discomfort in the knees. For those who already have
+        conditions like osteoarthritis, the cold can increase the sensitivity of the joint,
+        making pain more pronounced. Additionally, people tend to be less active in winter,
         which can lead to muscle stiffness and weakness, further stressing the knee joints.
       </p>
 
@@ -58,22 +57,22 @@ const KneePain = () => {
       {/* List */}
       <ul className="list-disc list-inside space-y-3 mb-6 text-[#707882]">
         <li>
-           Cold and Damp Weather:  Cold temperatures 
-          can cause muscles and tissues around the knee to stiffen, restricting movement and 
+          Cold and Damp Weather:  Cold temperatures
+          can cause muscles and tissues around the knee to stiffen, restricting movement and
           causing pain. Damp weather can also increase the sensitivity of the joints.
         </li>
         <li>
-           Barometric Pressure Changes:  The shift in air 
-          pressure during winter months can affect the joints, causing swelling and discomfort, 
+          Barometric Pressure Changes:  The shift in air
+          pressure during winter months can affect the joints, causing swelling and discomfort,
           especially in people with arthritis.
         </li>
         <li>
-           Reduced Activity:  The cold weather often keeps 
-          people indoors, leading to less physical activity and weakened muscles that support 
+          Reduced Activity:  The cold weather often keeps
+          people indoors, leading to less physical activity and weakened muscles that support
           the knee, making it more vulnerable to pain.
         </li>
         <li>
-           Poor Footwear:  Ice and snow can make walking 
+          Poor Footwear:  Ice and snow can make walking
           treacherous, and wearing improper footwear increases the risk of knee strain or falls.
         </li>
       </ul>
@@ -86,70 +85,70 @@ const KneePain = () => {
       {/* List */}
       <ul className="list-disc list-inside space-y-3 mb-6 text-[#707882]">
         <li>
-           Stay Active:  Regular low-impact exercises like 
-          swimming, cycling, or walking can help maintain flexibility and strength around the 
+          Stay Active:  Regular low-impact exercises like
+          swimming, cycling, or walking can help maintain flexibility and strength around the
           knee, preventing stiffness and pain. Make sure to stretch before and after exercise.
         </li>
         <li>
-           Warm Up Properly:  Always warm up before engaging 
-          in physical activities, especially in cold weather, to keep muscles and joints flexible 
+          Warm Up Properly:  Always warm up before engaging
+          in physical activities, especially in cold weather, to keep muscles and joints flexible
           and avoid strain.
         </li>
         <li>
-           Layer Up:  Wear warm, breathable clothing to keep 
-          your muscles and joints warm. Knee sleeves or wraps can help provide additional warmth 
+          Layer Up:  Wear warm, breathable clothing to keep
+          your muscles and joints warm. Knee sleeves or wraps can help provide additional warmth
           and support.
         </li>
         <li>
-           Use Hot or Cold Therapy:  Applying a heating pad 
-          or warm compress to the knee can relax muscles and improve circulation. Cold packs can 
+          Use Hot or Cold Therapy:  Applying a heating pad
+          or warm compress to the knee can relax muscles and improve circulation. Cold packs can
           be helpful for reducing swelling and inflammation after activity.
         </li>
         <li>
-           Mind Your Posture and Footwear:  Wear supportive 
-          shoes with good cushioning to prevent unnecessary stress on your knees. Avoid walking 
+          Mind Your Posture and Footwear:  Wear supportive
+          shoes with good cushioning to prevent unnecessary stress on your knees. Avoid walking
           on icy or uneven surfaces to reduce the risk of falls.
         </li>
         <li>
-           Consider Supplements or Medication:  
-          Over-the-counter anti-inflammatory medications, joint supplements (like glucosamine), 
-          or prescribed medications can help reduce pain and inflammation. Always consult with a 
+          Consider Supplements or Medication:
+          Over-the-counter anti-inflammatory medications, joint supplements (like glucosamine),
+          or prescribed medications can help reduce pain and inflammation. Always consult with a
           healthcare professional before starting any new treatments.
         </li>
         <li>
-           Consult a Doctor or Physical Therapist:  
-          If knee pain persists or worsens, it's important to seek medical advice. A doctor or 
-          physical therapist can help diagnose the underlying cause and provide a personalized 
+          Consult a Doctor or Physical Therapist:
+          If knee pain persists or worsens, it's important to seek medical advice. A doctor or
+          physical therapist can help diagnose the underlying cause and provide a personalized
           treatment plan, including specific exercises or therapies.
         </li>
       </ul>
 
       {/* Categories & Tags */}
-<div className="border-t border-gray-200 pt-4 pb-4 flex flex-wrap justify-between items-center text-sm text-[#707882]">
-  <div className="flex items-center gap-3">
-    <span className=" text-[#234179] uppercase">Categories:</span>
+      <div className="border-t border-gray-200 pt-4 pb-4 flex flex-wrap justify-between items-center text-sm text-[#707882]">
+        <div className="flex items-center gap-3">
+          <span className=" text-[#234179] uppercase">Categories:</span>
 
-    <div className="flex items-center gap-2">
-      <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
-        Health Care
-      </span>
-      <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
-        Medical Service
-      </span>
-    </div>
-  </div>
+          <div className="flex items-center gap-2">
+            <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
+              Health Care
+            </span>
+            <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
+              Medical Service
+            </span>
+          </div>
+        </div>
 
-  {/* Tags */}
-  <div className="flex items-center gap-3 mt-3 sm:mt-0">
-    <span className=" text-[#234179] uppercase">Tags:</span>
+        {/* Tags */}
+        <div className="flex items-center gap-3 mt-3 sm:mt-0">
+          <span className=" text-[#234179] uppercase">Tags:</span>
 
-    <p className="text-[#707882]">
-      Knee pain, Knee Pain Causes
-    </p>
-  </div>
+          <p className="text-[#707882]">
+            Knee pain, Knee Pain Causes
+          </p>
+        </div>
 
-</div>
-<div className="border-t border-gray-200"></div>
+      </div>
+      <div className="border-t border-gray-200"></div>
     </div>
   );
 };

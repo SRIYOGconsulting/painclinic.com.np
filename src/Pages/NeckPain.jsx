@@ -1,4 +1,3 @@
-import React from "react";
 import neckImg from "../assets/images/neck-pain.jpg";
 import { UserRound } from "lucide-react";
 
@@ -69,7 +68,7 @@ const NeckPain = () => {
           and shoulders.
         </li>
         <li>
-         Pressure Changes: Atmospheric pressure shifts
+          Pressure Changes: Atmospheric pressure shifts
           during monsoon weather can affect joints and worsen existing pain conditions.
         </li>
         <li>
@@ -90,31 +89,31 @@ const NeckPain = () => {
       </p>
 
       {/* Categories & Tags */}
-<div className="border-t border-gray-200 pt-4 pb-4 flex flex-wrap justify-between items-center text-sm text-[#707882]">
-  <div className="flex items-center gap-3">
-    <span className=" text-[#234179] uppercase">Categories:</span>
+      <div className="border-t border-gray-200 pt-4 pb-4 flex flex-wrap justify-between items-center text-sm text-[#707882]">
+        <div className="flex items-center gap-3">
+          <span className=" text-[#234179] uppercase">Categories:</span>
 
-    <div className="flex items-center gap-2">
-      <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
-        Health Care
-      </span>
-      <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
-        Medical Service
-      </span>
-    </div>
-  </div>
+          <div className="flex items-center gap-2">
+            <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
+              Health Care
+            </span>
+            <span className="px-3 py-1 bg-gray-100 rounded-md text-[#707882]">
+              Medical Service
+            </span>
+          </div>
+        </div>
 
-  {/* Tags */}
-  <div className="flex items-center gap-3 mt-3 sm:mt-0">
-    <span className=" text-[#234179] uppercase">Tags:</span>
+        {/* Tags */}
+        <div className="flex items-center gap-3 mt-3 sm:mt-0">
+          <span className=" text-[#234179] uppercase">Tags:</span>
 
-    <p className="text-[#707882]">
-      Neck pain, Inflammation
-    </p>
-  </div>
+          <p className="text-[#707882]">
+            Neck pain, Inflammation
+          </p>
+        </div>
 
-</div>
-<div className="border-t border-gray-200"></div>
+      </div>
+      <div className="border-t border-gray-200"></div>
     </div>
   );
 };

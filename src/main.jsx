@@ -7,7 +7,6 @@ import About from './Pages/About.jsx'
 import Conditions from './Pages/Conditions.jsx'
 import OurTeam from './Pages/OurTeam.jsx'
 import WWC from './Pages/WWC.jsx'
-import Messages from './Pages/Messages.jsx'
 import FAQs from './Pages/FAQs.jsx'
 import Blog from './Pages/Blog.jsx'
 import Lab from './Pages/Lab.jsx'
@@ -39,7 +38,6 @@ const router = createBrowserRouter([
       {path: "about", element : <About /> },
       {path: "team", element : <OurTeam /> },
       {path: "whatwecure", element : <WWC /> },
-      {path: "messages", element : <Messages /> },
       {path: "lab", element : <Lab /> },
       {path: "pharmacy", element : <Pharmacy /> },
       {path: "physiotherapy", element : <Physiotherapy /> },

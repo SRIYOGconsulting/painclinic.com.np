@@ -1,4 +1,3 @@
-import React from "react";
 import drpuspak from "../assets/images/drpuspak.jpg";
 
 const PuspakM = () => {
