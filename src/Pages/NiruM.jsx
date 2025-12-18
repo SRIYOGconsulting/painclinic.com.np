@@ -1,4 +1,4 @@
-import drniru from "../assets/images/drniru.jpg";
+import drniru from "/images/message/drniru.jpg";
 
 const NiruM = () => {
   return (

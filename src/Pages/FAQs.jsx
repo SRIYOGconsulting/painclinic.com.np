@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import faq1 from '../assets/images/Faq1.png';
-import faq2 from '../assets/images/faq2.jpg';
+import faq1 from '/images/faq/faq1.png';
+import faq2 from '/images/faq/faq2.jpg';
 
 const faqDataTop = [
   {

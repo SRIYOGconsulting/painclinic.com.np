@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import breadcrumb from "../assets/images/breadcrumb.jpg";
+import breadcrumb from "/images/home/breadcrumb.jpg";
 import { House } from "lucide-react";
 
 // Map special pages for friendly breadcrumbs

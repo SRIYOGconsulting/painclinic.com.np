@@ -1,12 +1,10 @@
-import {
-  Phone,
-  Send,
-  MapPin,
-  Clock,
-} from "lucide-react";
+import Phone from "/icons/phone.svg";
+import Send from "/icons/send.svg";
+import MapPin from "/icons/map-pin.svg";
+import Clock from "/icons/clock.svg";
 import { motion } from "motion/react"
-import reception from "../assets/images/reception.jpg";
-import sectitles1 from "../assets/images/shapes/sec-title-s-1-1.png";
+import reception from "/images/contact/reception.jpg";
+import sectitles1 from "/images/shapes/sec-title-s-1.png";
 
 const Contact = () => {
   return (
@@ -37,7 +35,7 @@ const Contact = () => {
           {/* Call */}
           <div className="flex items-start space-x-4">
             <div className="bg-[#e8f0fb] p-3 rounded-full">
-              <Phone size={20} className="text-[#234179]" />
+              <img src={Phone} alt="phone icon" className="w-5 h-5 text-[#234179]" />
             </div>
             <div>
               <p className="font-semibold text-[#1d2c4b]">Call Now</p>
@@ -48,7 +46,7 @@ const Contact = () => {
           {/* Email */}
           <div className="flex items-start space-x-4">
             <div className="bg-[#e8f0fb] p-3 rounded-full">
-              <Send size={20} className="text-[#234179]" />
+              <img src={Send} alt="send icon" className="w-5 h-5 text-[#234179]" />
             </div>
             <div>
               <p className="font-semibold text-[#1d2c4b]">Info@Painclinic.Com.Np</p>
@@ -59,7 +57,7 @@ const Contact = () => {
           {/* Address */}
           <div className="flex items-start space-x-4">
             <div className="bg-[#e8f0fb] p-3 rounded-full">
-              <MapPin size={20} className="text-[#234179]" />
+              <img src={MapPin} alt="map pin icon" className="w-5 h-5 text-[#234179]" />
             </div>
             <div>
               <p className="font-semibold text-[#1d2c4b]">Address</p>
@@ -70,7 +68,7 @@ const Contact = () => {
           {/* Time */}
           <div className="flex items-start space-x-4">
             <div className="bg-[#e8f0fb] p-3 rounded-full">
-              <Clock size={20} className="text-[#234179]" />
+              <img src={Clock} alt="clock icon" className="w-5 h-5 text-[#234179]" />
             </div>
             <div>
               <p className="font-semibold text-[#1d2c4b]">Opening And Closing Time</p>

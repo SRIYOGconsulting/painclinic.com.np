@@ -1,12 +1,12 @@
-import cancerpain from "../assets/images/cancer-pain.jpg";
-import { UserRound } from 'lucide-react';
+import cancerpain from "/images/cancerpain/cancer-pain.jpg";
+import UserRound from "/icons/user-round.svg";
 const CancerPain = () => {
   return (
     <div className="max-w-3xl mx-auto px-6 py-30 text-[#707882] font-[sans-serif]">
       {/* Author and read time */}
       <div className="text-[12px] text-[#707882] mb-4 flex items-center gap-6">
         <div className="flex items-center gap-2">
-          <UserRound className="w-4 h-4 stroke-current text-[#234179]" />
+          <img src={UserRound} alt="userround" className="w-4 h-4 text-[#234179] stroke-current"/>
           <p>
             By{" "}
             <span className="font-medium text-[#707882]">Salina Bastola</span>

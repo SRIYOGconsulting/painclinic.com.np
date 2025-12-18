@@ -1,4 +1,4 @@
-import pharmacy from "../assets/images/pharmacy.jpg"
+import pharmacy from "/images/pharmacy/pharmacy.jpg"
 const Pharmacy = () => {
   return (
     <div className="max-w-6xl mx-auto px-6 md:px-10 py-20 font-[sans-serif] text-[#0A2241]">

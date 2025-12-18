@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/images/pain-clinic-logo.png";
-import footerBg from "../assets/images/footer-bg.png";
-import headache from "../assets/images/headache-pain.jpg";
-import neckPain from "../assets/images/neck-pain.jpg";
+import logo from "/images/home/pain-clinic-logo.png";
+import footerBg from "/images/home/footer-bg.png";
+import headache from "/images/home/headache-pain.jpg";
+import neckPain from "/images/home/neck-pain.jpg";
 import {
   MapPin,
   Mail,
@@ -169,7 +169,7 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="py-4 mt-6 border-t border-[#0b2354]/50">
           <p className="text-center text-gray-400 text-xs">
-            © Copyright 2025 Advance Pain Specialist Clinic Birtamode, Jhapa, Nepal.
+            © Copyright 2025 Advance Pain Specialist Clinic Birtamode, Jhapa, Nepal. Built with : <a href="https://broadpress.org/" className="hover:underline">BroadPress</a>
           </p>
         </div>
       </div>

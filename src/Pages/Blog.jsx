@@ -1,20 +1,18 @@
 import { Link } from 'react-router-dom';
-import { UserRound, MessageCircleMore } from 'lucide-react';
+import UserRound from "/icons/user-round.svg";
+import MessageCircleMore from "/icons/message-circle-more.svg";
 import { motion } from 'motion/react';
-import headacheImg from "../assets/images/headache-pain.jpg";
-import jointImg from "../assets/images/joint-pain.jpg";
-import neckImg from "../assets/images/neck-pain.jpg";
-import shoulderImg from "../assets/images/shoulder-pain.jpg";
-import orofacial from "../assets/images/orafacial-pain.jpg";
-import disc from "../assets/images/back-pain.jpg";
-import knee from "../assets/images/knee-pain.jpg";
-import ankel from "../assets/images/ankle-pain.jpg";
-import nerve from "../assets/images/nerve-pain.jpg";
-import muscle from "../assets/images/muscle-pain.jpg";
-import fibromyalgia from "../assets/images/fibromyalgia-pain.jpg";
-import sports from "../assets/images/sports-injury.jpg";
-import whole from "../assets/images/whole-body-pain.jpg";
-import cancer from "../assets/images/cancer-pain.jpg";
+import headacheImg from "/images/blog/headache-pain.jpg";
+import jointImg from "/images/blog/joint-pain.jpg";
+import neckImg from "/images/blog/neck-pain.jpg";
+import shoulderImg from "/images/blog/shoulder-pain.jpg";
+import orofacial from "/images/blog/orafacial-pain.jpg";
+import knee from "/images/blog/knee-pain.jpg";
+import nerve from "/images/blog/nerve-pain.jpg";
+import muscle from "/images/blog/muscle-pain.jpg";
+import sports from "/images/blog/sports-injury.jpg";
+import whole from "/images/blog/whole-body-pain.jpg";
+import cancer from "/images/blog/cancer-pain.jpg";
 
 const blogs = [
   {
@@ -155,13 +153,13 @@ const Blog = () => {
             <div className="flex items-center gap-6 text-[11px] text-gray-600 mt-3">
               {/* Author */}
               <div className="flex items-center gap-2">
-                <UserRound size={16} className="text-[#234179]" />
+                <img src={UserRound} alt="userround" className="w-4 h-4 text-[#234179]"/>
                 <span>Advance Pain Clinic</span>
               </div>
 
               {/* Read Time */}
               <div className="flex items-center gap-2">
-                <MessageCircleMore size={16} className="text-[#234179]" />
+                <img src={MessageCircleMore} alt="message circle more" className="w-4 h-4 text-[#234179]"/>
                 <span>{blog.time}</span>
               </div>
             </div>

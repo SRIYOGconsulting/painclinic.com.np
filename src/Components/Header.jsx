@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/images/pain-clinic-logo.png";
+import logo from "/images/home/pain-clinic-logo.png";
 import { ChevronDown, Menu, MoveUpRight, Facebook,Twitter,Instagram,Youtube, X, Phone, Mail} from "lucide-react";
 
 const Header = () => {
@@ -203,7 +203,7 @@ useEffect(() => {
                 <ul className="ml-4 mt-2 flex flex-col gap-2">
                   <li><Link to="/puspak-message" onClick={() => setMobileOpen(false)}>Dr. Puspak</Link></li>
                   <li><Link to="/niru-message" onClick={() => setMobileOpen(false)}>Dr. Niru</Link></li>
-                  <li><Link to="/muskan-message" onClick={() => setMobileOpen(false)}>Dr. Muskan</Link></li>
+                  <li><Link to="/muskan-message" onClick={() => setMobileOpen(false)}>Dr. Muskaan</Link></li>
                 </ul>
               )}
             </li>

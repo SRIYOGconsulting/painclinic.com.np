@@ -1,23 +1,23 @@
 import { useState, useEffect } from 'react';
 import { motion } from "motion/react"
-import aboutImage from "../assets/images/home/1.jpg";
-import director from "../assets/images/home/director.png";
-import pain from "../assets/images/pain.jpg";
-import headacheIcon from "../assets/images/headache.png";
-import JointIcon from "../assets/images/joint.png";
-import neckIcon from "../assets/images/neck.png";
-import shoulderI from "../assets/images/shoulder.png";
-import orofacialI from "../assets/images/orofacial.png";
-import discI from "../assets/images/back.png";
-import kneeI from "../assets/images/knee.png";
-import ankelI from "../assets/images/ankle.png";
-import nerveI from "../assets/images/nerve.png";
-import muscleI from "../assets/images/muscle.png";
-import fibromyalgiaI from "../assets/images/fibromyalgia.png";
-import sportsI from "../assets/images/sports-injury.png";
-import wholeI from "../assets/images/whole-body.png";
-import cancerI from "../assets/images/cancer.png";
-import sectitles1 from "../assets/images/shapes/sec-title-s-1-1.png";
+import aboutImage from "/images/about/1.jpg";
+import director from "/images/about/director.png";
+import pain from "/images/about/pain.jpg";
+import headacheIcon from "/images/about/headache.png";
+import JointIcon from "/images/about/joint.png";
+import neckIcon from "/images/about/neck.png";
+import shoulderI from "/images/about/shoulder.png";
+import orofacialI from "/images/about/orofacial.png";
+import discI from "/images/about/back.png";
+import kneeI from "/images/about/knee.png";
+import ankelI from "/images/about/ankle.png";
+import nerveI from "/images/about/nerve.png";
+import muscleI from "/images/about/muscle.png";
+import fibromyalgiaI from "/images/about/fibromyalgia.png";
+import sportsI from "/images/about/sports-injury.png";
+import wholeI from "/images/about/whole-body.png";
+import cancerI from "/images/about/cancer.png";
+import sectitles1 from "/images/shapes/sec-title-s-1.png";
 
 const About = () => {
   const [currentBlogIndex, setCurrentBlogIndex] = useState(0);

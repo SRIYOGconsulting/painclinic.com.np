@@ -1,31 +1,34 @@
-import { Brain, ClipboardList, Bed, Pill } from "lucide-react";
 import { motion } from "motion/react"
-import whychooseus from "../assets/images/why-choose-1.jpg";
-import sectitles1 from "../assets/images/shapes/sec-title-s-1-1.png";
+import whychooseus from "/images/wwc/why-choose-1.jpg";
+import sectitles1 from "/images/shapes/sec-title-s-1.png";
+import Brain from "/icons/brain.svg";
+import ClipboardList from "/icons/clipboard-list.svg";
+import Bed from "/icons/bed.svg";
+import Pill from "/icons/pill.svg";
 
 const WWC = () => {
   const steps = [
     {
       id: 1,
-      icon: <Brain className="w-10 h-10 text-[#234179] stroke-current hover:text-white hover:bg-[#234179]" />,
+      icon: <img src={Brain} alt="brain" className="w-10 h-10 text-[#234179] stroke-current hover:text-white hover:bg-[#234179]" />,
       title: "Know The Problem",
       desc: "Knowing the problem is the first step.",
     },
     {
       id: 2,
-      icon: <ClipboardList className="w-10 h-10 text-[#234179]" />,
+      icon: <img src={ClipboardList} alt="clip" className="w-10 h-10 text-[#234179]" />,
       title: "Diagnose The Issue",
       desc: "In the second step, we diagnose the issue.",
     },
     {
       id: 3,
-      icon: <Bed className="w-10 h-10 text-[#234179] stroke-current hover:text-white hover:bg-[#234179]" />,
+      icon: <img src={Bed} alt="Bed" className="w-10 h-10 text-[#234179] stroke-current hover:text-white hover:bg-[#234179]" />,
       title: "Therapy",
       desc: "The process will undergo if the problem is cured by therapy.",
     },
     {
       id: 4,
-      icon: <Pill className="w-10 h-10 text-[#234179]" />,
+      icon: <img src={Pill} alt="pill" className="w-10 h-10 text-[#234179]" />,
       title: "Medication",
       desc: "Medication will help to manage most of the pains from the root.",
     },
@@ -128,7 +131,7 @@ const WWC = () => {
               <div>
                 <h3 className="font-semibold text-lg text-[#0A2241] flex items-center gap-3">
                   <span className="w-12 h-12 bg-0A2241 flex items-center justify-center rounded-full">
-                    <Brain />
+                    <img src={Brain} alt="brain" />
                   </span>
                   Personalized Approach
                 </h3>

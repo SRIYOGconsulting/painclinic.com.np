@@ -1,4 +1,4 @@
-import lab from "../assets/images/lab.png"
+import lab from "/images/lab/lab.png"
 
 const Lab = () => {
   return (

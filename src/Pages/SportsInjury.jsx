@@ -1,5 +1,5 @@
-import sportsinjury from "../assets/images/sports-injury.jpg";
-import { UserRound } from 'lucide-react';
+import sportsinjury from "/images/sportsinjury/sports-injury.jpg";
+import UserRound from "/icons/user-round.svg";
 
 const SportsInjury = () => {
   return (
@@ -7,7 +7,7 @@ const SportsInjury = () => {
       {/* Author and read time */}
       <div className="text-[12px] text-[#707882] mb-4 flex items-center gap-6">
         <div className="flex items-center gap-2">
-          <UserRound className="w-4 h-4 stroke-current text-[#234179]" />
+          <img src={UserRound} alt="userround" className="w-4 h-4 text-[#234179] stroke-current"/>
           <p>
             By{" "}
             <span className="font-medium text-[#707882]">Salina Bastola</span>

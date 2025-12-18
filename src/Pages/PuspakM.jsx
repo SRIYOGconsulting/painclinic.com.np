@@ -1,4 +1,4 @@
-import drpuspak from "../assets/images/drpuspak.jpg";
+import drpuspak from "/images/message/drpuspak.jpg";
 
 const PuspakM = () => {
   return (

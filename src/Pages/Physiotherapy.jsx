@@ -1,4 +1,4 @@
-import physiotherapy from "../assets/images/physiotherapy.png"
+import physiotherapy from "/images/physiotherapy/physiotherapy.png"
 const Physiotherapy = () => {
   return (
     <div className="max-w-6xl mx-auto px-6 md:px-10 py-20 font-[sans-serif] text-[#0A2241]">

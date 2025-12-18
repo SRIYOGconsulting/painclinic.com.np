@@ -2,49 +2,51 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react"
 
-import background from "../assets/images/home/background.png";
-import aboutImage from "../assets/images/home/1.jpg";
-import director from "../assets/images/home/director.png";
-import headacheImg from "../assets/images/headache-pain.jpg";
-import JointImg from "../assets/images/joint-pain.jpg";
-import neckImg from "../assets/images/neck-pain.jpg";
-import shoulderImg from "../assets/images/shoulder-pain.jpg";
-import orofacial from "../assets/images/orafacial-pain.jpg";
-import knee from "../assets/images/knee-pain.jpg";
-import muscle from "../assets/images/muscle-pain.jpg";
-import nerve from "../assets/images/nerve-pain.jpg";
-import offer from "../assets/images/offer.jpg";
-import choose from "../assets/images/why-choose-1-2.jpg";
-import cancerImg from "../assets/images/cancer-pain.jpg";
-import sportsImg from "../assets/images/sports-injury.jpg";
-import wholebody from "../assets/images/whole-body-pain.jpg";
-import backpain from "../assets/images/back-pain (1).jpg";
-import headacheIcon from "../assets/images/headache.png";
-import JointIcon from "../assets/images/joint.png";
-import neckIcon from "../assets/images/neck.png";
-import shoulderI from "../assets/images/shoulder.png";
-import orofacialI from "../assets/images/orofacial.png";
-import discI from "../assets/images/back.png";
-import kneeI from "../assets/images/knee.png";
-import ankelI from "../assets/images/ankle.png";
-import nerveI from "../assets/images/nerve.png";
-import muscleI from "../assets/images/muscle.png";
-import fibromyalgiaI from "../assets/images/fibromyalgia.png";
-import sportsI from "../assets/images/sports-injury.png";
-import wholeI from "../assets/images/whole-body.png";
-import cancerI from "../assets/images/cancer.png";
-import kneehero from "../assets/images/1Hero.png";
-import headachehero from "../assets/images/2Hero.png";
-import sectitles1 from "../assets/images/shapes/sec-title-s-1-1.png";
-import sectitles2 from "../assets/images/shapes/sec-title-s-1-2.png";
-import thunder from "../assets/images/shapes/why-choose-shape-1-1.png";
-import aboutshape from "../assets/images/shapes/about-shape-1-1.png";
-import heroshape from "../assets/images/shapes/main-slider-shape-1-3.png";
-import clover from "../assets/images/shapes/main-slider-shape-1-4.png";
-import flower from "../assets/images/shapes/main-slider-shape-1-2.png";
-import latestupdate from "../assets/images/shapes/welcome-inner-bg-1-1.jpg"
-
-import { UserRound, Hospital, HeartPulse, ThumbsUp } from "lucide-react";
+import background from "/images/home/background.png";
+import aboutImage from "/images/home/1.jpg";
+import director from "/images/home/director.png";
+import headacheImg from "/images/home/headache-pain.jpg";
+import JointImg from "/images/home/joint-pain.jpg";
+import neckImg from "/images/home/neck-pain.jpg";
+import shoulderImg from "/images/home/shoulder-pain.jpg";
+import orofacial from "/images/home/orafacial-pain.jpg";
+import knee from "/images/home/knee-pain.jpg";
+import muscle from "/images/home/muscle-pain.jpg";
+import nerve from "/images/home/nerve-pain.jpg";
+import offer from "/images/home/offer.jpg";
+import choose from "/images/home/why-choose-1-2.jpg";
+import cancerImg from "/images/home/cancer-pain.jpg";
+import sportsImg from "/images/home/sports-injury.jpg";
+import wholebody from "/images/home/whole-body-pain.jpg";
+import backpain from "/images/home/backpain.jpg";
+import headacheIcon from "/images/home/headache.png";
+import JointIcon from "/images/home/joint.png";
+import neckIcon from "/images/home/neck.png";
+import shoulderI from "/images/home/shoulder.png";
+import orofacialI from "/images/home/orofacial.png";
+import discI from "/images/home/back.png";
+import kneeI from "/images/home/knee.png";
+import ankelI from "/images/home/ankle.png";
+import nerveI from "/images/home/nerve.png";
+import muscleI from "/images/home/muscle.png";
+import fibromyalgiaI from "/images/home/fibromyalgia.png";
+import sportsI from "/images/home/sports-injury.png";
+import wholeI from "/images/home/whole-body.png";
+import cancerI from "/images/home/cancer.png";
+import kneehero from "/images/home/1Hero.png";
+import headachehero from "/images/home/2Hero.png";
+import sectitles1 from "/images/shapes/sec-title-s-1.png";
+import sectitles2 from "/images/shapes/sec-title-s-2.png";
+import thunder from "/images/shapes/why-choose-shape-1.png";
+import aboutshape from "/images/shapes/about-shape-1.png";
+import heroshape from "/images/shapes/main-slider-shape-3.png";
+import clover from "/images/shapes/main-slider-shape-4.png";
+import flower from "/images/shapes/main-slider-shape-2.png";
+import latestupdate from "/images/shapes/welcome-inner-bg-1.jpg"
+import UserIcon from "/icons/user-round.svg";
+import Hospital from "/icons/hospital.svg";
+import Heartpulse from "/icons/heart-pulse.svg";
+import ThumbsUp from "/icons/thumbs-up.svg";
 
 // Reusable hook for mobile detection
 function useIsMobile() {
@@ -209,10 +211,10 @@ const Home = () => {
       >
         {/* Content + Sliding Image */}
         <div className="relative z-10 flex items-center justify-between h-full w-full">
-          <motion.img src={flower} alt="clover" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 2, }} className="absolute top-70 left-90 h-15 w-15 " />
-          <motion.img src={clover} alt="clover" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 3, }} className="absolute bottom-90 right-0 h-15 w-15 " />
-          <motion.img src={clover} alt="clover" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 3, }} className="absolute bottom-5 left-0 h-15 w-15 " />
-          <motion.img src={heroshape} alt="clover" animate={{ x: [0, -10, 0] }} transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }} className="absolute bottom-10 left-90 h-15 w-15 " />
+          <motion.img src={flower} alt="clover" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 2, }} className="absolute top-70 left-90 h-15 w-15 "/>
+          <motion.img src={clover} alt="clover" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 3, }} className="absolute bottom-90 right-0 h-15 w-15 "/>
+          <motion.img src={clover} alt="clover" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 3, }} className="absolute bottom-5 left-0 h-15 w-15 "/>
+          <motion.img src={heroshape} alt="clover" animate={{ x: [0, -10, 0] }} transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }} className="absolute bottom-10 left-90 h-15 w-15 "/>
           {/* LEFT CONTENT */}
 
           <div className="text-[#0A2241] flex-1 py-20 md:py-30 px-6 md:px-12 mt-60">
@@ -258,7 +260,7 @@ const Home = () => {
 
               <div className="hidden lg:flex items-center bg-white rounded-xl shadow-lg px-5 py-3 w-[200px] gap-4">
                 <div className="bg-[#234179] text-white p-3 rounded-lg flex items-center justify-center">
-                  <ThumbsUp size={26} strokeWidth={2} />
+                  <img src={ThumbsUp} alt="Thumbs Up" className="w-7 h-7"/>
                 </div>
 
                 <div className="flex flex-col leading-tight">
@@ -294,7 +296,7 @@ const Home = () => {
 
       {/* About Us Section */}
       <div className="px-4 md:px-8 py-12 font-sans mt-15 relative max-w-6xl mx-auto">
-        <motion.img src={aboutshape} alt="clover" animate={{ y: [0, -20, 0] }} transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }} className="absolute top-80 right-5 h-24 w-24 opacity-30" />
+        <motion.img src={aboutshape} alt="clover" animate={{ y: [0, -20, 0] }} transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }} className="absolute top-80 right-5 h-24 w-24 opacity-30"/>
         <Link to='/about'>
           <div className="flex flex-col md:flex-row max-w-6xl mx-auto items-center gap-10 md:gap-30">
 
@@ -315,7 +317,7 @@ const Home = () => {
 
             {/* Right Content Section */}
             <div className="w-full md:w-1/2">
-              <div className="flex gap-2"><motion.img src={sectitles1} animate={{ rotate: 360 }} transition={{ repeat: Infinity }} className="h-4" />
+              <div className="flex gap-2"><motion.img src={sectitles1} animate={{ rotate: 360 }} transition={{ repeat: Infinity }} className="h-4"/>
                 <p className="text-sm text-gray-700 font-semibold flex items-center gap-1 mb-2">
                   About Us
                 </p></div>
@@ -480,11 +482,11 @@ const Home = () => {
       {/*Why Choose Us */}
       <section className="bg-white py-20 font-[sans-serif] relative">
 
-        <motion.img src={sectitles1} alt="clover" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 4, ease: "linear" }} className="absolute top-10 left-60 h-5 w-5" />
-        <motion.img src={sectitles1} alt="clover" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 4, ease: "linear" }} className="absolute bottom-30 left-140 h-5 w-5" />
-        <motion.img src={sectitles1} alt="clover" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 4, ease: "linear" }} className="absolute bottom-80 right-20 h-5 w-5" />
-        <motion.img src={sectitles1} alt="clover" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 4, ease: "linear" }} className="absolute top-30 right-20 h-5 w-5" />
-        <motion.img src={thunder} alt="clover" animate={{ rotate: [-10, 10, -10] }} transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }} className="absolute top-50 left-30 h-15 w-15" />
+        <motion.img src={sectitles1} alt="clover" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 4, ease: "linear" }} className="absolute top-10 left-60 h-5 w-5"/>
+        <motion.img src={sectitles1} alt="clover" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 4, ease: "linear" }} className="absolute bottom-30 left-140 h-5 w-5"/>
+        <motion.img src={sectitles1} alt="clover" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 4, ease: "linear" }} className="absolute bottom-80 right-20 h-5 w-5"/>
+        <motion.img src={sectitles1} alt="clover" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 4, ease: "linear" }} className="absolute top-30 right-20 h-5 w-5"/>
+        <motion.img src={thunder} alt="clover" animate={{ rotate: [-10, 10, -10] }} transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }} className="absolute top-50 left-30 h-15 w-15"/>
 
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center px-6 gap-12 relative">
 
@@ -530,7 +532,8 @@ const Home = () => {
               {/* Feature 1 */}
               <div className="flex gap-6 items-start">
                 <div className="w-18 h-14 bg-[#234179] text-white rounded-full flex items-center justify-center mt-2">
-                  <UserRound size={28} />
+                  <img src={UserIcon} alt="Expertise You Can Trust" className="w-7 h-7"/>
+                  {/* <UserRound size={28} /> */}
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-[#0A2241]">Expertise You Can Trust</h3>
@@ -540,12 +543,12 @@ const Home = () => {
                 </div>
               </div>
 
-              <hr className="border-gray-200" />
+              <hr className="border-gray-200"/>
 
               {/* Feature 2 */}
               <div className="flex gap-6 items-start">
                 <div className="w-17 h-14 bg-[#234179] text-white rounded-full flex items-center justify-center mt-2">
-                  <Hospital size={28} />
+                  <img src={Hospital} alt="Comprehensive Care" className="w-7 h-7"/>
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-[#0A2241]">Comprehensive Care</h3>
@@ -555,12 +558,12 @@ const Home = () => {
                 </div>
               </div>
 
-              <hr className="border-gray-200" />
+              <hr className="border-gray-200"/>
 
               {/* Feature 3 */}
               <div className="flex gap-6 items-start">
                 <div className="w-22 h-14 bg-[#234179] text-white rounded-full flex items-center justify-center mt-2">
-                  <HeartPulse size={28} />
+                  <img src={Heartpulse} alt="Patient-Centered Approach" className="w-7 h-7"/>
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-[#0A2241]">Commitment To The Community</h3>
@@ -623,7 +626,7 @@ const Home = () => {
           <div className="w-full md:w-1/2 flex flex-col">
             <div className="flex gap-2"><motion.img src={sectitles1} animate={{ rotate: 360 }}
               transition={{ repeat: Infinity, duration: 4 }}
-              className="h-4" /><p className="text-[#234179] font-semibold text-sm mb-1">
+              className="h-4"/><p className="text-[#234179] font-semibold text-sm mb-1">
                 Professional Pain Management
               </p></div>
 
@@ -688,7 +691,7 @@ const Home = () => {
           {/* Title */}
           <div className="flex gap-2"><motion.img src={sectitles1} animate={{ rotate: 360 }}
             transition={{ repeat: Infinity, duration: 4 }}
-            className="h-4" /><p className="text-[#234179] font-semibold text-sm mb-2">
+            className="h-4"/><p className="text-[#234179] font-semibold text-sm mb-2">
               Pain Clinic Blog
             </p></div>
 

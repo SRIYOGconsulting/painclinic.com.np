@@ -1,4 +1,4 @@
-import drmuskaan from "../assets/images/drmuskaan.jpg";
+import drmuskaan from "/images/message/drmuskaan.jpg";
 
 const MuskanM = () => {
   return (
