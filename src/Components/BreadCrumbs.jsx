@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import breadcrumb from "/images/home/breadcrumb.jpg";
-import { House } from "lucide-react";
+import House from "/icons/house.svg";
 
 // Map special pages for friendly breadcrumbs
 const breadcrumbMap = {
@@ -13,9 +13,9 @@ const breadcrumbMap = {
     hierarchy: ["/messages", "/niru-message"],
     labels: ["Messages", "Message from Dr. Niru"],
   },
-  "/muskan-message": {
-    hierarchy: ["/messages", "/muskan-message"],
-    labels: ["Messages", "Message from Dr. Muskan"],
+  "/muskaan-message": {
+    hierarchy: ["/messages", "/muskaan-message"],
+    labels: ["Messages", "Message from Dr. Muskaan"],
   },
 
   // footer links
@@ -63,13 +63,14 @@ const breadcrumbMap = {
     hierarchy: ["/blog"],
     labels: ["Comprehensive Pain Management for Cancer Patients"],
   },
+  
 };
 
 // Default breadcrumb labels for normal pages
 const defaultBreadcrumbMap = {
   "/about": "About Us",
   "/team": "Our Team",
-  "/whatwecure": "What We Cure",
+  "/cure": "What We Cure",
   "/messages": "Messages",
   "/lab": "Lab",
   "/pharmacy": "Pharmacy",
@@ -78,6 +79,7 @@ const defaultBreadcrumbMap = {
   "/faqs": "Frequently Asked Questions",
   "/blog": "Pain Clinic Blog",
   "/contact": "Contact Us",
+  "/qr" : "QR"
 };
 
   //  Page title configuration
@@ -193,7 +195,7 @@ const Breadcrumbs = () => {
 
         {/* Breadcrumb Navigation */}
         <nav className="text-[#0A2241] flex flex-wrap justify-center gap-2 items-center font-semibold">
-          <House className="text-[#234179]" size={18} />
+          <img src={House} alt="Home" className="text-[#234179]h-4 w-4" />
           <Link to="/" className="hover:underline hover:text-gray-900">
             Home
           </Link>

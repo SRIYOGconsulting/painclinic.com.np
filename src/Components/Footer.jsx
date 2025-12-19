@@ -3,18 +3,16 @@ import logo from "/images/home/pain-clinic-logo.png";
 import footerBg from "/images/home/footer-bg.png";
 import headache from "/images/home/headache-pain.jpg";
 import neckPain from "/images/home/neck-pain.jpg";
-import {
-  MapPin,
-  Mail,
-  Phone,
-  Facebook,
-  Twitter,
-  Instagram,
-  Youtube,
-  UserRound,
-  MessageCircleMore,
-  MoveUpRight
-} from "lucide-react";
+import MoveUpRight from "/icons/move-up-right.svg";
+import Facebook from "/icons/facebook.svg";
+import Instagram from "/icons/instagram.svg";
+import Twitter from "/icons/twitter.svg";
+import Youtube from "/icons/youtube.svg";
+import Phone from "/icons/phone.svg";
+import Mail from "/icons/email2.svg";
+import MapPin from "/icons/map-pin.svg";
+import UserRound from "/icons/user-round.svg";
+import MessageCircleMore from "/icons/message-circle-more.svg";
 
 const Footer = () => {
   return (
@@ -41,15 +39,15 @@ const Footer = () => {
             <button className="border border-gray-700 text-[15px] px-4 py-2 rounded-full text-[#234179] hover:bg-[#234179] hover:text-white transition flex">
               <a href="https://www.facebook.com/painclinicbirtamode" target="_blank" rel="noopener noreferrer">
                 BOOK AN APPOINTMENT
-              </a> <MoveUpRight />
+              </a> <img src={MoveUpRight} alt="External Link" className="h-4 w-4 ml-1" />
             </button>
 
             {/* Social Icons */}
             <div className="flex space-x-4 mt-6 text-gray-300">
-              <a href="#" className="hover:text-white"><Facebook size={18} /></a>
-              <a href="#" className="hover:text-white"><Twitter size={18} /></a>
-              <a href="#" className="hover:text-white"><Instagram size={18} /></a>
-              <a href="#" className="hover:text-white"><Youtube size={19} /></a>
+              <a href="https://www.facebook.com/painclinicbirtamode/" target="_blank" className="hover:text-white"><img src={Facebook} alt="Facebook" /></a>
+              <a href="#" className="hover:text-white"><img src={Twitter} alt="Twitter" /></a>
+              <a href="#" className="hover:text-white"><img src={Instagram} alt="Instagram" /></a>
+              <a href="#" className="hover:text-white"><img src={Youtube} alt="Youtube" /></a>
             </div>
           </div>
 
@@ -95,8 +93,8 @@ const Footer = () => {
                 <img src={headache} className="rounded-lg w-20 h-12 object-cover" alt="Headache" />
                 <div>
                   <div className="flex items-center gap-1 text-[#456EA1] text-[10px] font-semibold mb-1">
-                    <UserRound size={12} /> <span>Isha Sunam</span>
-                    <MessageCircleMore size={12} /> <span>2 Comments</span>
+                    <img src={UserRound} alt="user" /> <span>Isha Sunam</span>
+                    <img src={MessageCircleMore} alt="MessageCircleMore" /> <span>2 Comments</span>
                   </div>
                   <Link to="/what-is-headache">
                     <p className="text-[15px] font-semibold hover:underline hover:text-gray-300">
@@ -111,8 +109,8 @@ const Footer = () => {
                 <img src={neckPain} className="rounded-lg w-20 h-12 object-cover" alt="Neck Pain" />
                 <div>
                   <div className="flex items-center gap-1 text-[#456EA1] text-[10px] font-semibold mb-1">
-                    <UserRound size={12} /> <span>Monika Sharma</span>
-                    <MessageCircleMore size={12} /> <span>2 Comments</span>
+                    <img src={UserRound} alt="user" /><span>Monika Sharma</span>
+                    <img src={MessageCircleMore} alt="MessageCircleMore" /> <span>2 Comments</span>
                   </div>
                   <Link to="/what-is-neck-pain">
                     <p className="text-[15px] font-semibold hover:underline hover:text-gray-300">
@@ -132,7 +130,7 @@ const Footer = () => {
           {/* Address */}
           <div className="flex flex-col items-center md:items-start space-y-2">
             <div className="bg-[#1d3770] p-3 rounded-full">
-              <MapPin size={18} />
+              <img src={MapPin} alt="Map Pin" />
             </div>
             <p className="font-semibold text-[14px]">Clinic Address</p>
             <p className="font-semibold hover:underline text-[20px]">
@@ -145,7 +143,7 @@ const Footer = () => {
           {/* Email */}
           <div className="flex flex-col items-center md:items-start space-y-2">
             <div className="bg-[#1d3770] p-3 rounded-full">
-              <Mail size={18} />
+              <img src={Mail} alt="Mail" />
             </div>
             <p className="font-semibold text-[14px]">Email Enquiry</p>
             <p className="font-semibold hover:underline text-[20px]">
@@ -156,7 +154,7 @@ const Footer = () => {
           {/* Phone */}
           <div className="flex flex-col items-center md:items-start space-y-2">
             <div className="bg-[#1d3770] p-3 rounded-full">
-              <Phone size={18} />
+              <img src={Phone} alt="Phone" />
             </div>
             <p className="font-semibold text-[14px]">Hotline</p>
             <p className="font-semibold hover:underline text-[20px]">

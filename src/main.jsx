@@ -28,6 +28,21 @@ import MusclePain from './Pages/MusclePain.jsx'
 import SportsInjury from './Pages/SportsInjury.jsx'
 import WholeBodyPain from './Pages/WholeBodyPain.jsx'
 import CancerPain from './Pages/CancerPain.jsx'
+import Qr from './Pages/Qr.jsx'
+import HeadacheC from './Pages/HeadacheC.jsx'
+import JointPainC from './Pages/JointPainC.jsx'
+import NeckPainC from './Pages/NeckPainC.jsx'
+import ShoulderPainC from './Pages/ShoulderPainC.jsx'
+import OrofacialPainC from './Pages/OrofacialPainC.jsx'
+import KneePainC from './Pages/KneePainC.jsx'
+import NervePainC from './Pages/NervePainC.jsx'
+import MusclePainC from './Pages/MusclePainC.jsx'
+import SportsInjuryC from './Pages/SportsInjuryC.jsx'
+import WholeBodyPainC from './Pages/WholeBodyPainC.jsx'
+import CancerPainC from './Pages/CancerPainC.jsx'
+import DiscProlapseC from './Pages/DiscProlapseC.jsx'
+import AnklePainC from './Pages/AnkelPainC.jsx'
+import FibromyalgiaC from './Pages/FibromyalgiaC.jsx'
 
 const router = createBrowserRouter([
   {
@@ -37,17 +52,31 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       {path: "about", element : <About /> },
       {path: "team", element : <OurTeam /> },
-      {path: "whatwecure", element : <WWC /> },
+      {path: "cure", element : <WWC /> },
       {path: "lab", element : <Lab /> },
       {path: "pharmacy", element : <Pharmacy /> },
       {path: "physiotherapy", element : <Physiotherapy /> },
-      {path: "conditions", element : <Conditions /> },
+      {path: "conditions", element : <Conditions />,},
+       { path: "conditions/headache", element: <HeadacheC /> },
+       { path: "conditions/joint-pain", element: <JointPainC /> },
+        {path: "conditions/neck-pain", element: <NeckPainC/>},
+        {path: "conditions/shoulder-pain", element : <ShoulderPainC /> },
+        {path: "conditions/orofacial-pain", element : <OrofacialPainC /> },
+        {path: "conditions/knee-pain", element : <KneePainC /> },
+        {path: "conditions/nerve-pain", element : <NervePainC /> },
+        {path: "conditions/muscle-pain", element : <MusclePainC /> },
+        {path: "conditions/sports-pain", element : <SportsInjuryC /> },
+        {path: "conditions/whole-body-pain", element : <WholeBodyPainC /> },
+        {path: "conditions/cancer-pain", element : <CancerPainC /> },
+        {path: "conditions/disc-prolapse", element : <DiscProlapseC /> },
+        {path: "conditions/ankel-pain", element : <AnklePainC /> },
+        {path: "conditions/fibromyalgia", element : <FibromyalgiaC /> },
       {path: "faqs", element : <FAQs /> },
       {path: "blog", element : <Blog /> },
       {path: "contact", element : <Contact /> },
       {path: "puspak-message", element : <PuspakM /> },
       {path: "niru-message", element : <NiruM /> },
-      {path: "muskan-message", element : <MuskanM /> },
+      {path: "muskaan-message", element : <MuskanM /> },
       {path: "what-is-headache", element : <Headache /> },
       {path: "what-is-joint-pain", element : <JointPain /> },
       {path: "what-is-neck-pain", element : <NeckPain /> },
@@ -59,6 +88,7 @@ const router = createBrowserRouter([
       {path: "what-is-sports-pain", element : <SportsInjury /> },
       {path: "what-is-whole-body-pain", element : <WholeBodyPain /> },
       {path: "what-is-cancer-pain", element : <CancerPain /> },
+      {path: "qr", element : <Qr /> },
     ]
   }
 ])
