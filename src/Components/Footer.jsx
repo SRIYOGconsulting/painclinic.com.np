@@ -57,12 +57,12 @@ const Footer = () => {
               Our <span className="text-[#234179]">Treatments</span>
             </h3>
             <ul className="space-y-2 text-[#456EA1] text-[16px]">
-              <li><Link className="hover:underline" to="/what-is-headache">Headache</Link></li>
-              <li><Link className="hover:underline" to="/what-is-joint-pain">Joint Pain</Link></li>
-              <li><Link className="hover:underline" to="/what-is-neck-pain">Neck Pain</Link></li>
-              <li><Link className="hover:underline" to="/what-is-shoulder-pain">Shoulder Pain</Link></li>
-              <li><Link className="hover:underline" to="/what-is-orofacial-pain">Orofacial Pain</Link></li>
-              <li><Link className="hover:underline" to="/what-is-knee-pain">Knee Pain</Link></li>
+              <li><Link className="hover:underline" to="/blog/what-is-headache">Headache</Link></li>
+              <li><Link className="hover:underline" to="/blog/what-is-joint-pain">Joint Pain</Link></li>
+              <li><Link className="hover:underline" to="/blog/what-is-neck-pain">Neck Pain</Link></li>
+              <li><Link className="hover:underline" to="/blog/what-is-shoulder-pain">Shoulder Pain</Link></li>
+              <li><Link className="hover:underline" to="/blog/what-is-orofacial-pain">Orofacial Pain</Link></li>
+              <li><Link className="hover:underline" to="/blog/what-is-knee-pain">Knee Pain</Link></li>
             </ul>
           </div>
 
@@ -72,11 +72,11 @@ const Footer = () => {
               Browse <span className="text-[#234179]">More</span>
             </h3>
             <ul className="space-y-2 text-[#456EA1] text-[16px]">
-              <li><Link className="hover:underline" to="/what-is-nerve-pain">Nerve Related Pain</Link></li>
-              <li><Link className="hover:underline" to="/what-is-muscle-pain">Muscle Pain</Link></li>
-              <li><Link className="hover:underline" to="/what-is-sports-pain">Sports Injury</Link></li>
-              <li><Link className="hover:underline" to="/what-is-whole-body-pain">Whole Body Pain</Link></li>
-              <li><Link className="hover:underline" to="/what-is-cancer-pain">Cancer Pain</Link></li>
+              <li><Link className="hover:underline" to="/blog/what-is-nerve-pain">Nerve Related Pain</Link></li>
+              <li><Link className="hover:underline" to="/blog/what-is-muscle-pain">Muscle Pain</Link></li>
+              <li><Link className="hover:underline" to="/blog/what-is-sports-pain">Sports Injury</Link></li>
+              <li><Link className="hover:underline" to="/blog/what-is-whole-body-pain">Whole Body Pain</Link></li>
+              <li><Link className="hover:underline" to="/blog/what-is-cancer-pain">Cancer Pain</Link></li>
             </ul>
           </div>
 
@@ -96,7 +96,7 @@ const Footer = () => {
                     <img src={UserRound} alt="user" /> <span>Isha Sunam</span>
                     <img src={MessageCircleMore} alt="MessageCircleMore" /> <span>2 Comments</span>
                   </div>
-                  <Link to="/what-is-headache">
+                  <Link to="/blog/what-is-headache">
                     <p className="text-[15px] font-semibold hover:underline hover:text-gray-300">
                       How Weather Changes Trigger Headaches?
                     </p>
@@ -112,7 +112,7 @@ const Footer = () => {
                     <img src={UserRound} alt="user" /><span>Monika Sharma</span>
                     <img src={MessageCircleMore} alt="MessageCircleMore" /> <span>2 Comments</span>
                   </div>
-                  <Link to="/what-is-neck-pain">
+                  <Link to="/blog/what-is-neck-pain">
                     <p className="text-[15px] font-semibold hover:underline hover:text-gray-300">
                       Neck Pain: Causes Of Neck Pain During The Monsoon Season
                     </p>

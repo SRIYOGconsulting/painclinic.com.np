@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import breadcrumb from "/images/home/breadcrumb.jpg";
 import House from "/icons/house.svg";
 
-// Map special pages for friendly breadcrumbs
+// Special breadcrumb mappings
 const breadcrumbMap = {
   "/puspak-message": {
     hierarchy: ["/messages", "/puspak-message"],
@@ -17,56 +17,9 @@ const breadcrumbMap = {
     hierarchy: ["/messages", "/muskaan-message"],
     labels: ["Messages", "Message from Dr. Muskaan"],
   },
-
-  // footer links
-  "/what-is-headache": {
-    hierarchy: ["/blog"],
-    labels: ["How Weather Changes Trigger Headaches: Causes and Solutions"],
-  },
-  "/what-is-joint-pain": {
-    hierarchy: ["/blog"],
-    labels: ["Joint Care: How to Protect Your Joints"],
-  },
-  "/what-is-neck-pain": {
-    hierarchy: ["/blog"],
-    labels: ["Neck Pain: Causes of Neck Pain During the Monsoon Season"],
-  },
-  "/what-is-shoulder-pain": {
-    hierarchy: ["/blog"],
-    labels: ["Shoulder Pain and Cold Weather: Understanding the Connection"],
-  },
-  "/what-is-orofacial-pain": {
-    hierarchy: ["/blog"],
-    labels: ["The Winter Chill and Orofacial Pain: Causes and Care"],
-  },
-  "/what-is-knee-pain": {
-    hierarchy: ["/blog"],
-    labels: ["Winter and Knee Pain: Why It Happens and What You Can Do"],
-  },
-  "/what-is-nerve-pain": {
-    hierarchy: ["/blog"],
-    labels: ["Winter and Nerve Pain: Understanding the Triggers"],
-  },
-  "/what-is-muscle-pain": {
-    hierarchy: ["/blog"],
-    labels: ["Muscle Pain: Symptoms and Causes"],
-  },
-  "/what-is-sports-pain": {
-    hierarchy: ["/blog"],
-    labels: ["Preventing Sports Injuries During Outdoor Activities"],
-  },
-  "/what-is-whole-body-pain": {
-    hierarchy: ["/blog"],
-    labels: ["Whole Body Pain: Causes, Symptoms and Treatments"],
-  },
-  "/what-is-cancer-pain": {
-    hierarchy: ["/blog"],
-    labels: ["Comprehensive Pain Management for Cancer Patients"],
-  },
-  
 };
 
-// Default breadcrumb labels for normal pages
+// Default breadcrumb labels
 const defaultBreadcrumbMap = {
   "/about": "About Us",
   "/team": "Our Team",
@@ -79,82 +32,81 @@ const defaultBreadcrumbMap = {
   "/faqs": "Frequently Asked Questions",
   "/blog": "Pain Clinic Blog",
   "/contact": "Contact Us",
-  "/qr" : "QR"
+  "/qr": "QR",
 };
 
-  //  Page title configuration
+// Blog titles 
+const blogTitleMap = {
+  "/blog/what-is-headache":
+    "How Weather Changes Trigger Headaches: Causes and Solutions",
+  "/blog/what-is-joint-pain":
+    "Joint Care: How to Protect Your Joints",
+  "/blog/what-is-neck-pain":
+    "Neck Pain: Causes of Neck Pain During the Monsoon Season",
+  "/blog/what-is-shoulder-pain":
+    "Shoulder Pain and Cold Weather: Understanding the Connection",
+  "/blog/what-is-orofacial-pain":
+    "The Winter Chill and Orofacial Pain: Causes and Care",
+  "/blog/what-is-knee-pain":
+    "Winter and Knee Pain: Why It Happens and What You Can Do",
+  "/blog/what-is-nerve-pain":
+    "Winter and Nerve Pain: Understanding the Triggers",
+  "/blog/what-is-muscle-pain":
+    "Muscle Pain: Symptoms and Causes",
+  "/blog/what-is-sports-pain":
+    "Preventing Sports Injuries During Outdoor Activities",
+  "/blog/what-is-whole-body-pain":
+    "Whole Body Pain: Causes, Symptoms and Treatments",
+  "/blog/what-is-cancer-pain":
+    "Comprehensive Pain Management for Cancer Patients",
+};
 
+// Page title (document.title)
 const pageTitleMap = {
   "/": "Home | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-
   "/about": "About | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
   "/lab": "Lab | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/pharmacy": "Pharmacy | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/physiotherapy": "Physiotherapy | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
+  "/pharmacy":
+    "Pharmacy | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
+  "/physiotherapy":
+    "Physiotherapy | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
   "/team": "Team | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/whatwecure": "Cure | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/puspak-message": "Dr. Puspak Message | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/niru-message": "Dr. Niru Message | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/muskan-message": "Dr. Muskan Message | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/conditions": "Conditions | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/faq": "FAQs | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/blog": "Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-
-  "/what-is-headache":
-    "What is Headache | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/what-is-joint-pain":
-    "What is Joint Pain | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/what-is-neck-pain":
-    "What is Neck Pain | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/what-is-shoulder-pain":
-    "What is Shoulder Pain | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/what-is-orofacial-pain":
-    "What is Orofacial Pain | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/what-is-knee-pain":
-    "What is Knee Pain | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/what-is-nerve-pain":
-    "What is Nerve Pain | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/what-is-muscle-pain":
-    "What is Muscle Pain | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/what-is-sports-pain":
-    "What is Sports Injury | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/what-is-whole-body-pain":
-    "What is Whole Body Pain | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/what-is-cancer-pain":
-    "What is Cancer Pain | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-
-  "/contact": "Contact | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
+  "/conditions":
+    "Conditions | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
+  "/blog": "Blog | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
+  "/contact":
+    "Contact | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
 };
 
-  //  Breadcrumb Component
-
+// Breadcrumb Component
 const Breadcrumbs = () => {
   const { pathname } = useLocation();
   const isHome = pathname === "/";
 
   let breadcrumbItems = [];
 
-  // Page Title Effect 
+// Page title effect  
   useEffect(() => {
     document.title =
       pageTitleMap[pathname] ||
-      "Advance Pain Clinic | Birtamode, Jhapa, Nepal";
+      "Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal";
   }, [pathname]);
 
-  // Breadcrumb Logic 
+  // Breadcrumb logic 
   if (!isHome) {
-    if (breadcrumbMap[pathname]) {
-      const { hierarchy, labels } = breadcrumbMap[pathname];
+    if (pathname.startsWith("/blog/") && pathname !== "/blog") {
+      breadcrumbItems = [{ path: "/blog", label: "Our Blog" }];
+    }
 
-      if (labels.length === 1 && hierarchy.length === 1) {
-        breadcrumbItems = [{ path: "/blog", label: "Our Blog" }];
-      } else {
-        breadcrumbItems = hierarchy.map((path, index) => ({
-          path,
-          label: labels[index],
-        }));
-      }
-    } else {
+    else if (breadcrumbMap[pathname]) {
+      const { hierarchy, labels } = breadcrumbMap[pathname];
+      breadcrumbItems = hierarchy.map((path, index) => ({
+        path,
+        label: labels[index],
+      }));
+    }
+
+    else {
       const segments = pathname.split("/").filter(Boolean);
       let currentPath = "";
 
@@ -170,7 +122,7 @@ const Breadcrumbs = () => {
     }
   }
 
-  // Do not render breadcrumbs on Home
+  // No breadcrumbs on home
   if (isHome) return null;
 
   return (
@@ -186,17 +138,16 @@ const Breadcrumbs = () => {
       <div className="absolute inset-0 bg-[#ecf0f5cc] rounded-xl"></div>
 
       <div className="relative max-w-6xl mx-auto flex flex-col items-center text-center">
-        {/* Page Heading */}
+        {/*  Page Heading  */}
         <h1 className="text-[#0A2241] text-3xl sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-4 break-words">
-          {
-            breadcrumbItems[breadcrumbItems.length - 1]?.label
-          }
+          {blogTitleMap[pathname] ||
+            breadcrumbItems[breadcrumbItems.length - 1]?.label}
         </h1>
 
-        {/* Breadcrumb Navigation */}
+        {/*  Breadcrumb Navigation  */}
         <nav className="text-[#0A2241] flex flex-wrap justify-center gap-2 items-center font-semibold">
-          <img src={House} alt="Home" className="text-[#234179]h-4 w-4" />
-          <Link to="/" className="hover:underline hover:text-gray-900">
+          <img src={House} alt="Home" className="h-4 w-4" />
+          <Link to="/" className="hover:underline">
             Home
           </Link>
 
@@ -207,14 +158,9 @@ const Breadcrumbs = () => {
               <React.Fragment key={item.path}>
                 <span className="mx-1">{">"}</span>
                 {isLast ? (
-                  <span className="text-[#234179] break-words">
-                    {item.label}
-                  </span>
+                  <span className="text-[#234179]">{item.label}</span>
                 ) : (
-                  <Link
-                    to={item.path}
-                    className="hover:underline hover:text-gray-900 break-words"
-                  >
+                  <Link to={item.path} className="hover:underline">
                     {item.label}
                   </Link>
                 )}
