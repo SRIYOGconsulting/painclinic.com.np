@@ -7,7 +7,7 @@ const SportsInjury = () => {
       {/* Author and read time */}
       <div className="text-[12px] text-[#707882] mb-4 flex items-center gap-6">
         <div className="flex items-center gap-2">
-          <img src={UserRound} alt="userround" className="w-4 h-4 text-[#234179] stroke-current"/>
+          <img src={UserRound} alt="userround" className="w-4 h-4 text-[#234179] stroke-current" />
           <p>
             By{" "}
             <span className="font-medium text-[#707882]">Salina Bastola</span>
@@ -72,7 +72,7 @@ const SportsInjury = () => {
           Get Regular Check-ups: If you engage in regular outdoor activities or sports, consider having regular check-ups with a healthcare provider or a sports specialist to ensure that you're physically fit and not developing any potential issues.
         </li>
       </ul>
-      {/* Categories & Tags */}
+      {/* Categories*/}
       <div className="border-t border-gray-200 pt-4 pb-4 flex flex-wrap justify-between items-center text-sm text-[#707882]">
         <div className="flex items-center gap-3">
           <span className=" text-[#234179] uppercase">Categories:</span>

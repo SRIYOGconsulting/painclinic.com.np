@@ -5,7 +5,7 @@ import qrImage2 from "/images/qr/qr-loc.png";
 import qrImage3 from "/images/qr/qr-fb.png";
 import qrImage4 from "/images/qr/qr-tiktok.png";
 import qrImage5 from "/images/qr/qr-insta.png";
-import qrImage6 from "/images/qr/qr-code.png";
+import qrImage6 from "/images/qr/qr-insta.png";
 
 const Qr = () => {
   // Array with the QR code images, titles, and descriptions

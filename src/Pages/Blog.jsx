@@ -101,7 +101,7 @@ const Blog = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {blogs.map((blog, index) => (
           <Link
-            to={`/blog/${blog.path}`}   
+            to={`/blog/${blog.path}`}
             key={index}
             className="bg-[#ECF0F5CC] rounded-2xl shadow-md hover:shadow-lg transition-all p-5 block"
           >

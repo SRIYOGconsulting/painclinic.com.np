@@ -94,7 +94,7 @@ const Headache = () => {
         </li>
       </ul>
 
-      {/* Categories & Tags */}
+      {/* Categories */}
       <div className="border-t border-gray-200 pt-4 pb-4 flex flex-wrap justify-between items-center text-sm text-[#707882]">
         <div className="flex items-center gap-3">
           <span className=" text-[#234179] uppercase">Categories:</span>

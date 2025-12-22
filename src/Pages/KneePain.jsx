@@ -7,7 +7,7 @@ const KneePain = () => {
       {/* Author and read time */}
       <div className="text-[12px] text-[#707882] mb-4 flex items-center gap-6">
         <div className="flex items-center gap-2">
-          <img src={UserRound} alt="userround" className="w-4 h-4 text-[#234179] stroke-current"/>
+          <img src={UserRound} alt="userround" className="w-4 h-4 text-[#234179] stroke-current" />
           <p>
             By{" "}
             <span className="font-medium text-[#707882]">Salina Bastola</span>
@@ -146,7 +146,6 @@ const KneePain = () => {
             Knee pain, Knee Pain Causes
           </p>
         </div>
-
       </div>
       <div className="border-t border-gray-200"></div>
     </div>

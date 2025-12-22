@@ -77,6 +77,7 @@ const Footer = () => {
               <li><Link className="hover:underline" to="/blog/what-is-sports-pain">Sports Injury</Link></li>
               <li><Link className="hover:underline" to="/blog/what-is-whole-body-pain">Whole Body Pain</Link></li>
               <li><Link className="hover:underline" to="/blog/what-is-cancer-pain">Cancer Pain</Link></li>
+              <li><Link className="hover:underline" to="/qr">QR</Link></li>
             </ul>
           </div>
 

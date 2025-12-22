@@ -14,7 +14,6 @@ import Mail from "/icons/email2.svg";
 
 const Header = () => {
   const [hoveredMenu, setHoveredMenu] = useState({ main: null, sub: null });
-
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
   const [mobileMessagesOpen, setMobileMessagesOpen] = useState(false);

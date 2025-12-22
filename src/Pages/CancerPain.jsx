@@ -1,5 +1,6 @@
 import cancerpain from "/images/cancerpain/cancer-pain.jpg";
 import UserRound from "/icons/user-round.svg";
+
 const CancerPain = () => {
   return (
     <div className="max-w-3xl mx-auto px-6 py-30 text-[#707882] font-[sans-serif]">
