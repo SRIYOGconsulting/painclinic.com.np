@@ -22,33 +22,33 @@ import NiruM from './Pages/NiruM.jsx';
 import MuskanM from './Pages/MuskanM.jsx';
 
 // Blog detail pages
-import Headache from './Pages/Headache.jsx';
-import JointPain from './Pages/JointPain.jsx';
-import NeckPain from './Pages/NeckPain.jsx';
-import ShoulderPain from './Pages/ShoulderPain.jsx';
-import OrofacialPain from './Pages/OrofacialPain.jsx';
-import KneePain from './Pages/KneePain.jsx';
-import NervePain from './Pages/NervePain.jsx';
-import MusclePain from './Pages/MusclePain.jsx';
-import SportsInjury from './Pages/SportsInjury.jsx';
-import WholeBodyPain from './Pages/WholeBodyPain.jsx';
-import CancerPain from './Pages/CancerPain.jsx';
+import Headache from './Pages/Blogs/Headache.jsx';
+import JointPain from './Pages/Blogs/JointPain.jsx';
+import NeckPain from './Pages/Blogs/NeckPain.jsx';
+import ShoulderPain from './Pages/Blogs/ShoulderPain.jsx';
+import OrofacialPain from './Pages/Blogs/OrofacialPain.jsx';
+import KneePain from './Pages/Blogs/KneePain.jsx';
+import NervePain from './Pages/Blogs/NervePain.jsx';
+import MusclePain from './Pages/Blogs/MusclePain.jsx';
+import SportsInjury from './Pages/Blogs/SportsInjury.jsx';
+import WholeBodyPain from './Pages/Blogs/WholeBodyPain.jsx';
+import CancerPain from './Pages/Blogs/CancerPain.jsx';
 
 // Conditions pages
-import HeadacheC from './Pages/HeadacheC.jsx';
-import JointPainC from './Pages/JointPainC.jsx';
-import NeckPainC from './Pages/NeckPainC.jsx';
-import ShoulderPainC from './Pages/ShoulderPainC.jsx';
-import OrofacialPainC from './Pages/OrofacialPainC.jsx';
-import KneePainC from './Pages/KneePainC.jsx';
-import NervePainC from './Pages/NervePainC.jsx';
-import MusclePainC from './Pages/MusclePainC.jsx';
-import SportsInjuryC from './Pages/SportsInjuryC.jsx';
-import WholeBodyPainC from './Pages/WholeBodyPainC.jsx';
-import CancerPainC from './Pages/CancerPainC.jsx';
-import DiscProlapseC from './Pages/DiscProlapseC.jsx';
-import AnklePainC from './Pages/AnklePainC.jsx';
-import FibromyalgiaC from './Pages/FibromyalgiaC.jsx';
+import HeadacheC from './Pages/Conditions/HeadacheC.jsx';
+import JointPainC from './Pages/Conditions/JointPainC.jsx';
+import NeckPainC from './Pages/Conditions/NeckPainC.jsx';
+import ShoulderPainC from './Pages/Conditions/ShoulderPainC.jsx';
+import OrofacialPainC from './Pages/Conditions/OrofacialPainC.jsx';
+import KneePainC from './Pages/Conditions/KneePainC.jsx';
+import NervePainC from './Pages/Conditions/NervePainC.jsx';
+import MusclePainC from './Pages/Conditions/MusclePainC.jsx';
+import SportsInjuryC from './Pages/Conditions/SportsInjuryC.jsx';
+import WholeBodyPainC from './Pages/Conditions/WholeBodyPainC.jsx';
+import CancerPainC from './Pages/Conditions/CancerPainC.jsx';
+import DiscProlapseC from './Pages/Conditions/DiscProlapseC.jsx';
+import AnklePainC from './Pages/Conditions/AnklePainC.jsx';
+import FibromyalgiaC from './Pages/Conditions/FibromyalgiaC.jsx';
 
 // Other
 import Qr from './Pages/Qr.jsx';

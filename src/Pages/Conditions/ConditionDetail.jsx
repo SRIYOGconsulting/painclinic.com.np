@@ -1,6 +1,6 @@
 // src/Pages/ConditionDetail.jsx
 import { useParams } from "react-router-dom";
-import conditionsData from "../ConditionsData";
+import conditionsData from "../../ConditionsData";
 
 const ConditionDetail = () => {
   const { slug } = useParams();

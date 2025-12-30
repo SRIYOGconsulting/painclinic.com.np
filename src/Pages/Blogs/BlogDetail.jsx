@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { blogs } from "./Blog";  
+import { blogs } from "../Blog";  
 
 const BlogDetail = () => {
   const { path } = useParams();  // get `:path` from URL
