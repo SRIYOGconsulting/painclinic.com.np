@@ -83,11 +83,42 @@ const KneePainC = () => {
             </div>
             <div className="ml-4 flex flex-col">
               <h3 className="font-medium text-gray-900">
+                Are knee braces useful?
+              </h3>
+              <div className="mt-2 border-l-2 border-gray-300 pl-4">
+                <p className="text-[#707882]">
+                  Braces can provide support and stability during movement.
+They are especially helpful after injuries or for arthritis.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-start">
+            <div className="w-8 h-8 rounded-full bg-[#234179] flex items-center justify-center text-white">
+              <div className="text-xl">+</div>
+            </div>
+            <div className="ml-4 flex flex-col">
+              <h3 className="font-medium text-gray-900">
                 When should I see a doctor for knee pain?
               </h3>
               <div className="mt-2 border-l-2 border-gray-300 pl-4">
                 <p className="text-[#707882]">
                   If the pain is severe, persistent, or accompanied by swelling or bruising, see a doctor.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-start">
+            <div className="w-8 h-8 rounded-full bg-[#234179] flex items-center justify-center text-white">
+              <div className="text-xl">+</div>
+            </div>
+            <div className="ml-4 flex flex-col">
+              <h3 className="font-medium text-gray-900">
+                How can knee pain be relieved?
+              </h3>
+              <div className="mt-2 border-l-2 border-gray-300 pl-4">
+                <p className="text-[#707882]">
+                  Rest, ice, compression, elevation (RICE), and physiotherapy help most cases.
                 </p>
               </div>
             </div>

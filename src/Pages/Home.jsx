@@ -138,7 +138,7 @@ const Home = () => {
       category: "Neck Pain",
       doctor: "Dr. Sagar",
       date: "07 Dec, 2024",
-      title: "Neck Pain From Air Conditioning: Causes And Remedies",
+      title: "Neck Pain From Air Conditioning",
       path: "what-is-neck-pain",
       image: neckImg,
     },
@@ -211,10 +211,10 @@ const Home = () => {
       >
         {/* Content + Sliding Image */}
         <div className="relative z-10 flex items-center justify-between h-full w-full">
-          <motion.img src={flower} alt="clover" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 2, }} className="absolute top-70 left-90 h-15 w-15 "/>
+          {/* <motion.img src={flower} alt="clover" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 2, }} className="absolute top-70 left-90 h-15 w-15 "/>
           <motion.img src={clover} alt="clover" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 3, }} className="absolute bottom-90 right-0 h-15 w-15 "/>
           <motion.img src={clover} alt="clover" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 3, }} className="absolute bottom-5 left-0 h-15 w-15 "/>
-          <motion.img src={heroshape} alt="clover" animate={{ x: [0, -10, 0] }} transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }} className="absolute bottom-10 left-90 h-15 w-15 "/>
+          <motion.img src={heroshape} alt="clover" animate={{ x: [0, -10, 0] }} transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }} className="absolute bottom-10 left-90 h-15 w-15 "/> */}
           {/* LEFT CONTENT */}
 
           <div className="text-[#0A2241] flex-1 py-20 md:py-30 px-6 md:px-12 mt-60">
@@ -260,7 +260,7 @@ const Home = () => {
 
               <div className="hidden lg:flex items-center bg-white rounded-xl shadow-lg px-5 py-3 w-[200px] gap-4">
                 <div className="bg-[#234179] text-white p-3 rounded-lg flex items-center justify-center">
-                  <img src={ThumbsUp} alt="Thumbs Up" className="w-7 h-7"/>
+                  <img src={ThumbsUp} alt="Thumbs Up" className="w-7 h-7 brightness-0 invert"/>
                 </div>
 
                 <div className="flex flex-col leading-tight">
@@ -317,7 +317,7 @@ const Home = () => {
 
             {/* Right Content Section */}
             <div className="w-full md:w-1/2">
-              <div className="flex gap-2"><motion.img src={sectitles1} animate={{ rotate: 360 }} transition={{ repeat: Infinity }} className="h-4"/>
+              <div className="flex gap-2">
                 <p className="text-sm text-gray-700 font-semibold flex items-center gap-1 mb-2">
                   About Us
                 </p></div>
@@ -371,7 +371,7 @@ const Home = () => {
               transition={{ repeat: Infinity, duration: 4 }}
               className="h-4"
             />
-            <p className="text-sm">Our Services</p>
+            <p className="text-sm py-3">Our Services</p>
           </div>
 
           <h2 className="text-4xl font-bold">Pain Conditions That We Treat</h2>
@@ -442,12 +442,7 @@ const Home = () => {
 
           {/* LEFT CONTENT */}
           <div className="w-full md:w-1/2 p-10 relative z-10 mb-4">
-            <div className="flex gap-2"><motion.img
-              src={sectitles2}
-              animate={{ rotate: 360 }}
-              transition={{ repeat: Infinity, duration: 4 }}
-              className="h-4"
-            />
+            <div className="flex gap-2">
               <h3 className="text-sm text-white mb-1">
                 Say Goodbye To Your Pain
               </h3></div>
@@ -510,12 +505,7 @@ const Home = () => {
 
           {/* RIGHT SIDE CONTENT */}
           <div className="w-full md:w-1/2">
-            <div className="flex items-center"><motion.img
-              src={sectitles1}
-              animate={{ rotate: 360 }}
-              transition={{ repeat: Infinity, duration: 4 }}
-              className="h-4"
-            />
+            <div className="flex items-center">
               <p className="text-[#234179] font-semibold text-sm flex items-center gap-2">
                 <span className="text-[#234179] text-xl"></span> Reasons To Choose Us
               </p>
@@ -532,7 +522,7 @@ const Home = () => {
               {/* Feature 1 */}
               <div className="flex gap-6 items-start">
                 <div className="w-18 h-14 bg-[#234179] text-white rounded-full flex items-center justify-center mt-2">
-                  <img src={UserIcon} alt="Expertise You Can Trust" className="w-7 h-7"/>
+                  <img src={UserIcon} alt="Expertise You Can Trust" className="w-7 h-7 brightness-0 invert"/>
                   {/* <UserRound size={28} /> */}
                 </div>
                 <div>
@@ -548,7 +538,7 @@ const Home = () => {
               {/* Feature 2 */}
               <div className="flex gap-6 items-start">
                 <div className="w-17 h-14 bg-[#234179] text-white rounded-full flex items-center justify-center mt-2">
-                  <img src={Hospital} alt="Comprehensive Care" className="w-7 h-7"/>
+                  <img src={Hospital} alt="Comprehensive Care" className="w-7 h-7 brightness-0 invert"/>
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-[#0A2241]">Comprehensive Care</h3>
@@ -563,7 +553,7 @@ const Home = () => {
               {/* Feature 3 */}
               <div className="flex gap-6 items-start">
                 <div className="w-22 h-14 bg-[#234179] text-white rounded-full flex items-center justify-center mt-2">
-                  <img src={Heartpulse} alt="Patient-Centered Approach" className="w-7 h-7"/>
+                  <img src={Heartpulse} alt="Patient-Centered Approach" className="w-7 h-7 brightness-0 invert"/>
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-[#0A2241]">Commitment To The Community</h3>
@@ -732,7 +722,7 @@ const Home = () => {
 
                     {/* IMAGE */}
                     <div className="relative h-full w-full rounded-3xl overflow-hidden bg-white p-6">
-                      <div className="w-full h-full rounded-2xl overflow-hidden">
+                      <div className="w-full h-80 rounded-2xl overflow-hidden">
                         <motion.img
                           src={item1.image}
                           alt={item1.title}
@@ -753,7 +743,7 @@ const Home = () => {
 
                       {/* Doctor + Date */}
                       <p className="text-gray-500 text-sm mb-2">
-                        {item1.doctor} · {item1.date}
+                        {item1.doctor} 
                       </p>
 
                       {/* Title */}

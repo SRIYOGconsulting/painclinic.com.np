@@ -92,6 +92,37 @@ const AnklePainC = () => {
               </div>
             </div>
           </div>
+          <div className="flex items-start">
+            <div className="w-8 h-8 rounded-full bg-[#234179] flex items-center justify-center text-white">
+              <div className="text-xl">+</div>
+            </div>
+            <div className="ml-4 flex flex-col">
+              <h3 className="font-medium text-gray-900">
+                Can ankle pain be caused by shoes?
+              </h3>
+              <div className="mt-2 border-l-2 border-gray-300 pl-4">
+                <p className="text-[#707882]">
+                  Yes, tight or unsupportive shoes can trigger ankle pain. So, make sure to not wear tight shoes.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-start">
+            <div className="w-8 h-8 rounded-full bg-[#234179] flex items-center justify-center text-white">
+              <div className="text-xl">+</div>
+            </div>
+            <div className="ml-4 flex flex-col">
+              <h3 className="font-medium text-gray-900">
+                How can I relieve ankle pain at home?
+              </h3>
+              <div className="mt-2 border-l-2 border-gray-300 pl-4">
+                <p className="text-[#707882]">
+                  Rest, ice, compression, and elevation (RICE) help reduce pain and swelling.
+Gentle stretching and strengthening exercises may improve recovery.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

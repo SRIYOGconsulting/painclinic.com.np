@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "motion/react"
+
 import logo from "/images/home/pain-clinic-logo.png";
 import ChevronDown from "/icons/chevron-down.svg";
 import Menu from "/icons/menu.svg";
@@ -73,39 +75,84 @@ useEffect(() => {
 
           {/* ABOUT */}
           <li
-            className="relative"
-            onMouseEnter={() => setHoveredMenu({ main: "about", sub: null })}
-            onMouseLeave={() => setHoveredMenu({ main: null, sub: null })}
-          >
-            <span className="cursor-pointer hover:text-[#234179]">About</span>
+          className="relative"
+          onMouseEnter={() => setHoveredMenu({ main: "about", sub: null })}
+          onMouseLeave={() => setHoveredMenu({ main: null, sub: null })}
+        >
+          <span className="cursor-pointer hover:text-[#234179]">About</span>
 
+          {/* Animate main dropdown */}
+          <AnimatePresence>
             {hoveredMenu.main === "about" && (
-              <ul className="absolute bg-white shadow-lg rounded-md top-full left-0 w-48 py-2 z-50">
-                <li><Link to="/about" className="block px-4 py-2 hover:bg-[#234179] hover:text-white">About Us</Link></li>
-                <li><Link to="/team" className="block px-4 py-2 hover:bg-[#234179] hover:text-white">Our Team</Link></li>
-                <li><Link to="/cure" className="block px-4 py-2 hover:bg-[#234179] hover:text-white">What We Cure</Link></li>
+              <motion.ul
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.35 }}
+                className="absolute bg-white shadow-lg rounded-md top-full left-0 w-48 py-2 z-50"
+              >
+                {/* Top-level menu items */}
+                <li>
+                  <Link
+                    to="/about"
+                    className="block px-4 py-2 hover:bg-[#234179] hover:text-white"
+                  >
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/team"
+                    className="block px-4 py-2 hover:bg-[#234179] hover:text-white"
+                  >
+                    Our Team
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/cure"
+                    className="block px-4 py-2 hover:bg-[#234179] hover:text-white"
+                  >
+                    What We Cure
+                  </Link>
+                </li>
 
-                {/* MESSAGES */}
-                <li
-                  className="relative"
-                  onMouseEnter={() => setHoveredMenu({ main: "about", sub: "messages" })}
-                  onMouseLeave={() => setHoveredMenu({ main: "about", sub: null })}
-                >
+                {/* MESSAGES submenu */}
+                <li className="relative group">
                   <span className="block px-4 py-2 hover:bg-[#234179] hover:text-white cursor-pointer">
                     Messages
                   </span>
-
-                  {hoveredMenu.sub === "messages" && (
-                    <ul className="absolute left-full top-0 bg-white shadow-lg rounded-md w-48 py-2">
-                      <li><Link to="/puspak-message" className="block px-4 py-2 hover:bg-[#234179] hover:text-white">Dr. Puspak</Link></li>
-                      <li><Link to="/niru-message" className="block px-4 py-2 hover:bg-[#234179] hover:text-white">Dr. Niru</Link></li>
-                      <li><Link to="/muskaan-message" className="block px-4 py-2 hover:bg-[#234179] hover:text-white">Dr. Muskaan</Link></li>
-                    </ul>
-                  )}
+                  <ul className="absolute left-full top-0 w-48 bg-white shadow-lg rounded-md py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                    <li>
+                      <Link
+                        to="/puspak-message"
+                        className="block px-4 py-2 hover:bg-[#234179] hover:text-white"
+                      >
+                        Dr. Puspak
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/niru-message"
+                        className="block px-4 py-2 hover:bg-[#234179] hover:text-white"
+                      >
+                        Dr. Niru
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/muskaan-message"
+                        className="block px-4 py-2 hover:bg-[#234179] hover:text-white"
+                      >
+                        Dr. Muskaan
+                      </Link>
+                    </li>
+                  </ul>
                 </li>
-              </ul>
+              </motion.ul>
             )}
-          </li>
+          </AnimatePresence>
+        </li>
 
           {/* SERVICES */}
           <li
@@ -116,11 +163,14 @@ useEffect(() => {
             <span className="cursor-pointer hover:text-[#234179]">Services</span>
 
             {hoveredMenu.main === "services" && (
-              <ul className="absolute bg-white shadow-lg rounded-md top-full left-0 w-48 py-2 z-50">
+              <motion.ul className="absolute bg-white shadow-lg rounded-md top-full left-0 w-48 py-2 z-50" initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.35 }}>
                 <li><Link to="/lab" className="block px-4 py-2 hover:bg-[#234179] hover:text-white">Lab</Link></li>
                 <li><Link to="/pharmacy" className="block px-4 py-2 hover:bg-[#234179] hover:text-white">Pharmacy</Link></li>
                 <li><Link to="/physiotherapy" className="block px-4 py-2 hover:bg-[#234179] hover:text-white">Physiotherapy</Link></li>
-              </ul>
+              </motion.ul>
             )}
           </li>
 
@@ -133,7 +183,10 @@ useEffect(() => {
             <span className="cursor-pointer hover:text-[#234179]"><Link to="/conditions">Conditions</Link></span>
 
             {hoveredMenu.main === "conditions" && (
-              <ul className="grid grid-cols-3 absolute bg-white shadow-lg rounded-md top-full left-0 w-125 py-3 z-50">
+              <motion.ul className="grid grid-cols-3 absolute bg-white shadow-lg rounded-md top-full left-0 w-125 py-3 z-50" initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.35 }}>
                 <li><Link to="/conditions/headache" className="block px-4 py-3 hover:bg-[#234179] hover:text-white" onClick={() => setMobileOpen(false)}>Headache</Link></li>
                 <li><Link to="/conditions/joint-pain" className="block px-4 py-3 hover:bg-[#234179] hover:text-white" onClick={() => setMobileOpen(false)}>Joint Pain</Link></li>
                 <li><Link to="/conditions/neck-pain" className="block px-4 py-3 hover:bg-[#234179] hover:text-white" onClick={() => setMobileOpen(false)}>Neck Pain</Link></li>
@@ -146,9 +199,9 @@ useEffect(() => {
                 <li><Link to="/conditions/whole-body-pain" className="block px-4 py-3 hover:bg-[#234179] hover:text-white" onClick={() => setMobileOpen(false)}>Whole Body Pain</Link></li>
                 <li><Link to="/conditions/cancer-pain" className="block px-4 py-3 hover:bg-[#234179] hover:text-white" onClick={() => setMobileOpen(false)}>Cancer Pain</Link></li>
                 <li><Link to="/conditions/disc-prolapse" className="block px-4 py-3 hover:bg-[#234179] hover:text-white" onClick={() => setMobileOpen(false)}>Disc Prolapse</Link></li>
-                <li><Link to="/conditions/ankel-pain" className="block px-4 py-3 hover:bg-[#234179] hover:text-white" onClick={() => setMobileOpen(false)}>Ankel Pain</Link></li>
+                <li><Link to="/conditions/ankle-pain" className="block px-4 py-3 hover:bg-[#234179] hover:text-white" onClick={() => setMobileOpen(false)}>Ankle Pain</Link></li>
                 <li><Link to="/conditions/fibromyalgia" className="block px-4 py-3 hover:bg-[#234179] hover:text-white" onClick={() => setMobileOpen(false)}>Fibromyalgia</Link></li>
-              </ul>
+              </motion.ul>
             )}
           </li>
 
@@ -164,7 +217,7 @@ useEffect(() => {
               href="https://www.facebook.com/painclinicbirtamode"
               className="flex items-center gap-2 bg-[#234179] text-white px-6 py-3 rounded-full font-semibold"
             >
-              Book An Appointment <img src={MoveUpRight} alt="External Link" className="h-4 w-4" />
+              Book An Appointment <img src={MoveUpRight} alt="External Link" className="h-4 w-4 brightness-0 invert" />
             </a>
           </div>
 

@@ -49,11 +49,41 @@ const FibromyalgiaC = () => {
             </div>
             <div className="ml-4 flex flex-col">
               <h3 className="font-medium text-gray-900">
+                What is fibromyalgia?
+              </h3>
+              <div className="mt-2 border-l-2 border-gray-300 pl-4">
+                <p className="text-[#707882]">
+                  Fibromyalgia is a chronic condition causing widespread muscle pain and tenderness.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-start">
+            <div className="w-8 h-8 rounded-full bg-[#234179] flex items-center justify-center text-white">
+              <div className="text-xl">+</div>
+            </div>
+            <div className="ml-4 flex flex-col">
+              <h3 className="font-medium text-gray-900">
                 What are the symptoms of fibromyalgia?
               </h3>
               <div className="mt-2 border-l-2 border-gray-300 pl-4">
                 <p className="text-[#707882]">
                   Symptoms include widespread muscle pain, fatigue, sleep disturbances, memory problems, and mood issues.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-start">
+            <div className="w-8 h-8 rounded-full bg-[#234179] flex items-center justify-center text-white">
+              <div className="text-xl">+</div>
+            </div>
+            <div className="ml-4 flex flex-col">
+              <h3 className="font-medium text-gray-900">
+               What causes fibromyalgia?
+              </h3>
+              <div className="mt-2 border-l-2 border-gray-300 pl-4">
+                <p className="text-[#707882]">
+                  The exact cause is unknown but may involve genetics, infections, or stress.
                 </p>
               </div>
             </div>

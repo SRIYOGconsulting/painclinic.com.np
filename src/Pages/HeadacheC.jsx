@@ -127,39 +127,7 @@ const Headache = () => {
     </div>
   </div>
 
-  {/* FAQ 7 */}
-  <div className="flex items-start">
-    <div className="w-8 h-8 rounded-full bg-[#234179] flex items-center justify-center text-white">
-      <div className="text-xl">+</div>
-    </div>
-    <div className="ml-4 flex flex-col">
-      <h3 className="font-medium text-gray-900">
-        What is a sinus headache, and how does it differ from other types of headaches?
-      </h3>
-      <div className="mt-2 border-l-2 border-gray-300 pl-4">
-        <p className="text-[#707882]">
-          Sinus headaches cause pressure and pain around the forehead and eyes, often with congestion.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  {/* FAQ 8 */}
-  <div className="flex items-start">
-    <div className="w-8 h-8 rounded-full bg-[#234179] flex items-center justify-center text-white">
-      <div className="text-xl">+</div>
-    </div>
-    <div className="ml-4 flex flex-col">
-      <h3 className="font-medium text-gray-900">
-        Are headaches a sign of a more serious condition?
-      </h3>
-      <div className="mt-2 border-l-2 border-gray-300 pl-4">
-        <p className="text-[#707882]">
-          Most headaches aren't serious, but persistent or severe ones should be checked by a doctor.
-        </p>
-      </div>
-    </div>
-  </div>
+ 
 </div>
 
       </div>

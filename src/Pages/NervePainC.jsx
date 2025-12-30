@@ -75,6 +75,38 @@ const NervePainC = () => {
               </div>
             </div>
           </div>
+          <div className="flex items-start">
+            <div className="w-8 h-8 rounded-full bg-[#234179] flex items-center justify-center text-white">
+              <div className="text-xl">+</div>
+            </div>
+            <div className="ml-4 flex flex-col">
+              <h3 className="font-medium text-gray-900">
+                Can nerve pain feel like burning or tingling?
+
+              </h3>
+              <div className="mt-2 border-l-2 border-gray-300 pl-4">
+                <p className="text-[#707882]">
+                  Yes, nerve pain often causes sharp, tingling, or burning sensations on the affected body parts.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-start">
+            <div className="w-8 h-8 rounded-full bg-[#234179] flex items-center justify-center text-white">
+              <div className="text-xl">+</div>
+            </div>
+            <div className="ml-4 flex flex-col">
+              <h3 className="font-medium text-gray-900">
+                Can posture affect nerve pain?
+              </h3>
+              <div className="mt-2 border-l-2 border-gray-300 pl-4">
+                <p className="text-[#707882]">
+                  Poor posture can compress nerves and intensify pain.
+Correct alignment and ergonomic adjustments can relieve pressure.
+                </p>
+              </div>
+            </div>
+          </div>
 
           {/* FAQ 4 */}
           <div className="flex items-start">

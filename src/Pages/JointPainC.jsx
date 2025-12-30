@@ -109,6 +109,21 @@ const JointPainC = () => {
               </div>
             </div>
           </div>
+          <div className="flex items-start">
+            <div className="w-8 h-8 rounded-full bg-[#234179] flex items-center justify-center text-white">
+              <div className="text-xl">+</div>
+            </div>
+            <div className="ml-4 flex flex-col">
+              <h3 className="font-medium text-gray-900">
+                How is joint pain managed?
+              </h3>
+              <div className="mt-2 border-l-2 border-gray-300 pl-4">
+                <p className="text-[#707882]">
+                  Treatment includes medications, physiotherapy, rest, and gentle exercises.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

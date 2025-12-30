@@ -39,15 +39,15 @@ const Footer = () => {
             <button className="border border-gray-700 text-[15px] px-4 py-2 rounded-full text-[#234179] hover:bg-[#234179] hover:text-white transition flex">
               <a href="https://www.facebook.com/painclinicbirtamode" target="_blank" rel="noopener noreferrer">
                 BOOK AN APPOINTMENT
-              </a> <img src={MoveUpRight} alt="External Link" className="h-4 w-4 ml-1" />
+              </a> 
             </button>
 
             {/* Social Icons */}
             <div className="flex space-x-4 mt-6 text-gray-300">
-              <a href="https://www.facebook.com/painclinicbirtamode/" target="_blank" className="hover:text-white"><img src={Facebook} alt="Facebook" /></a>
-              <a href="#" className="hover:text-white"><img src={Twitter} alt="Twitter" /></a>
-              <a href="#" className="hover:text-white"><img src={Instagram} alt="Instagram" /></a>
-              <a href="#" className="hover:text-white"><img src={Youtube} alt="Youtube" /></a>
+              <a href="https://www.facebook.com/painclinicbirtamode/" target="_blank" className="hover:text-white brightness-0 invert"><img src={Facebook} alt="Facebook" /></a>
+              <a href="#" className="hover:text-white brightness-0 invert"><img src={Twitter} alt="Twitter" /></a>
+              <a href="#" className="hover:text-white brightness-0 invert"><img src={Instagram} alt="Instagram" /></a>
+              <a href="#" className="hover:text-white brightness-0 invert"><img src={Youtube} alt="Youtube" /></a>
             </div>
           </div>
 
@@ -94,8 +94,8 @@ const Footer = () => {
                 <img src={headache} className="rounded-lg w-20 h-12 object-cover" alt="Headache" />
                 <div>
                   <div className="flex items-center gap-1 text-[#456EA1] text-[10px] font-semibold mb-1">
-                    <img src={UserRound} alt="user" /> <span>Isha Sunam</span>
-                    <img src={MessageCircleMore} alt="MessageCircleMore" /> <span>2 Comments</span>
+                    <img src={UserRound} alt="user" className="brightness-0 invert"/> <span>Isha Sunam</span>
+                    <img src={MessageCircleMore} alt="MessageCircleMore" className="brightness-0 invert"/> <span>2 Comments</span>
                   </div>
                   <Link to="/blog/what-is-headache">
                     <p className="text-[15px] font-semibold hover:underline hover:text-gray-300">
@@ -110,8 +110,8 @@ const Footer = () => {
                 <img src={neckPain} className="rounded-lg w-20 h-12 object-cover" alt="Neck Pain" />
                 <div>
                   <div className="flex items-center gap-1 text-[#456EA1] text-[10px] font-semibold mb-1">
-                    <img src={UserRound} alt="user" /><span>Monika Sharma</span>
-                    <img src={MessageCircleMore} alt="MessageCircleMore" /> <span>2 Comments</span>
+                    <img src={UserRound} alt="user" className="brightness-0 invert"/><span>Monika Sharma</span>
+                    <img src={MessageCircleMore} alt="MessageCircleMore" className="brightness-0 invert"/> <span>2 Comments</span>
                   </div>
                   <Link to="/blog/what-is-neck-pain">
                     <p className="text-[15px] font-semibold hover:underline hover:text-gray-300">
@@ -131,11 +131,11 @@ const Footer = () => {
           {/* Address */}
           <div className="flex flex-col items-center md:items-start space-y-2">
             <div className="bg-[#1d3770] p-3 rounded-full">
-              <img src={MapPin} alt="Map Pin" />
+              <img src={MapPin} alt="Map Pin" className="brightness-0 invert" />
             </div>
             <p className="font-semibold text-[14px]">Clinic Address</p>
             <p className="font-semibold hover:underline text-[20px]">
-              <a href="https://www.google.com/maps/place/JXRM%2BHMW+Advance+Pain+Specialist+Clinic,+Advance+Pain+Specialist+Clinic+1,+Mahendra+Hwy,+Birtamod+57206" target="_blank" rel="noopener noreferrer">
+              <a href="https://maps.app.goo.gl/mQ2roAaSmGEkEQ3m8" target="_blank" rel="noopener noreferrer">
                 Birtamode, Jhapa, Nepal
               </a>
             </p>
@@ -144,7 +144,7 @@ const Footer = () => {
           {/* Email */}
           <div className="flex flex-col items-center md:items-start space-y-2">
             <div className="bg-[#1d3770] p-3 rounded-full">
-              <img src={Mail} alt="Mail" />
+              <img src={Mail} alt="Mail" className="brightness-0 invert" />
             </div>
             <p className="font-semibold text-[14px]">Email Enquiry</p>
             <p className="font-semibold hover:underline text-[20px]">
@@ -155,11 +155,11 @@ const Footer = () => {
           {/* Phone */}
           <div className="flex flex-col items-center md:items-start space-y-2">
             <div className="bg-[#1d3770] p-3 rounded-full">
-              <img src={Phone} alt="Phone" />
+              <img src={Phone} alt="Phone" className="brightness-0 invert" />
             </div>
             <p className="font-semibold text-[14px]">Hotline</p>
             <p className="font-semibold hover:underline text-[20px]">
-              <a href="tel:+9779701012345">97010-12345</a>
+              <a href="tel:+9779701012345">+977-97010-12345</a>
             </p>
           </div>
 
@@ -168,7 +168,7 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="py-4 mt-6 border-t border-[#0b2354]/50">
           <p className="text-center text-gray-400 text-xs">
-            © Copyright 2025 Advance Pain Specialist Clinic Birtamode, Jhapa, Nepal. Built with : <a href="https://broadpress.org/" className="hover:underline">BroadPress</a>
+            © Copyright 2025 Advance Pain Specialist Clinic Birtamode, Jhapa, Nepal. Built with : <a href="https://broadpress.org/" className="hover:underline" target="_blank">BroadPress</a>
           </p>
         </div>
       </div>

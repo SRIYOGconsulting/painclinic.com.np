@@ -92,6 +92,38 @@ const DiscProlapseC = () => {
               </div>
             </div>
           </div>
+          <div className="flex items-start">
+            <div className="w-8 h-8 rounded-full bg-[#234179] flex items-center justify-center text-white">
+              <div className="text-xl">+</div>
+            </div>
+            <div className="ml-4 flex flex-col">
+              <h3 className="font-medium text-gray-900">
+                What is a disc prolapse?
+              </h3>
+              <div className="mt-2 border-l-2 border-gray-300 pl-4">
+                <p className="text-[#707882]">
+                  A disc prolapse occurs when a spinal disc bulges out of its normal position.
+It can press on nearby nerves, causing pain, numbness, or tingling in the back and legs.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-start">
+            <div className="w-8 h-8 rounded-full bg-[#234179] flex items-center justify-center text-white">
+              <div className="text-xl">+</div>
+            </div>
+            <div className="ml-4 flex flex-col">
+              <h3 className="font-medium text-gray-900">
+                How is it treated?
+              </h3>
+              <div className="mt-2 border-l-2 border-gray-300 pl-4">
+                <p className="text-[#707882]">
+                 Treatment includes rest, physiotherapy, pain medications, and lifestyle adjustments.
+In severe cases, surgery may be recommended to relieve nerve pressure.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

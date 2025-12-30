@@ -58,6 +58,37 @@ const SportsInjuryC = () => {
               </div>
             </div>
           </div>
+          <div className="flex items-start">
+            <div className="w-8 h-8 rounded-full bg-[#234179] flex items-center justify-center text-white">
+              <div className="text-xl">+</div>
+            </div>
+            <div className="ml-4 flex flex-col">
+              <h3 className="font-medium text-gray-900">
+                How soon should I rest after a sports injury?
+              </h3>
+              <div className="mt-2 border-l-2 border-gray-300 pl-4">
+                <p className="text-[#707882]">
+                  Immediate rest helps prevent further damage.
+Ice and compression are recommended in the first 48 hours.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-start">
+            <div className="w-8 h-8 rounded-full bg-[#234179] flex items-center justify-center text-white">
+              <div className="text-xl">+</div>
+            </div>
+            <div className="ml-4 flex flex-col">
+              <h3 className="font-medium text-gray-900">
+                What are common sports injuries?
+              </h3>
+              <div className="mt-2 border-l-2 border-gray-300 pl-4">
+                <p className="text-[#707882]">
+                  Sprains, strains, fractures, and tendon injuries are common in athletes.
+                </p>
+              </div>
+            </div>
+          </div>
 
           {/* FAQ 3 */}
           <div className="flex items-start">

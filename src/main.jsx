@@ -47,7 +47,7 @@ import SportsInjuryC from './Pages/SportsInjuryC.jsx';
 import WholeBodyPainC from './Pages/WholeBodyPainC.jsx';
 import CancerPainC from './Pages/CancerPainC.jsx';
 import DiscProlapseC from './Pages/DiscProlapseC.jsx';
-import AnklePainC from './Pages/AnkelPainC.jsx';
+import AnklePainC from './Pages/AnklePainC.jsx';
 import FibromyalgiaC from './Pages/FibromyalgiaC.jsx';
 
 // Other
@@ -88,7 +88,7 @@ const router = createBrowserRouter([
       { path: 'conditions/whole-body-pain', element: <WholeBodyPainC /> },
       { path: 'conditions/cancer-pain', element: <CancerPainC /> },
       { path: 'conditions/disc-prolapse', element: <DiscProlapseC /> },
-      { path: 'conditions/ankel-pain', element: <AnklePainC /> },
+      { path: 'conditions/ankle-pain', element: <AnklePainC /> },
       { path: 'conditions/fibromyalgia', element: <FibromyalgiaC /> },
 
       // Blog routes
