@@ -10,16 +10,18 @@ import OurTeam from './Pages/OurTeam.jsx';
 import WWC from './Pages/WWC.jsx';
 import FAQs from './Pages/FAQs.jsx';
 import Blog from './Pages/Blog.jsx';
-import Lab from './Pages/Lab.jsx';
-import Pharmacy from './Pages/Pharmacy.jsx';
-import Physiotherapy from './Pages/Physiotherapy.jsx';
+
+import Lab from './Pages/Services/Lab.jsx';
+import Pharmacy from './Pages/Services/Pharmacy.jsx';
+import Physiotherapy from './Pages/Services/Physiotherapy.jsx';
+
 import Contact from './Pages/Contact.jsx';
 import Conditions from './Pages/Conditions.jsx';
 
 // Team messages
-import PuspakM from './Pages/PuspakM.jsx';
-import NiruM from './Pages/NiruM.jsx';
-import MuskanM from './Pages/MuskanM.jsx';
+import PuspakM from './Pages/Messages/PuspakM.jsx';
+import NiruM from './Pages/Messages/NiruM.jsx';
+import MuskanM from './Pages/Messages/MuskanM.jsx';
 
 // Blog detail pages
 import Headache from './Pages/Blogs/Headache.jsx';
