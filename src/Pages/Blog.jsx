@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'motion/react';
 import UserRound from "/icons/user-round.svg";
 import MessageCircleMore from "/icons/message-circle-more.svg";
-import { motion } from 'motion/react';
 
 import headacheImg from "/images/blog/headache-pain.jpg";
 import jointImg from "/images/blog/joint-pain.jpg";

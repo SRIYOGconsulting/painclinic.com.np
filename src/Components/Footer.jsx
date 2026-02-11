@@ -36,6 +36,7 @@ const Footer = () => {
               Comprehensive Pain Management Clinic in Birtamode, Jhapa, Nepal specializing multiple treatment methods to cure your pain.
             </p>
 
+
             <button className="border border-gray-700 text-[15px] px-4 py-2 rounded-full text-[#234179] hover:bg-[#234179] hover:text-white transition flex">
               <a href="https://www.facebook.com/painclinicbirtamode" target="_blank" rel="noopener noreferrer">
                 BOOK AN APPOINTMENT

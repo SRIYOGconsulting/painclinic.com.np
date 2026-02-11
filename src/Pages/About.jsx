@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion } from "motion/react"
+import { motion } from 'motion/react';
 import aboutImage from "/images/about/1.jpg";
 import director from "/images/about/director.png";
 import pain from "/images/about/pain.jpg";
@@ -24,7 +24,7 @@ const About = () => {
 
   // doodle icons
   const doodleImages = [
-    { src: orofacialI, alt: 'Oral Pain', label: 'Orafacial Pain' },
+    { src: orofacialI, alt: 'Oral Pain', label: 'Orofacial Pain' },
     { src: shoulderI, alt: 'Shoulder Pain', label: 'Shoulder Pain' },
     { src: sportsI, alt: 'Sports Injury', label: 'Sports Injury' },
     { src: headacheIcon, alt: 'Headache', label: 'Headache' },
@@ -32,12 +32,12 @@ const About = () => {
     { src: JointIcon, alt: 'Joint pain', label: 'Joint Pain' },
     { src: neckIcon, alt: 'Neck pain', label: 'Neck Pain' },
     { src: cancerI, alt: 'Cancer pain', label: 'Cancer Pain' },
-    { src: wholeI, alt: 'whole body pain', label: 'whole body Pain' },
-    { src: fibromyalgiaI, alt: 'fibromyalhia', label: 'fibromyalhia Pain' },
+    { src: wholeI, alt: 'whole body pain', label: 'Whole Body Pain' },
+    { src: fibromyalgiaI, alt: 'fibromyalgia', label: 'Fibromyalgia Pain' },
     { src: muscleI, alt: 'muscle pain', label: 'muscle Pain' },
     { src: nerveI, alt: 'nerve pain', label: 'nerve Pain' },
     { src: discI, alt: 'disc pain', label: 'disc Pain' },
-    { src: ankelI, alt: 'ankel pain', label: 'Ankle Pain' },
+    { src: ankelI, alt: 'ankle pain', label: 'Ankle Pain' },
   ];
 
   const loopedDoodles = doodleImages.concat(doodleImages);
@@ -56,7 +56,7 @@ const About = () => {
     <div className="max-w-5xl mx-auto px-4 md:px-8 font-[sans-serif]">
 
       {/* Advance Pain section */}
-      <div className="px-4 md:px-8 py-12 font-sans mt-15 relative">
+      <div className="px-4 md:px-8 py-12 font-sans mt-16 relative">
 
 
         <div className="flex flex-col md:flex-row max-w-6xl mx-auto items-center gap-10 md:gap-30">
@@ -163,7 +163,7 @@ const About = () => {
             <div
               className="
           flex 
-          gap-19   
+          gap-28   
           whitespace-nowrap 
           transition-transform 
           duration-500
@@ -173,7 +173,7 @@ const About = () => {
               {loopedDoodles.map((item2, index) => (
                 <div
                   key={index}
-                  className="w-35 mx-auto flex-shrink-0 flex flex-col items-center text-center relative group"
+                  className="w-40 mx-auto flex-shrink-0 flex flex-col items-center text-center relative group"
                 >
                   <img
                     src={item2.src}

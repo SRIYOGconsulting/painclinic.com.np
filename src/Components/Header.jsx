@@ -4,8 +4,6 @@ import { motion, AnimatePresence } from "motion/react"
 
 import logo from "/images/home/pain-clinic-logo.png";
 import ChevronDown from "/icons/chevron-down.svg";
-import Menu from "/icons/menu.svg";
-import X from "/icons/x.svg"; 
 import MoveUpRight from "/icons/move-up-right.svg";
 import Facebook from "/icons/facebook.svg";
 import Instagram from "/icons/instagram.svg";
@@ -221,10 +219,39 @@ useEffect(() => {
             </a>
           </div>
 
-          {/* HAMBURGER */}
-          <button className="lg:hidden text-3xl" onClick={() => setMobileOpen(true)}>
-            <img src={Menu} alt="Menu" />
-          </button>
+          {/* ENHANCED HAMBURGER */}
+          <motion.button 
+            className="lg:hidden relative w-8 h-8 flex flex-col justify-center items-center gap-1.5 z-50"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          >
+            <motion.span 
+              className="w-6 h-0.5 bg-[#234179] rounded-full"
+              animate={{ 
+                rotate: mobileOpen ? 45 : 0,
+                y: mobileOpen ? 8 : 0
+              }}
+              transition={{ duration: 0.3 }}
+            />
+            <motion.span 
+              className="w-6 h-0.5 bg-[#234179] rounded-full"
+              animate={{ 
+                opacity: mobileOpen ? 0 : 1,
+                x: mobileOpen ? 20 : 0
+              }}
+              transition={{ duration: 0.3 }}
+            />
+            <motion.span 
+              className="w-6 h-0.5 bg-[#234179] rounded-full"
+              animate={{ 
+                rotate: mobileOpen ? -45 : 0,
+                y: mobileOpen ? -8 : 0
+              }}
+              transition={{ duration: 0.3 }}
+            />
+          </motion.button>
         </div>
       </nav>
 
@@ -247,13 +274,22 @@ useEffect(() => {
   <div className="flex items-center justify-between px-6 py-4 ">
     <img src={logo} alt="Logo" className="h-16 w-42" />
 
-    <button
-      className="text-2xl"
+    <motion.button
+      className="relative w-8 h-8 flex flex-col justify-center items-center gap-1.5"
       onClick={() => setMobileOpen(false)}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
       aria-label="Close menu"
     >
-       <img src={X} alt="Close" />
-    </button>
+      <motion.span 
+        className="absolute w-6 h-0.5 bg-[#234179] rounded-full"
+        animate={{ rotate: 45 }}
+      />
+      <motion.span 
+        className="absolute w-6 h-0.5 bg-[#234179] rounded-full"
+        animate={{ rotate: -45 }}
+      />
+    </motion.button>
   </div>
 
   {/* SCROLLABLE MENU */}

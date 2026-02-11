@@ -10,7 +10,6 @@ const RoadBlock = () => {
   const month = monthNames[today.getMonth()];
 
   const [showRoadBlock, setShowRoadBlock] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(20);      
   const [displayTimeLeft, setDisplayTimeLeft] = useState(5);
 
   // Close function

@@ -127,7 +127,7 @@ const Breadcrumbs = () => {
 
   return (
     <section
-      className="relative py-16 sm:py-20 md:py-28 mx-auto rounded-xl px-4 sm:px-6 md:px-8"
+      className="relative py-8 sm:py-10 md:py-14 mx-auto rounded-xl px-4 sm:px-6 md:px-8"
       style={{
         backgroundImage: `url(${breadcrumb})`,
         backgroundSize: "cover",
@@ -139,14 +139,14 @@ const Breadcrumbs = () => {
 
       <div className="relative max-w-6xl mx-auto flex flex-col items-center text-center">
         {/*  Page Heading  */}
-        <h1 className="text-[#0A2241] text-3xl sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-4 break-words">
+        <h1 className="text-[#0A2241] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 break-words">
           {blogTitleMap[pathname] ||
             breadcrumbItems[breadcrumbItems.length - 1]?.label}
         </h1>
 
         {/*  Breadcrumb Navigation  */}
-        <nav className="text-[#0A2241] flex flex-wrap justify-center gap-2 items-center font-semibold">
-          <img src={House} alt="Home" className="h-4 w-4" />
+        <nav className="text-[#0A2241] flex flex-wrap justify-center gap-1 items-center text-sm font-medium">
+          <img src={House} alt="Home" className="h-3 w-3" />
           <Link to="/" className="hover:underline">
             Home
           </Link>
@@ -156,7 +156,7 @@ const Breadcrumbs = () => {
 
             return (
               <React.Fragment key={item.path}>
-                <span className="mx-1">{">"}</span>
+                <span className="mx-1 text-xs">{'>'}</span>
                 {isLast ? (
                   <span className="text-[#234179]">{item.label}</span>
                 ) : (

@@ -607,7 +607,6 @@ const Home = () => {
         </div>
       </section>
 
-
       {/* what we cure section */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center gap-12">
