@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'motion/react';
+import { motion } from "framer-motion";
 import aboutImage from "/images/about/1.jpg";
 import director from "/images/about/director.png";
 import pain from "/images/about/pain.jpg";

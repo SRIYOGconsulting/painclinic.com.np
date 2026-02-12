@@ -1,4 +1,4 @@
-import { motion } from "motion/react"
+import { motion } from "framer-motion"
 import whychooseus from "/images/wwc/why-choose-1.jpg";
 import sectitles1 from "/images/shapes/sec-title-s-1.png";
 import Brain from "/icons/brain.svg";

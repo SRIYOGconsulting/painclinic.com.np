@@ -2,7 +2,7 @@ import Phone from "/icons/phone.svg";
 import Send from "/icons/send.svg";
 import MapPin from "/icons/map-pin.svg";
 import Clock from "/icons/clock.svg";
-import { motion } from "motion/react"
+import { motion } from "framer-motion"
 import reception from "/images/contact/reception.jpg";
 import sectitles1 from "/images/shapes/sec-title-s-1.png";
 

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { motion } from 'motion/react';
+import { motion } from "framer-motion";
 import UserRound from "/icons/user-round.svg";
 import MessageCircleMore from "/icons/message-circle-more.svg";
 

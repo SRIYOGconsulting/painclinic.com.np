@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { motion, AnimatePresence } from "motion/react"
+import { motion, AnimatePresence } from "framer-motion"
 
 import logo from "/images/home/pain-clinic-logo.png";
 import ChevronDown from "/icons/chevron-down.svg";
