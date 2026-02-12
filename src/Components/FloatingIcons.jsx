@@ -5,7 +5,7 @@ import '../styles/floating-icons.css';
 
 const FloatingIcons = () => {
   const [isVisible, setIsVisible] = useState(false);
-
+  
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 300) {

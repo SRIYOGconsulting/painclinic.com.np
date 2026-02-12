@@ -49,7 +49,7 @@ const Contact = () => {
               <img src={Send} alt="send icon" className="w-5 h-5 text-[#234179]" />
             </div>
             <div>
-              <p className="font-semibold text-[#1d2c4b]">Info@Painclinic.Com.Np</p>
+              <p className="font-semibold text-[#1d2c4b]">Email</p>
               <a href="mailto:info@painclinic.com.np" className="text-gray-600">info@painclinic.com.np</a>
             </div>
           </div>
