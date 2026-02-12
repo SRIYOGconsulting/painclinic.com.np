@@ -8,6 +8,7 @@ import RoadBlock from "./Components/RoadBlock";
 import Footer from './Components/Footer'
 import Breadcrumbs from './Components/BreadCrumbs'
 import ScrollToTop from './Components/ScrollToTop'
+import FloatingIcons from './Components/FloatingIcons'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
       <Outlet />
       <Footer/>
       <RoadBlock />
+      <FloatingIcons />
     </div>
   )
 }
