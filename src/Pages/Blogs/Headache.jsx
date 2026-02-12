@@ -20,7 +20,7 @@ const Headache = () => {
 
       {/* Paragraphs */}
       <p className="mb-4 leading-relaxed text-[#707882]">
-        A headache is pain in the head or neck area. It can range from mild to severe and may be caused by factors like stress, dehydration, or lack of sleep. Common types include tension headaches, migraines, cluster headaches, and sinus headaches. Symptoms can include throbbing, tightness, nausea, and sensitivity to light or sound.
+        A headache is pain in the head or neck area. It can also range from mild to severe and may be caused by factors like stress, dehydration, or lack of sleep. Common types include tension headaches, migraines, cluster headaches, and sinus headaches. Symptoms can include throbbing, tightness, nausea, and sensitivity to light or sound.
       </p>
       <p className="mb-4 leading-relaxed text-[#707882]">
         There are different types of headaches, including tension headaches, migraines, sinus headaches, and cluster headaches. Tension headaches are the most common and often result from stress or muscle tension. Migraines are more intense, often causing throbbing pain on one side of the head, and are usually accompanied by other symptoms. Sinus headaches occur when the sinuses become inflamed, while cluster headaches involve severe pain on one side of the head, typically around the eye. Treatment depends on the type of headache and its cause, ranging from over-the-counter pain relievers to lifestyle changes or medical treatments
