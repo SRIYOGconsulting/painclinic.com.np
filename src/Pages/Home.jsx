@@ -139,7 +139,7 @@ const Home = () => {
       doctor: "Dr. Sagar",
       date: "07 Dec, 2024",
       title: "Neck Pain From Air Conditioning",
-      path: "what-is-neck-pain",
+      path: "blog/what-is-neck-pain",
       image: neckImg,
     },
     {
@@ -148,7 +148,7 @@ const Home = () => {
       doctor: "Dr. Niru",
       date: "6 Aug, 2024",
       title: "How Weather Changes Trigger Headaches",
-      path: "what-is-headache",
+      path: "blog/what-is-headache",
       image: headacheImg,
     },
     {
@@ -157,13 +157,12 @@ const Home = () => {
       doctor: "Dr. Puspak",
       date: "3 Nov, 2024",
       title: "Exercises To Ease Stiff Joints",
-      path: "what-is-joint-pain",
+      path: "blog/what-is-joint-pain",
       image: JointImg,
     },
   ];
 
   const [currentBlogIndex, setCurrentBlogIndex] = useState(0);
-  const loopedSlides = blogSlides.concat(blogSlides);
 
   const nextBlog = () =>
     setCurrentBlogIndex((prev) => (prev + 1 >= blogSlides.length ? 0 : prev + 1));
@@ -254,9 +253,11 @@ const Home = () => {
             </p>
 
             <div className="mt-8 flex items-center gap-60">
-              <button className="px-7 py-3 text-[13px] bg-[#234179] text-white font-semibold rounded-full hover:bg-[#1e3767] transition">
-                {heroSlides[heroIndex].button}
-              </button>
+              <Link to="/conditions">
+                <button className="px-7 py-3 text-[13px] bg-[#234179] text-white font-semibold rounded-full hover:bg-[#1e3767] transition cursor-pointer">
+                  {heroSlides[heroIndex].button}
+                </button>
+              </Link>
 
               <div className="hidden lg:flex items-center bg-white rounded-xl shadow-lg px-5 py-3 w-[200px] gap-4">
                 <div className="bg-[#234179] text-white p-3 rounded-lg flex items-center justify-center">
@@ -342,9 +343,11 @@ const Home = () => {
 
               {/* Button and Director Info */}
               <div className="flex items-center gap-6">
-                <button className="bg-[#234179] hover:bg-[#1e3767] transition px-8 py-3 rounded-full text-white font-semibold">
-                  Book Now
-                </button>
+                <Link to="/contact">
+                  <button className="bg-[#234179] hover:bg-[#1e3767] transition px-8 py-3 rounded-full text-white font-semibold cursor-pointer">
+                    Book Now
+                  </button>
+                </Link>
                 <img
                   src={director}
                   alt="Dr. Niru Nepal"
@@ -409,16 +412,35 @@ const Home = () => {
         </div>
 
 
-        {/* Pagination Dots */}
-        <div className="flex justify-center mt-6 space-x-3">
-          {Array.from({ length: slides.length - 2 }).map((_, idx) => (
-            <button
-              key={idx}
-              className={`w-3 h-3 rounded-full ${idx === currentServiceIndex ? "bg-white" : "bg-white/50"
-                }`}
-              onClick={() => setcurrentServiceIndex(idx)}
-            />
-          ))}
+        {/* Pagination Dots and Navigation Arrows */}
+        <div className="flex justify-center items-center mt-6 gap-4">
+          {/* Left Arrow */}
+          <button
+            onClick={prevService}
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-white/80 hover:bg-white text-gray-700 shadow-md transition-all duration-200 cursor-pointer md:hidden"
+          >
+            <span className="text-lg font-bold">&#8592;</span>
+          </button>
+          
+          {/* Dots */}
+          <div className="flex space-x-3">
+            {Array.from({ length: slides.length - 2 }).map((_, idx) => (
+              <button
+                key={idx}
+                className={`w-3 h-3 rounded-full cursor-pointer ${idx === currentServiceIndex ? "bg-white" : "bg-white/50"
+                  }`}
+                onClick={() => setcurrentServiceIndex(idx)}
+              />
+            ))}
+          </div>
+          
+          {/* Right Arrow */}
+          <button
+            onClick={nextService}
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-white/80 hover:bg-white text-gray-700 shadow-md transition-all duration-200 cursor-pointer md:hidden"
+          >
+            <span className="text-lg font-bold">&#8594;</span>
+          </button>
         </div>
       </section>
 
@@ -458,9 +480,11 @@ const Home = () => {
               long-standing need for specialized care in the region.
             </p>
 
-            <button className="bg-[#234179] text-white px-4 py-2 rounded-full">
-              Book an Appointment
-            </button>
+            <Link to="/contact">
+              <button className="bg-[#234179] text-white px-4 py-2 rounded-full hover:bg-[#1e3767] transition cursor-pointer">
+                Book an Appointment
+              </button>
+            </Link>
           </div>
 
           {/* RIGHT IMAGE */}
@@ -686,32 +710,15 @@ const Home = () => {
 
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-4xl font-bold text-[#0A2241]">Latest Updates</h2>
-
-            {/* Navigation Buttons */}
-            <div className="flex items-center gap-3">
-              <button
-                onClick={nextBlog}
-                className="w-12 h-12 flex items-center justify-center rounded-full bg-white border border-gray-400 hover:bg-gray-100"
-              >
-                &#8592;
-              </button>
-
-              <button
-                onClick={prevBlog}
-                className="w-12 h-12 flex items-center bg-white justify-center rounded-full border border-gray-400 hover:bg-gray-100"
-              >
-                &#8594;
-              </button>
-            </div>
           </div>
 
           {/* Slider */}
           <div className="overflow-hidden">
             <div
               className="flex transition-transform duration-500"
-              style={{ transform: `translateX(-${currentBlogIndex * (isMobile ? 100 : 50)}%)`, width: isMobile ? `${loopedSlides.length * 35}%` : "auto" }}
+              style={{ transform: `translateX(-${currentBlogIndex * (isMobile ? 100 : 50)}%)` }}
             >
-              {loopedSlides.map((item1, index) => (
+              {blogSlides.map((item1, index) => (
                 <Link
                   to={`/${item1.path}`}
                   key={index}
@@ -751,7 +758,7 @@ const Home = () => {
                       </h3>
 
                       {/* Read More Button */}
-                      <button className="w-10 h-10 rounded-full border border-[#234179] text-[#234179] flex items-center justify-center">
+                      <button className="w-10 h-10 rounded-full border border-[#234179] text-[#234179] flex items-center justify-center hover:bg-[#234179] hover:text-white transition cursor-pointer">
                         {">"}
                       </button>
                     </div>

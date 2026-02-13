@@ -42,7 +42,7 @@ const OurTeam = () => {
       {teamMembers.map((member, index) => (
         <div
           key={index}
-          className="relative flex flex-col items-center text-center bg-[#ECF0F5] rounded-3xl shadow-sm w-90 pt-28 sm:pt-28 pb-8 h-auto"
+          className="relative flex flex-col items-center text-center bg-[#ECF0F5] rounded-3xl shadow-xs w-90 pt-28 sm:pt-28 pb-8 h-auto"
         >
           <div className="absolute -top-8 sm:-top-20 left-1/2 transform -translate-x-1/2">
             <img
