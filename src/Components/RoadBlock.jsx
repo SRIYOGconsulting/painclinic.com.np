@@ -5,18 +5,29 @@ const RoadBlock = () => {
   const day = today.getDate();
   const monthNames = [
     "january","february","march","april","may","june",
-    "july","august","september","october","november","december","default"
+    "july","august","september","october","november","december"
   ];
   const month = monthNames[today.getMonth()];
 
   const [showRoadBlock, setShowRoadBlock] = useState(false);
   const [displayTimeLeft, setDisplayTimeLeft] = useState(5);
+  const [timeLeft, setTimeLeft] = useState(20);
+  const [isMobile, setIsMobile] = useState(false);
 
   // Close function
   const onClose = useCallback(() => {
-    document.body.classList.remove('hideScroll');
-    document.body.classList.add('showScroll')
+    document.body.style.overflow = "";
     setShowRoadBlock(false);
+  }, []);
+
+  // Detect mobile screen size
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 550);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   // Show roadblock once per session
@@ -31,9 +42,7 @@ const RoadBlock = () => {
   // Hide scroll while roadblock is visible
   useEffect(() => {
     if (showRoadBlock) {
-      document.body.classList.add('hideScroll');
-    } else {
-      return;
+      document.body.style.overflow = "hidden";
     }
     return () => {
       document.body.style.overflow = "";
@@ -78,7 +87,7 @@ const RoadBlock = () => {
           <div className="relative">
             <button
               onClick={displayTimeLeft <= 0 ? onClose : undefined}
-              className={`sm:-top-[10px] sm:-right-[10px] ${window.innerWidth < 550 ? "top-[40px] right-0" : "-top-[10px] -right-[10px]"}`}
+              className={`sm:-top-[10px] sm:-right-[10px] ${isMobile ? "top-[40px] right-0" : "-top-[10px] -right-[10px]"}`}
               style={{
                 backgroundColor: "#055d59",
                 borderRadius: "50%",
@@ -98,16 +107,8 @@ const RoadBlock = () => {
 
             <a href="#" target="_blank" rel="noopener noreferrer">
               <img
-                src={`/roadblock/${month}/${day}.jpg`}
-                onError={(e) => {
-                  const originalSrc = e.currentTarget.src;
-                  e.currentTarget.onerror = null;
-                  if (!originalSrc.includes("default.jpg")) {
-                    e.currentTarget.src = "/roadblock/default.jpg";
-                  } else {
-                    handleImageError();
-                  }
-                }}
+                src={`/roadblock/default/default.jpg`}
+                onError={handleImageError}
                 className="img-fluid rounded"
                 style={{
                   borderRadius: "3%",
