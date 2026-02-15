@@ -93,23 +93,20 @@ const Home = () => {
 
   // Conditions
   const slides = [
-    { id: 1, title: "Headache", bigImage: headacheImg, path: "what-is-headache" },
-    { id: 2, title: "Joint Pain", bigImage: JointImg, path: "what-is-joint-pain" },
-    { id: 3, title: "Whole Body Pain", bigImage: wholebody, path: "what-is-whole-body-pain" },
-    { id: 4, title: "Sports Injury", bigImage: sportsImg, path: "what-is-sports-pain" },
-    { id: 5, title: "Cancer Pain", bigImage: cancerImg, path: "what-is-cancer-pain" },
-    { id: 6, title: "Orofacial Pain", bigImage: orofacial, path: "what-is-orofacial-pain" },
-    { id: 7, title: "Knee Pain", bigImage: knee, path: "what-is-knee-pain" },
-    { id: 8, title: "Muscle Pain", bigImage: muscle, path: "what-is-muscle-pain" },
-    { id: 9, title: "Nerve Pain", bigImage: nerve, path: "what-is-nerve-pain" },
-    { id: 10, title: "Neck Pain", bigImage: neckImg, path: "what-is-neck-pain" },
-    { id: 11, title: "Shoulder Pain", bigImage: shoulderImg, path: "what-is-shoulder-pain" },
-    { id: 12, title: "Knee Pain", bigImage: knee, path: "what-is-knee-pain" },
-    { id: 13, title: "Muscle Pain", bigImage: muscle, path: "what-is-muscle-pain" },
-    { id: 13, title: "Knee Pain", bigImage: knee, path: "what-is-knee-pain" },
-    { id: 13, title: "Muscle Pain", bigImage: muscle, path: "what-is-muscle-pain" },
-    { id: 13, title: "Muscle Pain", bigImage: muscle, path: "what-is-muscle-pain" },
-    { id: 13, title: "Muscle Pain", bigImage: muscle, path: "what-is-muscle-pain" },
+    { id: 1, title: "Headache", bigImage: headacheImg, path: "conditions/headache" },
+    { id: 2, title: "Joint Pain", bigImage: JointImg, path: "conditions/joint-pain" },
+    { id: 3, title: "Whole Body Pain", bigImage: wholebody, path: "conditions/whole-body-pain" },
+    { id: 4, title: "Sports Injury", bigImage: sportsImg, path: "conditions/sports-pain" },
+    { id: 5, title: "Cancer Pain", bigImage: cancerImg, path: "conditions/cancer-pain" },
+    { id: 6, title: "Orofacial Pain", bigImage: orofacial, path: "conditions/orofacial-pain" },
+    { id: 7, title: "Knee Pain", bigImage: knee, path: "conditions/knee-pain" },
+    { id: 8, title: "Muscle Pain", bigImage: muscle, path: "conditions/muscle-pain" },
+    { id: 9, title: "Nerve Pain", bigImage: nerve, path: "conditions/nerve-pain" },
+    { id: 10, title: "Neck Pain", bigImage: neckImg, path: "conditions/neck-pain" },
+    { id: 11, title: "Shoulder Pain", bigImage: shoulderImg, path: "conditions/shoulder-pain" },
+    { id: 12, title: "Disc Prolapse", bigImage: backpain, path: "conditions/disc-prolapse" },
+    { id: 13, title: "Ankle Pain", bigImage: knee, path: "conditions/ankle-pain" },
+    { id: 14, title: "Fibromyalgia", bigImage: muscle, path: "conditions/fibromyalgia" },
   ];
 
   const [currentServiceIndex, setcurrentServiceIndex] = useState(0);

@@ -186,7 +186,7 @@ const RoadBlock = () => {
 
             <a href="#" target="_blank" rel="noopener noreferrer">
               <img
-                src={`/roadblock/default/default.jpg`}
+                src={`/roadblock/${month}/default.jpg`}
                 onError={handleImageError}
                 className="img-fluid rounded"
                 style={{

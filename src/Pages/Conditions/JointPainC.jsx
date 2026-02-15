@@ -174,7 +174,7 @@ const JointPainC = () => {
             <p className="text-[#707882] py-3">
               Back pain is closely related to joint pain, particularly in the lower back, where spinal joints and discs can become inflamed or compressed.
             </p>
-            <Link to="/conditions/back-pain"><button className="border border-[#234179] px-3 py-2 hover:text-white hover:bg-[#234179] cursor-pointer rounded-md">
+            <Link to="/conditions/disc-prolapse"><button className="border border-[#234179] px-3 py-2 hover:text-white hover:bg-[#234179] cursor-pointer rounded-md">
               Read More
             </button></Link>
           </div>
