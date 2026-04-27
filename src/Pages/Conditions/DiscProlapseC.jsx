@@ -174,7 +174,7 @@ In severe cases, surgery may be recommended to relieve nerve pressure.
             <p className="text-[#707882] py-3">
               Back pain is the primary symptom of disc prolapse, often centered in the lower back or radiating down the legs.
             </p>
-            <Link to="/conditions/back-pain"><button className="border border-[#234179] px-3 py-2 hover:text-white hover:bg-[#234179] cursor-pointer rounded-md">
+            <Link to="/conditions/disc-prolapse"><button className="border border-[#234179] px-3 py-2 hover:text-white hover:bg-[#234179] cursor-pointer rounded-md">
               Read More
             </button></Link>
           </div>

@@ -174,7 +174,7 @@ Combined with physiotherapy, it often enhances recovery.
             <p className="text-[#707882] py-3">
               Neck pain is often accompanied by back pain, especially in the upper and lower back, due to posture and strain.
             </p>
-            <Link to="/conditions/back-pain"><button className="border border-[#234179] px-3 py-2 hover:text-white hover:bg-[#234179] cursor-pointer rounded-md">
+            <Link to="/conditions/disc-prolapse"><button className="border border-[#234179] px-3 py-2 hover:text-white hover:bg-[#234179] cursor-pointer rounded-md">
               Read More
             </button></Link>
           </div>

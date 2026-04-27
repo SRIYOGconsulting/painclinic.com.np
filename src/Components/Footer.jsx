@@ -37,18 +37,21 @@ const Footer = () => {
             </p>
 
 
-            <button className="border border-gray-700 text-[15px] px-4 py-2 rounded-full text-[#234179] hover:bg-[#234179] hover:text-white transition flex">
-              <a href="https://www.facebook.com/painclinicbirtamode" target="_blank" rel="noopener noreferrer">
-                BOOK AN APPOINTMENT
-              </a> 
-            </button>
+            <a
+              href="https://www.facebook.com/painclinicbirtamode"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex border border-gray-700 text-[15px] px-4 py-2 rounded-full text-[#234179] hover:bg-[#234179] hover:text-white transition"
+            >
+              BOOK AN APPOINTMENT
+            </a>
 
             {/* Social Icons */}
             <div className="flex space-x-4 mt-6 text-gray-300">
-              <a href="https://www.facebook.com/painclinicbirtamode/" target="_blank" className="hover:text-white brightness-0 invert"><img src={Facebook} alt="Facebook" /></a>
-              <a href="#" className="hover:text-white brightness-0 invert"><img src={Twitter} alt="Twitter" /></a>
-              <a href="#" className="hover:text-white brightness-0 invert"><img src={Instagram} alt="Instagram" /></a>
-              <a href="#" className="hover:text-white brightness-0 invert"><img src={Youtube} alt="Youtube" /></a>
+              <a href="https://www.facebook.com/painclinicbirtamode/" target="_blank" rel="noopener noreferrer" className="hover:text-white brightness-0 invert"><img src={Facebook} alt="Facebook" /></a>
+              <Link to="/qr" className="hover:text-white brightness-0 invert"><img src={Twitter} alt="Twitter" /></Link>
+              <Link to="/qr" className="hover:text-white brightness-0 invert"><img src={Instagram} alt="Instagram" /></Link>
+              <Link to="/qr" className="hover:text-white brightness-0 invert"><img src={Youtube} alt="Youtube" /></Link>
             </div>
           </div>
 

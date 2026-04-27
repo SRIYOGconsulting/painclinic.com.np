@@ -184,20 +184,18 @@ const RoadBlock = () => {
               {displayTimeLeft <= 0 ? "X" : displayTimeLeft}
             </button>
 
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <img
-                src={`/roadblock/${month}/default.jpg`}
-                onError={handleImageError}
-                className="img-fluid rounded"
-                style={{
-                  borderRadius: "3%",
-                  objectFit: "contain",
-                  height: "550px",
-                  width: "550px",
-                }}
-                alt="Advertisement"
-              />
-            </a>
+            <img
+              src={`/roadblock/${month}/default.jpg`}
+              onError={handleImageError}
+              className="img-fluid rounded"
+              style={{
+                borderRadius: "3%",
+                objectFit: "contain",
+                height: "550px",
+                width: "550px",
+              }}
+              alt="Advertisement"
+            />
           </div>
         </div>
       )}

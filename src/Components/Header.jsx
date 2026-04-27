@@ -315,7 +315,7 @@ useEffect(() => {
           <ul className="ml-4 mt-2 flex flex-col gap-2 text-base">
             <li><Link to="/about" onClick={() => setMobileOpen(false)}>About Us</Link></li>
             <li><Link to="/team" onClick={() => setMobileOpen(false)}>Our Team</Link></li>
-            <li><Link to="/whatwecure" onClick={() => setMobileOpen(false)}>What We Cure</Link></li>
+            <li><Link to="/cure" onClick={() => setMobileOpen(false)}>What We Cure</Link></li>
 
             <li>
               <button
@@ -356,12 +356,18 @@ useEffect(() => {
       </li>
       {/* Conditions */}
       <li>
-        <button
-          onClick={() => setMobileConditionsOpen(!mobileConditionsOpen)}
-          className="w-full flex justify-between items-center"
-        >
-          <Link to="/conditions">Conditions</Link> <img src={ChevronDown} className="h-5 w-5" alt="Expand" />
-        </button>
+        <div className="w-full flex justify-between items-center">
+          <Link to="/conditions" onClick={() => setMobileOpen(false)}>
+            Conditions
+          </Link>
+          <button
+            type="button"
+            onClick={() => setMobileConditionsOpen(!mobileConditionsOpen)}
+            aria-label={mobileConditionsOpen ? "Collapse conditions menu" : "Expand conditions menu"}
+          >
+            <img src={ChevronDown} className="h-5 w-5" alt="Expand" />
+          </button>
+        </div>
 
         {mobileConditionsOpen && (
           <ul className="ml-4 mt-2 grid grid-cols-3 gap-2 text-base">
@@ -376,9 +382,9 @@ useEffect(() => {
                 <li><Link to="/conditions/sports-pain" className="block px-4 py-2 hover:bg-[#234179] hover:text-white" onClick={() => setMobileOpen(false)}>Sports Injury</Link></li>
                 <li><Link to="/conditions/whole-body-pain" className="block px-4 py-2 hover:bg-[#234179] hover:text-white" onClick={() => setMobileOpen(false)}>Whole Body Pain</Link></li>
                 <li><Link to="/conditions/cancer-pain" className="block px-4 py-2 hover:bg-[#234179] hover:text-white" onClick={() => setMobileOpen(false)}>Cancer Pain</Link></li>
-                <li><Link to="/conditions" className="block px-4 py-2 hover:bg-[#234179] hover:text-white" onClick={() => setMobileOpen(false)}>Disc Prolapse</Link></li>
-                <li><Link to="/conditions" className="block px-4 py-2 hover:bg-[#234179] hover:text-white" onClick={() => setMobileOpen(false)}>Ankel Pain</Link></li>
-                <li><Link to="/conditions" className="block px-4 py-2 hover:bg-[#234179] hover:text-white" onClick={() => setMobileOpen(false)}>Fibromyalgia</Link></li>
+                <li><Link to="/conditions/disc-prolapse" className="block px-4 py-2 hover:bg-[#234179] hover:text-white" onClick={() => setMobileOpen(false)}>Disc Prolapse</Link></li>
+                <li><Link to="/conditions/ankle-pain" className="block px-4 py-2 hover:bg-[#234179] hover:text-white" onClick={() => setMobileOpen(false)}>Ankle Pain</Link></li>
+                <li><Link to="/conditions/fibromyalgia" className="block px-4 py-2 hover:bg-[#234179] hover:text-white" onClick={() => setMobileOpen(false)}>Fibromyalgia</Link></li>
           </ul>
         )}
       </li>
@@ -409,10 +415,18 @@ useEffect(() => {
 
       {/* SOCIALS */}
       <div className="flex gap-4 mt-4 text-gray-500">
-        <img src={Facebook} alt="Facebook" />
-        <img src={Twitter} alt="Twitter" />
-        <img src={Instagram} alt="Instagram" />
-        <img src={Youtube} alt="Youtube" />
+        <a href="https://www.facebook.com/painclinicbirtamode" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <img src={Facebook} alt="Facebook" />
+        </a>
+        <Link to="/qr" onClick={() => setMobileOpen(false)} aria-label="Social QR links">
+          <img src={Twitter} alt="Twitter" />
+        </Link>
+        <Link to="/qr" onClick={() => setMobileOpen(false)} aria-label="Social QR links">
+          <img src={Instagram} alt="Instagram" />
+        </Link>
+        <Link to="/qr" onClick={() => setMobileOpen(false)} aria-label="Social QR links">
+          <img src={Youtube} alt="Youtube" />
+        </Link>
       </div>
     </ul>
   </div>

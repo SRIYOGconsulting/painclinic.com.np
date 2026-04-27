@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import aboutImage from "/images/about/1.jpg";
 import director from "/images/about/director.png";
 import pain from "/images/about/pain.jpg";
@@ -104,9 +105,12 @@ const About = () => {
 
             {/* Button and Director Info */}
             <div className="flex items-center gap-6">
-              <button className="bg-[#234179] hover:bg-[#1e3767] transition px-8 py-3 rounded-full text-white font-semibold">
+              <Link
+                to="/contact"
+                className="bg-[#234179] hover:bg-[#1e3767] transition px-8 py-3 rounded-full text-white font-semibold"
+              >
                 Book Now
-              </button>
+              </Link>
               <img
                 src={director}
                 alt="Dr. Niru Nepal"
@@ -143,13 +147,21 @@ const About = () => {
           </p>
 
           <div className="flex justify-center lg:justify-start gap-4">
-            <button className="bg-[#0D6EFD] hover:bg-[#1e3767] transition px-6 md:px-8 py-2 rounded-md text-white">
+            <a
+              href="https://www.facebook.com/painclinicbirtamode"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#0D6EFD] hover:bg-[#1e3767] transition px-6 md:px-8 py-2 rounded-md text-white"
+            >
               Book an Appointment
-            </button>
+            </a>
 
-            <button className="border border-gray-700 px-6 md:px-8 py-2 rounded-md text-[#234179]">
+            <Link
+              to="/contact"
+              className="border border-gray-700 px-6 md:px-8 py-2 rounded-md text-[#234179]"
+            >
               Contact Us
-            </button>
+            </Link>
           </div>
         </div>
       </div>

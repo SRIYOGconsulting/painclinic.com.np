@@ -173,7 +173,7 @@ This often leads to headaches and facial muscle pain.
             <p className="text-[#707882] py-3">
               Back pain, particularly in the upper back, can be related to orofacial pain due to poor posture or muscle tension.
             </p>
-            <Link to="/conditions/back-pain"><button className="border border-[#234179] px-3 py-2 hover:text-white hover:bg-[#234179] cursor-pointer rounded-md">
+            <Link to="/conditions/disc-prolapse"><button className="border border-[#234179] px-3 py-2 hover:text-white hover:bg-[#234179] cursor-pointer rounded-md">
               Read More
             </button></Link>
           </div>

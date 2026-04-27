@@ -158,7 +158,7 @@ Correct alignment and ergonomic adjustments can relieve pressure.
             <p className="text-[#707882] py-3">
               Nerve pain in the lower back, such as sciatica, can cause pain to radiate down the legs and into the feet.
             </p>
-            <Link to="/conditions/back-pain"><button className="border border-[#234179] px-3 py-2 hover:text-white hover:bg-[#234179] cursor-pointer rounded-md">
+            <Link to="/conditions/disc-prolapse"><button className="border border-[#234179] px-3 py-2 hover:text-white hover:bg-[#234179] cursor-pointer rounded-md">
               Read More
             </button></Link>
           </div>

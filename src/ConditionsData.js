@@ -92,7 +92,7 @@ const conditionsData = [
       "Ankle pain is commonly caused by sprains, fractures, or conditions like gout. It can hinder walking and requires proper care to prevent long-term complications.",
     image: ankel,
     icon: ankelI,
-    path: "ankel-pain",
+    path: "ankle-pain",
   },
   {
     title: "Nerve Related Pain",

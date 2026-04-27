@@ -173,7 +173,7 @@ Ergonomic adjustments and stretching can relieve tension.
             <p className="text-[#707882] py-3">
               Shoulder pain can often radiate to the upper back, leading to discomfort and muscle strain in that region.
             </p>
-            <Link to="/conditions/back-pain"><button className="border border-[#234179] px-3 py-2 hover:text-white hover:bg-[#234179] cursor-pointer rounded-md">
+            <Link to="/conditions/disc-prolapse"><button className="border border-[#234179] px-3 py-2 hover:text-white hover:bg-[#234179] cursor-pointer rounded-md">
               Read More
             </button></Link>
           </div>

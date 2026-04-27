@@ -173,7 +173,7 @@ They are especially helpful after injuries or for arthritis.
             <p className="text-[#707882] py-3">
               Back pain, particularly in the lower back, can affect posture and lead to knee discomfort.
             </p>
-            <Link to="/conditions/back-pain"><button className="border border-[#234179] px-3 py-2 hover:text-white hover:bg-[#234179] cursor-pointer rounded-md">
+            <Link to="/conditions/disc-prolapse"><button className="border border-[#234179] px-3 py-2 hover:text-white hover:bg-[#234179] cursor-pointer rounded-md">
               Read More
             </button></Link>
           </div>
