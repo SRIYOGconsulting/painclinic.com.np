@@ -50,7 +50,14 @@ const Footer = () => {
             <div className="flex space-x-4 mt-6 text-gray-300">
               <a href="https://www.facebook.com/painclinicbirtamode/" target="_blank" rel="noopener noreferrer" className="hover:text-white brightness-0 invert"><img src={Facebook} alt="Facebook" /></a>
               <Link to="/qr" className="hover:text-white brightness-0 invert"><img src={Twitter} alt="Twitter" /></Link>
-              <Link to="/qr" className="hover:text-white brightness-0 invert"><img src={Instagram} alt="Instagram" /></Link>
+              <a
+                href="https://www.instagram.com/advancepainclinic?igsh=MTY1ZGRqYnhqZGVtMQ=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white brightness-0 invert"
+              >
+                <img src={Instagram} alt="Instagram" />
+              </a>
               <Link to="/qr" className="hover:text-white brightness-0 invert"><img src={Youtube} alt="Youtube" /></Link>
             </div>
           </div>
