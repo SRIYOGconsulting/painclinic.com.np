@@ -219,9 +219,9 @@ const Home = () => {
             </p>
 
             <div className="relative inline-block overflow-hidden max-w- mb-5">
-              <p className="text-5xl md:text-6xl font-semibold leading-tight mb-">
+              <h1 className="text-5xl md:text-6xl font-semibold leading-tight mb-">
                 {heroSlides[heroIndex].title}
-              </p>
+              </h1>
               <AnimatePresence>
                 {[...Array(5)].map((_, i) => (
                   <motion.div

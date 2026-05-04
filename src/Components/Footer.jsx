@@ -6,13 +6,12 @@ import neckPain from "/images/home/neck-pain.jpg";
 import MoveUpRight from "/icons/move-up-right.svg";
 import Facebook from "/icons/facebook.svg";
 import Instagram from "/icons/instagram.svg";
-import Twitter from "/icons/twitter.svg";
-import Youtube from "/icons/youtube.svg";
 import Phone from "/icons/phone.svg";
 import Mail from "/icons/email2.svg";
 import MapPin from "/icons/map-pin.svg";
 import UserRound from "/icons/user-round.svg";
 import MessageCircleMore from "/icons/message-circle-more.svg";
+import { socialLinks } from "../seo";
 
 const Footer = () => {
   return (
@@ -48,17 +47,15 @@ const Footer = () => {
 
             {/* Social Icons */}
             <div className="flex space-x-4 mt-6 text-gray-300">
-              <a href="https://www.facebook.com/painclinicbirtamode/" target="_blank" rel="noopener noreferrer" className="hover:text-white brightness-0 invert"><img src={Facebook} alt="Facebook" /></a>
-              <Link to="/qr" className="hover:text-white brightness-0 invert"><img src={Twitter} alt="Twitter" /></Link>
+              <a href={socialLinks.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-white brightness-0 invert"><img src={Facebook} alt="Facebook" /></a>
               <a
-                href="https://www.instagram.com/advancepainclinic?igsh=MTY1ZGRqYnhqZGVtMQ=="
+                href={socialLinks.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white brightness-0 invert"
               >
                 <img src={Instagram} alt="Instagram" />
               </a>
-              <Link to="/qr" className="hover:text-white brightness-0 invert"><img src={Youtube} alt="Youtube" /></Link>
             </div>
           </div>
 

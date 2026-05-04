@@ -7,10 +7,9 @@ import ChevronDown from "/icons/chevron-down.svg";
 import MoveUpRight from "/icons/move-up-right.svg";
 import Facebook from "/icons/facebook.svg";
 import Instagram from "/icons/instagram.svg";
-import Twitter from "/icons/twitter.svg";
-import Youtube from "/icons/youtube.svg";
 import Phone from "/icons/phone.svg";
 import Mail from "/icons/email2.svg";
+import { socialLinks } from "../seo";
 
 const Header = () => {
   const [hoveredMenu, setHoveredMenu] = useState({ main: null, sub: null });
@@ -415,18 +414,12 @@ useEffect(() => {
 
       {/* SOCIALS */}
       <div className="flex gap-4 mt-4 text-gray-500">
-        <a href="https://www.facebook.com/painclinicbirtamode" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <a href={socialLinks.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
           <img src={Facebook} alt="Facebook" />
         </a>
-        <Link to="/qr" onClick={() => setMobileOpen(false)} aria-label="Social QR links">
-          <img src={Twitter} alt="Twitter" />
-        </Link>
-        <Link to="/qr" onClick={() => setMobileOpen(false)} aria-label="Social QR links">
+        <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
           <img src={Instagram} alt="Instagram" />
-        </Link>
-        <Link to="/qr" onClick={() => setMobileOpen(false)} aria-label="Social QR links">
-          <img src={Youtube} alt="Youtube" />
-        </Link>
+        </a>
       </div>
     </ul>
   </div>

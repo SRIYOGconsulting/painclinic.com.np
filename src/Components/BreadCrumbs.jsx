@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import breadcrumb from "/images/home/breadcrumb.jpg";
 import House from "/icons/house.svg";
@@ -61,36 +61,12 @@ const blogTitleMap = {
     "Comprehensive Pain Management for Cancer Patients",
 };
 
-// Page title (document.title)
-const pageTitleMap = {
-  "/": "Home | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/about": "About | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/lab": "Lab | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/pharmacy":
-    "Pharmacy | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/physiotherapy":
-    "Physiotherapy | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/team": "Team | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/conditions":
-    "Conditions | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/blog": "Blog | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-  "/contact":
-    "Contact | Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal",
-};
-
 // Breadcrumb Component
 const Breadcrumbs = () => {
   const { pathname } = useLocation();
   const isHome = pathname === "/";
 
   let breadcrumbItems = [];
-
-// Page title effect  
-  useEffect(() => {
-    document.title =
-      pageTitleMap[pathname] ||
-      "Advance Pain Specialist Clinic | Birtamode, Jhapa, Nepal";
-  }, [pathname]);
 
   // Breadcrumb logic 
   if (!isHome) {
