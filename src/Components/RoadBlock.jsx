@@ -11,8 +11,9 @@ const RoadBlock = () => {
 
   const [showRoadBlock, setShowRoadBlock] = useState(false);
   const [displayTimeLeft, setDisplayTimeLeft] = useState(5);
-  const [timeLeft, setTimeLeft] = useState(20);
+  const [, setTimeLeft] = useState(20);
   const [isMobile, setIsMobile] = useState(false);
+  const imageSrc = `/roadblock/${month}/${day}.jpg`;
 
   // Close function
   const onClose = useCallback(() => {
@@ -34,8 +35,12 @@ const RoadBlock = () => {
   useEffect(() => {
     const hasSeen = sessionStorage.getItem("roadblock_seen");
     if (!hasSeen) {
-      setShowRoadBlock(true);
-      sessionStorage.setItem("roadblock_seen", "true");
+      const timer = setTimeout(() => {
+        setShowRoadBlock(true);
+        sessionStorage.setItem("roadblock_seen", "true");
+      }, 8000);
+
+      return () => clearTimeout(timer);
     }
   }, []);
 
@@ -94,66 +99,68 @@ const RoadBlock = () => {
       return;
     }
 
-    // Initialize OneSignalDeferred
-    window.OneSignalDeferred = window.OneSignalDeferred || [];
-    
-    // Load OneSignal SDK script
-    const script = document.createElement('script');
-    script.src = 'https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js';
-    script.defer = true;
-    document.head.appendChild(script);
+    let script;
+    const loadOneSignal = () => {
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      script = document.createElement('script');
+      script.src = 'https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js';
+      script.defer = true;
+      document.head.appendChild(script);
 
-    // Initialize OneSignal
-    OneSignalDeferred.push(async function(OneSignal) {
-      await OneSignal.init({
-        appId: "add8c7e5-0874-4f9e-8961-71b987148955",
-        notifyButton: {
-          enable: true,
-          position: 'bottom-right',
-          theme: 'default',
-          size: 'medium',
-          showCredit: false,
-          text: {
-            'tip.state.unsubscribed': 'Subscribe to notifications',
-            'tip.state.subscribed': 'You\'re subscribed to notifications',
-            'tip.state.blocked': 'You\'ve blocked notifications',
-            'message.prenotify': 'Click to subscribe to notifications',
-            'message.action.subscribed': 'Thanks for subscribing!',
-            'message.action.resubscribed': 'You\'re subscribed to notifications',
-            'message.action.unsubscribed': 'You won\'t receive notifications again',
-            'dialog.main.title': 'Manage Site Notifications',
-            'dialog.main.button.subscribe': 'Subscribe',
-            'dialog.main.button.unsubscribe': 'Unsubscribe',
-            'dialog.blocked.title': 'Unblock Notifications',
-            'dialog.blocked.message': 'Follow these instructions to allow notifications:'
+      window.OneSignalDeferred.push(async function(OneSignal) {
+        await OneSignal.init({
+          appId: "add8c7e5-0874-4f9e-8961-71b987148955",
+          notifyButton: {
+            enable: true,
+            position: 'bottom-right',
+            theme: 'default',
+            size: 'medium',
+            showCredit: false,
+            text: {
+              'tip.state.unsubscribed': 'Subscribe to notifications',
+              'tip.state.subscribed': 'You\'re subscribed to notifications',
+              'tip.state.blocked': 'You\'ve blocked notifications',
+              'message.prenotify': 'Click to subscribe to notifications',
+              'message.action.subscribed': 'Thanks for subscribing!',
+              'message.action.resubscribed': 'You\'re subscribed to notifications',
+              'message.action.unsubscribed': 'You won\'t receive notifications again',
+              'dialog.main.title': 'Manage Site Notifications',
+              'dialog.main.button.subscribe': 'Subscribe',
+              'dialog.main.button.unsubscribe': 'Unsubscribe',
+              'dialog.blocked.title': 'Unblock Notifications',
+              'dialog.blocked.message': 'Follow these instructions to allow notifications:'
+            },
+            colors: {
+              'circle.background': '#234179',
+              'circle.foreground': 'white',
+              'badge.background': '#234179',
+              'badge.foreground': 'white',
+              'edge.circle.background': '#234179',
+              'edge.circle.foreground': 'white',
+              'badge.bordercolor': 'white',
+              'pulse.color': '#234179',
+              'dialog.button.background': '#234179',
+              'dialog.button.foreground': 'white'
+            }
           },
-          colors: {
-            'circle.background': '#234179',
-            'circle.foreground': 'white',
-            'badge.background': '#234179',
-            'badge.foreground': 'white',
-            'edge.circle.background': '#234179',
-            'edge.circle.foreground': 'white',
-            'badge.bordercolor': 'white',
-            'pulse.color': '#234179',
-            'dialog.button.background': '#234179',
-            'dialog.button.foreground': 'white'
+          welcomeNotification: {
+            disable: true
+          },
+          promptOptions: {
+            actionMessage: "We'd like to show you notifications for the latest news and updates.",
+            acceptButtonText: "Allow",
+            cancelButtonText: "No thanks"
           }
-        },
-        welcomeNotification: {
-          disable: true
-        },
-        promptOptions: {
-          actionMessage: "We'd like to show you notifications for the latest news and updates.",
-          acceptButtonText: "Allow",
-          cancelButtonText: "No thanks"
-        }
+        });
       });
-    });
+    };
+
+    const idleTimer = setTimeout(loadOneSignal, 8000);
 
     return () => {
       // Cleanup if needed
-      if (script.parentNode) {
+      clearTimeout(idleTimer);
+      if (script?.parentNode) {
         script.parentNode.removeChild(script);
       }
     };
@@ -185,9 +192,11 @@ const RoadBlock = () => {
             </button>
 
             <img
-              src={`/roadblock/${month}/default.jpg`}
+              src={imageSrc}
               onError={handleImageError}
               className="img-fluid rounded"
+              loading="lazy"
+              decoding="async"
               style={{
                 borderRadius: "3%",
                 objectFit: "contain",

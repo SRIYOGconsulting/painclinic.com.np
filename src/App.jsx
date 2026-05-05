@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import './App.css'
 import { Outlet } from 'react-router-dom'
 import Header from './Components/Header'
-import RoadBlock from "./Components/RoadBlock";
-import Footer from './Components/Footer'
 import Breadcrumbs from './Components/BreadCrumbs'
 import ScrollToTop from './Components/ScrollToTop'
-import FloatingIcons from './Components/FloatingIcons'
 import Seo from './Components/Seo'
+
+const Footer = lazy(() => import('./Components/Footer'))
+const RoadBlock = lazy(() => import('./Components/RoadBlock'))
+const FloatingIcons = lazy(() => import('./Components/FloatingIcons'))
 
 function App() {
 
@@ -18,9 +19,11 @@ function App() {
       <Header/>
       <Breadcrumbs/>
       <Outlet />
-      <Footer/>
-      <RoadBlock />
-      <FloatingIcons />
+      <Suspense fallback={null}>
+        <Footer/>
+        <RoadBlock />
+        <FloatingIcons />
+      </Suspense>
     </div>
   )
 }

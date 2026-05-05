@@ -1,59 +1,56 @@
-import { StrictMode } from 'react';
+import { StrictMode, createElement, lazy, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 
 import App from './App.jsx';
 import Home from './Pages/Home.jsx';
-import About from './Pages/About.jsx';
-import OurTeam from './Pages/OurTeam.jsx';
-import WWC from './Pages/WWC.jsx';
-import FAQs from './Pages/FAQs.jsx';
-import Blog from './Pages/Blog.jsx';
 
-import Lab from './Pages/Services/Lab.jsx';
-import Pharmacy from './Pages/Services/Pharmacy.jsx';
-import Physiotherapy from './Pages/Services/Physiotherapy.jsx';
+const About = lazy(() => import('./Pages/About.jsx'));
+const OurTeam = lazy(() => import('./Pages/OurTeam.jsx'));
+const WWC = lazy(() => import('./Pages/WWC.jsx'));
+const FAQs = lazy(() => import('./Pages/FAQs.jsx'));
+const Blog = lazy(() => import('./Pages/Blog.jsx'));
+const Lab = lazy(() => import('./Pages/Services/Lab.jsx'));
+const Pharmacy = lazy(() => import('./Pages/Services/Pharmacy.jsx'));
+const Physiotherapy = lazy(() => import('./Pages/Services/Physiotherapy.jsx'));
+const Contact = lazy(() => import('./Pages/Contact.jsx'));
+const Conditions = lazy(() => import('./Pages/Conditions.jsx'));
+const PuspakM = lazy(() => import('./Pages/Messages/PuspakM.jsx'));
+const NiruM = lazy(() => import('./Pages/Messages/NiruM.jsx'));
+const MuskanM = lazy(() => import('./Pages/Messages/MuskanM.jsx'));
+const Headache = lazy(() => import('./Pages/Blogs/Headache.jsx'));
+const JointPain = lazy(() => import('./Pages/Blogs/JointPain.jsx'));
+const NeckPain = lazy(() => import('./Pages/Blogs/NeckPain.jsx'));
+const ShoulderPain = lazy(() => import('./Pages/Blogs/ShoulderPain.jsx'));
+const OrofacialPain = lazy(() => import('./Pages/Blogs/OrofacialPain.jsx'));
+const KneePain = lazy(() => import('./Pages/Blogs/KneePain.jsx'));
+const NervePain = lazy(() => import('./Pages/Blogs/NervePain.jsx'));
+const MusclePain = lazy(() => import('./Pages/Blogs/MusclePain.jsx'));
+const SportsInjury = lazy(() => import('./Pages/Blogs/SportsInjury.jsx'));
+const WholeBodyPain = lazy(() => import('./Pages/Blogs/WholeBodyPain.jsx'));
+const CancerPain = lazy(() => import('./Pages/Blogs/CancerPain.jsx'));
+const HeadacheC = lazy(() => import('./Pages/Conditions/HeadacheC.jsx'));
+const JointPainC = lazy(() => import('./Pages/Conditions/JointPainC.jsx'));
+const NeckPainC = lazy(() => import('./Pages/Conditions/NeckPainC.jsx'));
+const ShoulderPainC = lazy(() => import('./Pages/Conditions/ShoulderPainC.jsx'));
+const OrofacialPainC = lazy(() => import('./Pages/Conditions/OrofacialPainC.jsx'));
+const KneePainC = lazy(() => import('./Pages/Conditions/KneePainC.jsx'));
+const NervePainC = lazy(() => import('./Pages/Conditions/NervePainC.jsx'));
+const MusclePainC = lazy(() => import('./Pages/Conditions/MusclePainC.jsx'));
+const SportsInjuryC = lazy(() => import('./Pages/Conditions/SportsInjuryC.jsx'));
+const WholeBodyPainC = lazy(() => import('./Pages/Conditions/WholeBodyPainC.jsx'));
+const CancerPainC = lazy(() => import('./Pages/Conditions/CancerPainC.jsx'));
+const DiscProlapseC = lazy(() => import('./Pages/Conditions/DiscProlapseC.jsx'));
+const AnklePainC = lazy(() => import('./Pages/Conditions/AnklePainC.jsx'));
+const FibromyalgiaC = lazy(() => import('./Pages/Conditions/FibromyalgiaC.jsx'));
+const Qr = lazy(() => import('./Pages/Qr.jsx'));
 
-import Contact from './Pages/Contact.jsx';
-import Conditions from './Pages/Conditions.jsx';
-
-// Team messages
-import PuspakM from './Pages/Messages/PuspakM.jsx';
-import NiruM from './Pages/Messages/NiruM.jsx';
-import MuskanM from './Pages/Messages/MuskanM.jsx';
-
-// Blog detail pages
-import Headache from './Pages/Blogs/Headache.jsx';
-import JointPain from './Pages/Blogs/JointPain.jsx';
-import NeckPain from './Pages/Blogs/NeckPain.jsx';
-import ShoulderPain from './Pages/Blogs/ShoulderPain.jsx';
-import OrofacialPain from './Pages/Blogs/OrofacialPain.jsx';
-import KneePain from './Pages/Blogs/KneePain.jsx';
-import NervePain from './Pages/Blogs/NervePain.jsx';
-import MusclePain from './Pages/Blogs/MusclePain.jsx';
-import SportsInjury from './Pages/Blogs/SportsInjury.jsx';
-import WholeBodyPain from './Pages/Blogs/WholeBodyPain.jsx';
-import CancerPain from './Pages/Blogs/CancerPain.jsx';
-
-// Conditions pages
-import HeadacheC from './Pages/Conditions/HeadacheC.jsx';
-import JointPainC from './Pages/Conditions/JointPainC.jsx';
-import NeckPainC from './Pages/Conditions/NeckPainC.jsx';
-import ShoulderPainC from './Pages/Conditions/ShoulderPainC.jsx';
-import OrofacialPainC from './Pages/Conditions/OrofacialPainC.jsx';
-import KneePainC from './Pages/Conditions/KneePainC.jsx';
-import NervePainC from './Pages/Conditions/NervePainC.jsx';
-import MusclePainC from './Pages/Conditions/MusclePainC.jsx';
-import SportsInjuryC from './Pages/Conditions/SportsInjuryC.jsx';
-import WholeBodyPainC from './Pages/Conditions/WholeBodyPainC.jsx';
-import CancerPainC from './Pages/Conditions/CancerPainC.jsx';
-import DiscProlapseC from './Pages/Conditions/DiscProlapseC.jsx';
-import AnklePainC from './Pages/Conditions/AnklePainC.jsx';
-import FibromyalgiaC from './Pages/Conditions/FibromyalgiaC.jsx';
-
-// Other
-import Qr from './Pages/Qr.jsx';
+const withSuspense = (RouteComponent) => (
+  <Suspense fallback={null}>
+    {createElement(RouteComponent)}
+  </Suspense>
+);
 
 const router = createBrowserRouter([
   {
@@ -62,58 +59,58 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
 
-      { path: 'about', element: <About /> },
-      { path: 'team', element: <OurTeam /> },
-      { path: 'cure', element: <WWC /> },
-      { path: 'lab', element: <Lab /> },
-      { path: 'pharmacy', element: <Pharmacy /> },
-      { path: 'physiotherapy', element: <Physiotherapy /> },
-      { path: 'faqs', element: <FAQs /> },
-      { path: 'contact', element: <Contact /> },
+      { path: 'about', element: withSuspense(About) },
+      { path: 'team', element: withSuspense(OurTeam) },
+      { path: 'cure', element: withSuspense(WWC) },
+      { path: 'lab', element: withSuspense(Lab) },
+      { path: 'pharmacy', element: withSuspense(Pharmacy) },
+      { path: 'physiotherapy', element: withSuspense(Physiotherapy) },
+      { path: 'faqs', element: withSuspense(FAQs) },
+      { path: 'contact', element: withSuspense(Contact) },
 
       // Team Messages
-      { path: 'puspak-message', element: <PuspakM /> },
-      { path: 'niru-message', element: <NiruM /> },
-      { path: 'muskaan-message', element: <MuskanM /> },
+      { path: 'puspak-message', element: withSuspense(PuspakM) },
+      { path: 'niru-message', element: withSuspense(NiruM) },
+      { path: 'muskaan-message', element: withSuspense(MuskanM) },
 
       // Conditions
-      { path: 'conditions', element: <Conditions /> },
-      { path: 'conditions/headache', element: <HeadacheC /> },
-      { path: 'conditions/joint-pain', element: <JointPainC /> },
-      { path: 'conditions/neck-pain', element: <NeckPainC /> },
-      { path: 'conditions/shoulder-pain', element: <ShoulderPainC /> },
-      { path: 'conditions/orofacial-pain', element: <OrofacialPainC /> },
-      { path: 'conditions/knee-pain', element: <KneePainC /> },
-      { path: 'conditions/nerve-pain', element: <NervePainC /> },
-      { path: 'conditions/muscle-pain', element: <MusclePainC /> },
-      { path: 'conditions/sports-pain', element: <SportsInjuryC /> },
-      { path: 'conditions/whole-body-pain', element: <WholeBodyPainC /> },
-      { path: 'conditions/cancer-pain', element: <CancerPainC /> },
-      { path: 'conditions/disc-prolapse', element: <DiscProlapseC /> },
-      { path: 'conditions/ankle-pain', element: <AnklePainC /> },
-      { path: 'conditions/fibromyalgia', element: <FibromyalgiaC /> },
+      { path: 'conditions', element: withSuspense(Conditions) },
+      { path: 'conditions/headache', element: withSuspense(HeadacheC) },
+      { path: 'conditions/joint-pain', element: withSuspense(JointPainC) },
+      { path: 'conditions/neck-pain', element: withSuspense(NeckPainC) },
+      { path: 'conditions/shoulder-pain', element: withSuspense(ShoulderPainC) },
+      { path: 'conditions/orofacial-pain', element: withSuspense(OrofacialPainC) },
+      { path: 'conditions/knee-pain', element: withSuspense(KneePainC) },
+      { path: 'conditions/nerve-pain', element: withSuspense(NervePainC) },
+      { path: 'conditions/muscle-pain', element: withSuspense(MusclePainC) },
+      { path: 'conditions/sports-pain', element: withSuspense(SportsInjuryC) },
+      { path: 'conditions/whole-body-pain', element: withSuspense(WholeBodyPainC) },
+      { path: 'conditions/cancer-pain', element: withSuspense(CancerPainC) },
+      { path: 'conditions/disc-prolapse', element: withSuspense(DiscProlapseC) },
+      { path: 'conditions/ankle-pain', element: withSuspense(AnklePainC) },
+      { path: 'conditions/fibromyalgia', element: withSuspense(FibromyalgiaC) },
 
       // Blog routes
       {
         path: 'blog',
         children: [
-          { index: true, element: <Blog /> },
+          { index: true, element: withSuspense(Blog) },
 
-          { path: 'what-is-headache', element: <Headache /> },
-          { path: 'what-is-joint-pain', element: <JointPain /> },
-          { path: 'what-is-neck-pain', element: <NeckPain /> },
-          { path: 'what-is-shoulder-pain', element: <ShoulderPain /> },
-          { path: 'what-is-orofacial-pain', element: <OrofacialPain /> },
-          { path: 'what-is-knee-pain', element: <KneePain /> },
-          { path: 'what-is-nerve-pain', element: <NervePain /> },
-          { path: 'what-is-muscle-pain', element: <MusclePain /> },
-          { path: 'what-is-sports-pain', element: <SportsInjury /> },
-          { path: 'what-is-whole-body-pain', element: <WholeBodyPain /> },
-          { path: 'what-is-cancer-pain', element: <CancerPain /> },
+          { path: 'what-is-headache', element: withSuspense(Headache) },
+          { path: 'what-is-joint-pain', element: withSuspense(JointPain) },
+          { path: 'what-is-neck-pain', element: withSuspense(NeckPain) },
+          { path: 'what-is-shoulder-pain', element: withSuspense(ShoulderPain) },
+          { path: 'what-is-orofacial-pain', element: withSuspense(OrofacialPain) },
+          { path: 'what-is-knee-pain', element: withSuspense(KneePain) },
+          { path: 'what-is-nerve-pain', element: withSuspense(NervePain) },
+          { path: 'what-is-muscle-pain', element: withSuspense(MusclePain) },
+          { path: 'what-is-sports-pain', element: withSuspense(SportsInjury) },
+          { path: 'what-is-whole-body-pain', element: withSuspense(WholeBodyPain) },
+          { path: 'what-is-cancer-pain', element: withSuspense(CancerPain) },
         ],
       },
 
-      { path: 'qr', element: <Qr /> },
+      { path: 'qr', element: withSuspense(Qr) },
     ],
   },
 ]);

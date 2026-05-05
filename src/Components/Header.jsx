@@ -63,7 +63,7 @@ useEffect(() => {
 
         {/* LOGO */}
         <div className="flex-shrink-0">
-          <img src={logo} alt="Logo" className="h-22" />
+          <img src={logo} alt="Logo" className="h-22" width="151" height="88" fetchPriority="high" />
         </div>
 
         {/* DESKTOP NAV */}
@@ -271,7 +271,7 @@ useEffect(() => {
 >
   {/* HEADER (Logo + Close) */}
   <div className="flex items-center justify-between px-6 py-4 ">
-    <img src={logo} alt="Logo" className="h-16 w-42" />
+    <img src={logo} alt="Logo" className="h-16 w-42" width="168" height="64" />
 
     <motion.button
       className="relative w-8 h-8 flex flex-col justify-center items-center gap-1.5"

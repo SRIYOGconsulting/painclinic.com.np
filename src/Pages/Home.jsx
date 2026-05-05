@@ -279,6 +279,8 @@ const Home = () => {
                 key={heroIndex}
                 src={heroSlides[heroIndex].image}
                 alt="Hero"
+                fetchPriority={heroIndex === 0 ? "high" : "auto"}
+                decoding="async"
                 className="w-full max-w-[650px] h-auto object-cover relative z-10"
                 style={{ objectPosition: "center", zIndex: 1 }}
                 initial={{ opacity: 0 }}
@@ -303,6 +305,8 @@ const Home = () => {
               <img
                 src={aboutImage}
                 alt="aboutImage"
+                loading="lazy"
+                decoding="async"
                 className="rounded-3xl shadow-lg w-auto h-auto md:w-100 md:h-100 object-cover"
               />
               <div className="absolute bottom-4 right-0 md:right-6 bg-[#6b85be] rounded-2xl px-6 py-5 text-white text-center w-[110px] opacity-90">
@@ -348,6 +352,8 @@ const Home = () => {
                 <img
                   src={director}
                   alt="Dr. Niru Nepal"
+                  loading="lazy"
+                  decoding="async"
                   className="w-16 h-16 rounded-full object-cover shadow-md"
                 />
                 <div>
@@ -392,6 +398,8 @@ const Home = () => {
                   <img
                     src={item.bigImage}
                     alt={item.title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover rounded-xl"
                   />
 
@@ -489,6 +497,8 @@ const Home = () => {
             <img
               src={offer}
               alt="Senior Citizen"
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover"
             />
           </div>
@@ -513,6 +523,8 @@ const Home = () => {
             <img
               src={JointImg}
               alt="Why Choose Us"
+              loading="lazy"
+              decoding="async"
               className="w-[380px] h-[380px] rounded-full object-cover"
             />
 
@@ -520,6 +532,8 @@ const Home = () => {
             <img
               src={choose}
               alt="Doctor"
+              loading="lazy"
+              decoding="async"
               className="w-40 h-40 rounded-full object-cover border-[10px] border-white shadow-xl absolute bottom-4 right-6"
             />
           </div>
@@ -679,6 +693,8 @@ const Home = () => {
             <img
               src={backpain}
               alt="Back pain illustration"
+              loading="lazy"
+              decoding="async"
               className="w-[] h-[380px] object-cover rounded-2xl shadow-lg"
             />
 
@@ -729,6 +745,8 @@ const Home = () => {
                         <motion.img
                           src={item1.image}
                           alt={item1.title}
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-full object-cover"
                           whileHover={{ scale: 1.1 }}
                         />
@@ -792,6 +810,8 @@ const Home = () => {
                   <img
                     src={item2.src}
                     alt={item2.label}
+                    loading="lazy"
+                    decoding="async"
                     className="w-25 h-25 object-contain mb-4"
                   />
                   <p>{item2.label}</p>

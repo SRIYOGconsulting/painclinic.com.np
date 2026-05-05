@@ -8,14 +8,21 @@
   <!-- google tag manager -->
   <script>
     (function(w,d,s,l,i){
-      w[l]=w[l]||[];
-      w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-      var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),
-          dl=l!='dataLayer'?'&l='+l:'';
-      j.async=true;
-      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-      f.parentNode.insertBefore(j,f);
+      function loadGtm(){
+        w[l]=w[l]||[];
+        w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),
+            dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);
+      }
+      if ('requestIdleCallback' in w) {
+        requestIdleCallback(loadGtm, { timeout: 3000 });
+      } else {
+        w.addEventListener('load', loadGtm, { once: true });
+      }
     })(window,document,'script','dataLayer','GTM-52K2J4LF');
   </script>
   <!-- end google tag manager -->
@@ -60,6 +67,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="/images/home/background.png" fetchpriority="high">
+  <link rel="preload" as="image" href="/images/home/pain-clinic-logo.png" fetchpriority="high">
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" />
