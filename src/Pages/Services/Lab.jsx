@@ -9,7 +9,7 @@ const Lab = () => {
         <div className="bg-[#f3f6fa] rounded-xl">
           <img
             src={lab}
-            alt="product details"
+            alt="Laboratory service at Advance Pain Specialist Clinic"
             className="rounded-md object-cover h-120 w-full"
           />
         </div>

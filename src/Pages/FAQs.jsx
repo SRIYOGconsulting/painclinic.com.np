@@ -81,7 +81,7 @@ const FAQs = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Top Left Image */}
         <div className="flex justify-center items-center">
-          <img src={faq1} alt="faq1" className="max-w-[480px]" />
+          <img src={faq1} alt="Pain clinic appointment questions" className="max-w-[480px]" />
         </div>
 
         {/* Top Right FAQs */}
@@ -99,7 +99,7 @@ const FAQs = () => {
 
         {/* Bottom Left Image */}
         <div className="flex justify-center items-center">
-          <img src={faq2} alt="faq2" className="max-w-[480px]" />
+          <img src={faq2} alt="Pain management treatment questions" className="max-w-[480px]" />
         </div>
 
         {/* Bottom Right FAQs */}

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import aboutImage from "/images/about/1.jpg";
-import director from "/images/about/director.png";
+import director from "/images/about/director.jpg";
 import pain from "/images/about/pain.jpg";
 import headacheIcon from "/images/about/headache.png";
 import JointIcon from "/images/about/joint.png";

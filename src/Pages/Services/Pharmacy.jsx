@@ -8,7 +8,7 @@ const Pharmacy = () => {
         <div className="bg-[#f3f6fa] rounded-xl">
           <img
             src={pharmacy}
-            alt="product details"
+            alt="Pharmacy service at Advance Pain Specialist Clinic"
             className="rounded-md object-cover h-120 w-full"
           />
         </div>

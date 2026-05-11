@@ -3,251 +3,251 @@
 
   <!-- Main Pages -->
   <url>
-    <loc>https://painclinic.com.np/</loc>
+    <loc>https://www.painclinic.com.np/</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://painclinic.com.np/about</loc>
+    <loc>https://www.painclinic.com.np/about</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/team</loc>
+    <loc>https://www.painclinic.com.np/team</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/cure</loc>
-    <lastmod>2025-12-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://painclinic.com.np/puspak-message</loc>
-    <lastmod>2025-12-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://painclinic.com.np/niru-message</loc>
-    <lastmod>2025-12-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://painclinic.com.np/muskaan-message</loc>
+    <loc>https://www.painclinic.com.np/cure</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://painclinic.com.np/lab</loc>
+    <loc>https://www.painclinic.com.np/puspak-message</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.painclinic.com.np/niru-message</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.painclinic.com.np/muskaan-message</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.painclinic.com.np/lab</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/pharmacy</loc>
+    <loc>https://www.painclinic.com.np/pharmacy</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/physiotherapy</loc>
+    <loc>https://www.painclinic.com.np/physiotherapy</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://painclinic.com.np/conditions</loc>
+    <loc>https://www.painclinic.com.np/conditions</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://painclinic.com.np/faqs</loc>
+    <loc>https://www.painclinic.com.np/faqs</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://painclinic.com.np/blog</loc>
+    <loc>https://www.painclinic.com.np/blog</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://painclinic.com.np/contact</loc>
+    <loc>https://www.painclinic.com.np/contact</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://painclinic.com.np/qr</loc>
+    <loc>https://www.painclinic.com.np/qr</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://painclinic.com.np/conditions/headache</loc>
+    <loc>https://www.painclinic.com.np/conditions/headache</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/conditions/joint-pain</loc>
+    <loc>https://www.painclinic.com.np/conditions/joint-pain</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/conditions/neck-pain</loc>
+    <loc>https://www.painclinic.com.np/conditions/neck-pain</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/conditions/shoulder-pain</loc>
+    <loc>https://www.painclinic.com.np/conditions/shoulder-pain</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/conditions/orofacial-pain</loc>
+    <loc>https://www.painclinic.com.np/conditions/orofacial-pain</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/conditions/knee-pain</loc>
+    <loc>https://www.painclinic.com.np/conditions/knee-pain</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/conditions/nerve-pain</loc>
+    <loc>https://www.painclinic.com.np/conditions/nerve-pain</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/conditions/muscle-pain</loc>
+    <loc>https://www.painclinic.com.np/conditions/muscle-pain</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/conditions/sports-pain</loc>
+    <loc>https://www.painclinic.com.np/conditions/sports-pain</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/conditions/whole-body-pain</loc>
+    <loc>https://www.painclinic.com.np/conditions/whole-body-pain</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/conditions/cancer-pain</loc>
+    <loc>https://www.painclinic.com.np/conditions/cancer-pain</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/conditions/disc-prolapse</loc>
+    <loc>https://www.painclinic.com.np/conditions/disc-prolapse</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/conditions/ankle-pain</loc>
+    <loc>https://www.painclinic.com.np/conditions/ankle-pain</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/conditions/fibromyalgia</loc>
+    <loc>https://www.painclinic.com.np/conditions/fibromyalgia</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://painclinic.com.np/blog/what-is-headache</loc>
+    <loc>https://www.painclinic.com.np/blog/what-is-headache</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/blog/what-is-joint-pain</loc>
+    <loc>https://www.painclinic.com.np/blog/what-is-joint-pain</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/blog/what-is-neck-pain</loc>
+    <loc>https://www.painclinic.com.np/blog/what-is-neck-pain</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/blog/what-is-shoulder-pain</loc>
+    <loc>https://www.painclinic.com.np/blog/what-is-shoulder-pain</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/blog/what-is-orofacial-pain</loc>
+    <loc>https://www.painclinic.com.np/blog/what-is-orofacial-pain</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/blog/what-is-knee-pain</loc>
+    <loc>https://www.painclinic.com.np/blog/what-is-knee-pain</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/blog/what-is-nerve-pain</loc>
+    <loc>https://www.painclinic.com.np/blog/what-is-nerve-pain</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/blog/what-is-muscle-pain</loc>
+    <loc>https://www.painclinic.com.np/blog/what-is-muscle-pain</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/blog/what-is-sports-pain</loc>
+    <loc>https://www.painclinic.com.np/blog/what-is-sports-pain</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/blog/what-is-whole-body-pain</loc>
+    <loc>https://www.painclinic.com.np/blog/what-is-whole-body-pain</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://painclinic.com.np/blog/what-is-cancer-pain</loc>
+    <loc>https://www.painclinic.com.np/blog/what-is-cancer-pain</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>

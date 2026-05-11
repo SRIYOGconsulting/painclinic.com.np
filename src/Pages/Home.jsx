@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion"
 
 import background from "/images/home/background.png";
 import aboutImage from "/images/home/1.jpg";
-import director from "/images/home/director.png";
+import director from "/images/home/director.jpg";
 import headacheImg from "/images/home/headache-pain.jpg";
 import JointImg from "/images/home/joint-pain.jpg";
 import neckImg from "/images/home/neck-pain.jpg";
@@ -278,7 +278,7 @@ const Home = () => {
               <motion.img
                 key={heroIndex}
                 src={heroSlides[heroIndex].image}
-                alt="Hero"
+                alt="Pain specialist clinic care in Birtamode"
                 fetchPriority={heroIndex === 0 ? "high" : "auto"}
                 decoding="async"
                 className="w-full max-w-[650px] h-auto object-cover relative z-10"
@@ -304,7 +304,7 @@ const Home = () => {
             <div className="relative w-full md:w-1/2">
               <img
                 src={aboutImage}
-                alt="aboutImage"
+                alt="Advance Pain Specialist Clinic in Birtamode"
                 loading="lazy"
                 decoding="async"
                 className="rounded-3xl shadow-lg w-auto h-auto md:w-100 md:h-100 object-cover"
@@ -522,7 +522,7 @@ const Home = () => {
             {/* Main Rounded Image */}
             <img
               src={JointImg}
-              alt="Why Choose Us"
+              alt="Joint pain treatment at Advance Pain Specialist Clinic"
               loading="lazy"
               decoding="async"
               className="w-[380px] h-[380px] rounded-full object-cover"
@@ -531,7 +531,7 @@ const Home = () => {
             {/* Small Overlapping Doctor Image */}
             <img
               src={choose}
-              alt="Doctor"
+              alt="Pain specialist doctor at Advance Pain Specialist Clinic"
               loading="lazy"
               decoding="async"
               className="w-40 h-40 rounded-full object-cover border-[10px] border-white shadow-xl absolute bottom-4 right-6"
@@ -692,7 +692,7 @@ const Home = () => {
           <div className="w-full md:w-1/2 flex justify-center relative">
             <img
               src={backpain}
-              alt="Back pain illustration"
+              alt="Back pain treatment at Advance Pain Specialist Clinic"
               loading="lazy"
               decoding="async"
               className="w-[] h-[380px] object-cover rounded-2xl shadow-lg"

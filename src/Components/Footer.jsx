@@ -28,7 +28,7 @@ const Footer = () => {
           {/* Left Section: Logo & Description */}
           <div className="space-y-4 order-1">
             <div className="flex items-center space-x-2">
-              <img src={logo} alt="Logo" className="h-20 w-60 object-contain" />
+              <img src={logo} alt="Advance Pain Specialist Clinic logo" className="h-20 w-60 object-contain" />
             </div>
 
             <p className="text-[#456EA1] leading-relaxed text-[16px]">
@@ -99,7 +99,7 @@ const Footer = () => {
 
               {/* Tip 1 */}
               <div className="flex items-start space-x-3">
-                <img src={headache} className="rounded-lg w-20 h-12 object-cover" alt="Headache" />
+                <img src={headache} className="rounded-lg w-20 h-12 object-cover" alt="Headache" loading="lazy" decoding="async" />
                 <div>
                   <div className="flex items-center gap-1 text-[#456EA1] text-[10px] font-semibold mb-1">
                     <img src={UserRound} alt="user" className="brightness-0 invert"/> <span>Isha Sunam</span>
@@ -115,7 +115,7 @@ const Footer = () => {
 
               {/* Tip 2 */}
               <div className="flex items-start space-x-3">
-                <img src={neckPain} className="rounded-lg w-20 h-12 object-cover" alt="Neck Pain" />
+                <img src={neckPain} className="rounded-lg w-20 h-12 object-cover" alt="Neck Pain" loading="lazy" decoding="async" />
                 <div>
                   <div className="flex items-center gap-1 text-[#456EA1] text-[10px] font-semibold mb-1">
                     <img src={UserRound} alt="user" className="brightness-0 invert"/><span>Monika Sharma</span>

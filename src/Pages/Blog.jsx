@@ -113,6 +113,8 @@ const Blog = () => {
               <img
                 src={blog.image}
                 alt={blog.title}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-56 object-cover rounded-xl"
               />
 

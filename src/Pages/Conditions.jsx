@@ -214,12 +214,16 @@ const Conditions = () => {
               <img
                 src={item.image}
                 alt={item.title}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-60 object-cover"
               />
               <div className="absolute -bottom-6 left-6 object-cover h-20 w-20 rounded-full border-[6px] border-white bg-[#234179] shadow-md transition-all duration-300 hover:border-[#234179] hover:bg-white">
                 <img
                   src={item.icon}
                   alt={`${item.title} icon`}
+                  loading="lazy"
+                  decoding="async"
                   className="object-cover h-14 w-14 mx-auto my-2"
                 />
               </div>
@@ -249,4 +253,3 @@ const Conditions = () => {
 };
 
 export default Conditions;
-
