@@ -4,3 +4,79 @@ html, body {
   width: 100%;
 }
 
+@keyframes heroTitleReveal {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes floatY {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes spinSlow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+}
+
+.hero-title-reveal {
+  animation: heroTitleReveal 1s ease-in-out both;
+}
+
+.hero-fade-in {
+  animation: fadeIn 1s ease-in-out both;
+}
+
+.dropdown-fade {
+  animation: fadeIn 0.25s ease-out both;
+}
+
+.animate-float-y {
+  animation: floatY 3s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 4s linear infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-title-reveal,
+  .hero-fade-in,
+  .dropdown-fade,
+  .animate-float-y,
+  .animate-spin-slow,
+  .animate-wiggle {
+    animation: none;
+  }
+}

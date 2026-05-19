@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion"
 
-import background from "/images/home/background.png";
+import background from "/images/home/background.jpg";
 import aboutImage from "/images/home/1.jpg";
 import director from "/images/home/director.jpg";
 import headacheImg from "/images/home/headache-pain.jpg";
@@ -39,9 +38,6 @@ import sectitles1 from "/images/shapes/sec-title-s-1.png";
 import sectitles2 from "/images/shapes/sec-title-s-2.png";
 import thunder from "/images/shapes/why-choose-shape-1.png";
 import aboutshape from "/images/shapes/about-shape-1.png";
-import heroshape from "/images/shapes/main-slider-shape-3.png";
-import clover from "/images/shapes/main-slider-shape-4.png";
-import flower from "/images/shapes/main-slider-shape-2.png";
 import latestupdate from "/images/shapes/welcome-inner-bg-1.jpg"
 import UserIcon from "/icons/user-round.svg";
 import Hospital from "/icons/hospital.svg";
@@ -126,7 +122,7 @@ const Home = () => {
       );
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [slides.length]);
 
   // BLOG SLIDER
   const blogSlides = [
@@ -161,14 +157,6 @@ const Home = () => {
 
   const [currentBlogIndex, setCurrentBlogIndex] = useState(0);
 
-  const nextBlog = () =>
-    setCurrentBlogIndex((prev) => (prev + 1 >= blogSlides.length ? 0 : prev + 1));
-
-  const prevBlog = () =>
-    setCurrentBlogIndex((prev) =>
-      prev - 1 < 0 ? blogSlides.length - 1 : prev - 1
-    );
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentBlogIndex((prev) =>
@@ -176,7 +164,7 @@ const Home = () => {
       );
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [blogSlides.length]);
 
   // DOODLES
   const doodleImages = [
@@ -207,10 +195,6 @@ const Home = () => {
       >
         {/* Content + Sliding Image */}
         <div className="relative z-10 flex items-center justify-between h-full w-full">
-          {/* <motion.img src={flower} alt="clover" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 2, }} className="absolute top-70 left-90 h-15 w-15 "/>
-          <motion.img src={clover} alt="clover" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 3, }} className="absolute bottom-90 right-0 h-15 w-15 "/>
-          <motion.img src={clover} alt="clover" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 3, }} className="absolute bottom-5 left-0 h-15 w-15 "/>
-          <motion.img src={heroshape} alt="clover" animate={{ x: [0, -10, 0] }} transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }} className="absolute bottom-10 left-90 h-15 w-15 "/> */}
           {/* LEFT CONTENT */}
 
           <div className="text-[#0A2241] flex-1 py-20 md:py-30 px-6 md:px-12 mt-60">
@@ -222,26 +206,17 @@ const Home = () => {
               <h1 className="text-5xl md:text-6xl font-semibold leading-tight mb-">
                 {heroSlides[heroIndex].title}
               </h1>
-              <AnimatePresence>
-                {[...Array(5)].map((_, i) => (
-                  <motion.div
+              {[...Array(5)].map((_, i) => (
+                  <div
                     key={`overlay-${heroIndex}-${i}`}
-                    className="absolute top-0 h-full bg-[#234179] z-20"
+                    className="absolute top-0 h-full bg-[#234179] z-20 hero-title-reveal"
                     style={{
                       left: `${(i * 100) / 5}%`, // split overlay into 5 vertical slices
                       width: `${100 / 5}%`,
-                    }}
-                    initial={{ y: "-100%" }}           // slice covers text fully
-                    animate={{ y: "100%" }}      // slide down to reveal text
-                    //  exit={{y:0}}            // reset for next slide
-                    transition={{
-                      duration: 1,
-                      ease: "easeInOut",
-                      delay: i * 0.1,
+                      animationDelay: `${i * 0.1}s`,
                     }}
                   />
                 ))}
-              </AnimatePresence>
 
             </div>
 
@@ -274,21 +249,15 @@ const Home = () => {
 
           {/* RIGHT SLIDING IMAGE: hidden on small/medium, visible on large */}
           <div className="hidden lg:flex flex-1 h-full overflow-hidden relative justify-end mt-60">
-            <AnimatePresence>
-              <motion.img
+              <img
                 key={heroIndex}
                 src={heroSlides[heroIndex].image}
                 alt="Pain specialist clinic care in Birtamode"
                 fetchPriority={heroIndex === 0 ? "high" : "auto"}
                 decoding="async"
-                className="w-full max-w-[650px] h-auto object-cover relative z-10"
+                className="w-full max-w-[650px] h-auto object-cover relative z-10 hero-fade-in"
                 style={{ objectPosition: "center", zIndex: 1 }}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1, ease: "easeInOut" }} // smooth fade
               />
-            </AnimatePresence>
           </div>
 
         </div>
@@ -296,7 +265,7 @@ const Home = () => {
 
       {/* About Us Section */}
       <div className="px-4 md:px-8 py-12 font-sans mt-15 relative max-w-6xl mx-auto">
-        <motion.img src={aboutshape} alt="clover" animate={{ y: [0, -20, 0] }} transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }} className="absolute top-80 right-5 h-24 w-24 opacity-30"/>
+        <img src={aboutshape} alt="" loading="lazy" decoding="async" className="absolute top-80 right-5 h-24 w-24 opacity-30 animate-float-y"/>
         <Link to='/about'>
           <div className="flex flex-col md:flex-row max-w-6xl mx-auto items-center gap-10 md:gap-30">
 
@@ -371,11 +340,12 @@ const Home = () => {
       <section className="bg-[#234179] py-25 px-4 mt-15 h-160">
         <div className="text-center flex flex-col items-center text-white mb-10">
           <div className="flex items-center gap-2">
-            <motion.img
+            <img
               src={sectitles2}
-              animate={{ rotate: 360 }}
-              transition={{ repeat: Infinity, duration: 4 }}
-              className="h-4"
+              alt=""
+              loading="lazy"
+              decoding="async"
+              className="h-4 animate-spin-slow"
             />
             <p className="text-sm py-3">Our Services</p>
           </div>
@@ -508,11 +478,11 @@ const Home = () => {
       {/*Why Choose Us */}
       <section className="bg-white py-20 font-[sans-serif] relative">
 
-        <motion.img src={sectitles1} alt="clover" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 4, ease: "linear" }} className="absolute top-10 left-60 h-5 w-5"/>
-        <motion.img src={sectitles1} alt="clover" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 4, ease: "linear" }} className="absolute bottom-30 left-140 h-5 w-5"/>
-        <motion.img src={sectitles1} alt="clover" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 4, ease: "linear" }} className="absolute bottom-80 right-20 h-5 w-5"/>
-        <motion.img src={sectitles1} alt="clover" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 4, ease: "linear" }} className="absolute top-30 right-20 h-5 w-5"/>
-        <motion.img src={thunder} alt="clover" animate={{ rotate: [-10, 10, -10] }} transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }} className="absolute top-50 left-30 h-15 w-15"/>
+        <img src={sectitles1} alt="" loading="lazy" decoding="async" className="absolute top-10 left-60 h-5 w-5 animate-spin-slow"/>
+        <img src={sectitles1} alt="" loading="lazy" decoding="async" className="absolute bottom-30 left-140 h-5 w-5 animate-spin-slow"/>
+        <img src={sectitles1} alt="" loading="lazy" decoding="async" className="absolute bottom-80 right-20 h-5 w-5 animate-spin-slow"/>
+        <img src={sectitles1} alt="" loading="lazy" decoding="async" className="absolute top-30 right-20 h-5 w-5 animate-spin-slow"/>
+        <img src={thunder} alt="" loading="lazy" decoding="async" className="absolute top-50 left-30 h-15 w-15 animate-wiggle"/>
 
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center px-6 gap-12 relative">
 
@@ -648,9 +618,8 @@ const Home = () => {
 
           {/* LEFT SIDE CONTENT */}
           <div className="w-full md:w-1/2 flex flex-col">
-            <div className="flex gap-2"><motion.img src={sectitles1} animate={{ rotate: 360 }}
-              transition={{ repeat: Infinity, duration: 4 }}
-              className="h-4"/><p className="text-[#234179] font-semibold text-sm mb-1">
+            <div className="flex gap-2"><img src={sectitles1} alt="" loading="lazy" decoding="async"
+              className="h-4 animate-spin-slow"/><p className="text-[#234179] font-semibold text-sm mb-1">
                 Professional Pain Management
               </p></div>
 
@@ -715,9 +684,8 @@ const Home = () => {
         ></div>
         <div className="max-w-6xl mx-auto">
           {/* Title */}
-          <div className="flex gap-2"><motion.img src={sectitles1} animate={{ rotate: 360 }}
-            transition={{ repeat: Infinity, duration: 4 }}
-            className="h-4"/><p className="text-[#234179] font-semibold text-sm mb-2">
+          <div className="flex gap-2"><img src={sectitles1} alt="" loading="lazy" decoding="async"
+            className="h-4 animate-spin-slow"/><p className="text-[#234179] font-semibold text-sm mb-2">
               Pain Clinic Blog
             </p></div>
 
@@ -742,13 +710,12 @@ const Home = () => {
                     {/* IMAGE */}
                     <div className="relative h-full w-full rounded-3xl overflow-hidden bg-white p-6">
                       <div className="w-full h-80 rounded-2xl overflow-hidden">
-                        <motion.img
+                        <img
                           src={item1.image}
                           alt={item1.title}
                           loading="lazy"
                           decoding="async"
-                          className="w-full h-full object-cover"
-                          whileHover={{ scale: 1.1 }}
+                          className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                         />
                       </div>
 

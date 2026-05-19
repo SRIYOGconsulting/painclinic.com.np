@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion"
 
 import logo from "/images/home/pain-clinic-logo.png";
 import ChevronDown from "/icons/chevron-down.svg";
@@ -78,15 +77,9 @@ useEffect(() => {
         >
           <span className="cursor-pointer hover:text-[#234179]">About</span>
 
-          {/* Animate main dropdown */}
-          <AnimatePresence>
             {hoveredMenu.main === "about" && (
-              <motion.ul
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.35 }}
-                className="absolute bg-white shadow-lg rounded-md top-full left-0 w-48 py-2 z-50"
+              <ul
+                className="absolute bg-white shadow-lg rounded-md top-full left-0 w-48 py-2 z-50 dropdown-fade"
               >
                 {/* Top-level menu items */}
                 <li>
@@ -146,9 +139,8 @@ useEffect(() => {
                     </li>
                   </ul>
                 </li>
-              </motion.ul>
+              </ul>
             )}
-          </AnimatePresence>
         </li>
 
           {/* SERVICES */}
@@ -160,14 +152,11 @@ useEffect(() => {
             <span className="cursor-pointer hover:text-[#234179]">Services</span>
 
             {hoveredMenu.main === "services" && (
-              <motion.ul className="absolute bg-white shadow-lg rounded-md top-full left-0 w-48 py-2 z-50" initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.35 }}>
+              <ul className="absolute bg-white shadow-lg rounded-md top-full left-0 w-48 py-2 z-50 dropdown-fade">
                 <li><Link to="/lab" className="block px-4 py-2 hover:bg-[#234179] hover:text-white">Lab</Link></li>
                 <li><Link to="/pharmacy" className="block px-4 py-2 hover:bg-[#234179] hover:text-white">Pharmacy</Link></li>
                 <li><Link to="/physiotherapy" className="block px-4 py-2 hover:bg-[#234179] hover:text-white">Physiotherapy</Link></li>
-              </motion.ul>
+              </ul>
             )}
           </li>
 
@@ -180,10 +169,7 @@ useEffect(() => {
             <span className="cursor-pointer hover:text-[#234179]"><Link to="/conditions">Conditions</Link></span>
 
             {hoveredMenu.main === "conditions" && (
-              <motion.ul className="grid grid-cols-3 absolute bg-white shadow-lg rounded-md top-full left-0 w-125 py-3 z-50" initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.35 }}>
+              <ul className="grid grid-cols-3 absolute bg-white shadow-lg rounded-md top-full left-0 w-125 py-3 z-50 dropdown-fade">
                 <li><Link to="/conditions/headache" className="block px-4 py-3 hover:bg-[#234179] hover:text-white" onClick={() => setMobileOpen(false)}>Headache</Link></li>
                 <li><Link to="/conditions/joint-pain" className="block px-4 py-3 hover:bg-[#234179] hover:text-white" onClick={() => setMobileOpen(false)}>Joint Pain</Link></li>
                 <li><Link to="/conditions/neck-pain" className="block px-4 py-3 hover:bg-[#234179] hover:text-white" onClick={() => setMobileOpen(false)}>Neck Pain</Link></li>
@@ -198,7 +184,7 @@ useEffect(() => {
                 <li><Link to="/conditions/disc-prolapse" className="block px-4 py-3 hover:bg-[#234179] hover:text-white" onClick={() => setMobileOpen(false)}>Disc Prolapse</Link></li>
                 <li><Link to="/conditions/ankle-pain" className="block px-4 py-3 hover:bg-[#234179] hover:text-white" onClick={() => setMobileOpen(false)}>Ankle Pain</Link></li>
                 <li><Link to="/conditions/fibromyalgia" className="block px-4 py-3 hover:bg-[#234179] hover:text-white" onClick={() => setMobileOpen(false)}>Fibromyalgia</Link></li>
-              </motion.ul>
+              </ul>
             )}
           </li>
 
@@ -219,38 +205,21 @@ useEffect(() => {
           </div>
 
           {/* ENHANCED HAMBURGER */}
-          <motion.button 
-            className="lg:hidden relative w-8 h-8 flex flex-col justify-center items-center gap-1.5 z-50"
+          <button 
+            className="lg:hidden relative w-8 h-8 flex flex-col justify-center items-center gap-1.5 z-50 transition-transform hover:scale-110 active:scale-95"
             onClick={() => setMobileOpen(!mobileOpen)}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
           >
-            <motion.span 
-              className="w-6 h-0.5 bg-[#234179] rounded-full"
-              animate={{ 
-                rotate: mobileOpen ? 45 : 0,
-                y: mobileOpen ? 8 : 0
-              }}
-              transition={{ duration: 0.3 }}
+            <span 
+              className={`w-6 h-0.5 bg-[#234179] rounded-full transition-all duration-300 ${mobileOpen ? "translate-y-2 rotate-45" : ""}`}
             />
-            <motion.span 
-              className="w-6 h-0.5 bg-[#234179] rounded-full"
-              animate={{ 
-                opacity: mobileOpen ? 0 : 1,
-                x: mobileOpen ? 20 : 0
-              }}
-              transition={{ duration: 0.3 }}
+            <span 
+              className={`w-6 h-0.5 bg-[#234179] rounded-full transition-all duration-300 ${mobileOpen ? "translate-x-5 opacity-0" : ""}`}
             />
-            <motion.span 
-              className="w-6 h-0.5 bg-[#234179] rounded-full"
-              animate={{ 
-                rotate: mobileOpen ? -45 : 0,
-                y: mobileOpen ? -8 : 0
-              }}
-              transition={{ duration: 0.3 }}
+            <span 
+              className={`w-6 h-0.5 bg-[#234179] rounded-full transition-all duration-300 ${mobileOpen ? "-translate-y-2 -rotate-45" : ""}`}
             />
-          </motion.button>
+          </button>
         </div>
       </nav>
 
@@ -273,22 +242,18 @@ useEffect(() => {
   <div className="flex items-center justify-between px-6 py-4 ">
     <img src={logo} alt="Advance Pain Specialist Clinic logo" className="h-16 w-42" width="168" height="64" />
 
-    <motion.button
-      className="relative w-8 h-8 flex flex-col justify-center items-center gap-1.5"
+    <button
+      className="relative w-8 h-8 flex flex-col justify-center items-center gap-1.5 transition-transform hover:scale-110 active:scale-95"
       onClick={() => setMobileOpen(false)}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
       aria-label="Close menu"
     >
-      <motion.span 
-        className="absolute w-6 h-0.5 bg-[#234179] rounded-full"
-        animate={{ rotate: 45 }}
+      <span 
+        className="absolute w-6 h-0.5 bg-[#234179] rounded-full rotate-45"
       />
-      <motion.span 
-        className="absolute w-6 h-0.5 bg-[#234179] rounded-full"
-        animate={{ rotate: -45 }}
+      <span 
+        className="absolute w-6 h-0.5 bg-[#234179] rounded-full -rotate-45"
       />
-    </motion.button>
+    </button>
   </div>
 
   {/* SCROLLABLE MENU */}
