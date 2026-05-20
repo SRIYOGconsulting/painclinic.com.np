@@ -44,6 +44,25 @@ import Hospital from "/icons/hospital.svg";
 import Heartpulse from "/icons/heart-pulse.svg";
 import ThumbsUp from "/icons/thumbs-up.svg";
 
+const HERO_SLIDE_INTERVAL_MS = 8000;
+
+const heroSlides = [
+  {
+    id: 1,
+    title: "Pain Clinic in Birtamode, Jhapa",
+    description: "Advance Pain Specialist Clinic in Birtamode, Jhapa, Nepal offers expert care for managing chronic and acute pain conditions.",
+    button: "View All Conditions",
+    image: kneehero,
+  },
+  {
+    id: 2,
+    title: "Modern Diagnostic Technology",
+    description: "At Advance Pain Specialist Clinic, we are committed to helping you regain a pain-free life. ",
+    button: "Book An Appointment",
+    image: headachehero,
+  },
+];
+
 // Reusable hook for mobile detection
 function useIsMobile() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -58,31 +77,14 @@ function useIsMobile() {
 }
 
 const Home = () => {
-  const heroSlides = [
-    {
-      id: 1,
-      title: "Pain Clinic in Birtamode, Jhapa",
-      description: "Advance Pain Specialist Clinic in Birtamode, Jhapa, Nepal offers expert care for managing chronic and acute pain conditions.",
-      button: "View All Conditions",
-      image: kneehero,
-    },
-    {
-      id: 2,
-      title: "Modern Diagnostic Technology",
-      description: "At Advance Pain Specialist Clinic, we are committed to helping you regain a pain-free life. ",
-      button: "Book An Appointment",
-      image: headachehero,
-    },
-  ];
-
   const [heroIndex, setHeroIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setHeroIndex((prev) => (prev + 1) % heroSlides.length);
-    }, 3000);
+    }, HERO_SLIDE_INTERVAL_MS);
     return () => clearInterval(interval);
-  }, [heroSlides.length]);
+  }, []);
 
 
   const isMobile = useIsMobile();
@@ -206,7 +208,7 @@ const Home = () => {
               <h1 className="text-5xl md:text-6xl font-semibold leading-tight mb-">
                 {heroSlides[heroIndex].title}
               </h1>
-              {[...Array(5)].map((_, i) => (
+              {heroIndex !== 0 && [...Array(5)].map((_, i) => (
                   <div
                     key={`overlay-${heroIndex}-${i}`}
                     className="absolute top-0 h-full bg-[#234179] z-20 hero-title-reveal"
@@ -254,8 +256,11 @@ const Home = () => {
                 src={heroSlides[heroIndex].image}
                 alt="Pain specialist clinic care in Birtamode"
                 fetchPriority={heroIndex === 0 ? "high" : "auto"}
+                loading={heroIndex === 0 ? "eager" : "lazy"}
                 decoding="async"
-                className="w-full max-w-[650px] h-auto object-cover relative z-10 hero-fade-in"
+                width="775"
+                height="815"
+                className={`w-full max-w-[650px] h-auto object-cover relative z-10 ${heroIndex === 0 ? "" : "hero-fade-in"}`}
                 style={{ objectPosition: "center", zIndex: 1 }}
               />
           </div>
